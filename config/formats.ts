@@ -265,22 +265,22 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
 	},
-	{
-		name: "[Gen 9] NFE",
-		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3710638/">NFE</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3712567/">NFE Resources</a>`,
-		],
+	// {
+	// 	name: "[Gen 9] NFE",
+	// 	desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+	// 	threads: [
+	// 		`&bullet; <a href="https://www.smogon.com/forums/threads/3710638/">NFE</a>`,
+	// 		`&bullet; <a href="https://www.smogon.com/forums/threads/3712567/">NFE Resources</a>`,
+	// 	],
 
-		mod: 'gen9',
-		ruleset: ['Standard OMs', 'Not Fully Evolved', 'Sleep Moves Clause', 'Terastal Clause', 'Min Source Gen = 9'],
-		banlist: [
-			'Basculin-White-Striped', 'Bisharp', 'Chansey', 'Dipplin', 'Duraludon', 'Gurdurr', 'Haunter', 'Magmar', 'Magneton', 'Porygon2', 'Primeape',
-			'Qwilfish-Hisui', 'Rhydon', 'Scyther', 'Sneasel', 'Sneasel-Hisui', 'Ursaring', 'Vulpix-Base', 'Arena Trap', 'Magnet Pull', 'Shadow Tag',
-			'Baton Pass',
-		],
-	},
+	// 	mod: 'gen9',
+	// 	ruleset: ['Standard OMs', 'Not Fully Evolved', 'Sleep Moves Clause', 'Terastal Clause', 'Min Source Gen = 9'],
+	// 	banlist: [
+	// 		'Basculin-White-Striped', 'Bisharp', 'Chansey', 'Dipplin', 'Duraludon', 'Gurdurr', 'Haunter', 'Magmar', 'Magneton', 'Porygon2', 'Primeape',
+	// 		'Qwilfish-Hisui', 'Rhydon', 'Scyther', 'Sneasel', 'Sneasel-Hisui', 'Ursaring', 'Vulpix-Base', 'Arena Trap', 'Magnet Pull', 'Shadow Tag',
+	// 		'Baton Pass',
+	// 	],
+	// },
 	{
 		name: "[Gen 9] Ubers UU",
 		threads: [
@@ -294,16 +294,16 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Moves Clause', 'Evasion Items Clause', 'Species Clause', 'Sleep Clause Mod', 'Mega Rayquaza Clause'],
 		banlist: ['ND AG', 'Assist', 'Baton Pass'],
 	},
-	{
-		name: "[Gen 9] ZU",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3719022/">ZU Metagame Discussion</a>`,
-		],
+	// {
+	// 	name: "[Gen 9] ZU",
+	// 	threads: [
+	// 		`&bullet; <a href="https://www.smogon.com/forums/threads/3719022/">ZU Metagame Discussion</a>`,
+	// 	],
 
-		mod: 'gen9',
-		ruleset: ['[Gen 9] PU'],
-		banlist: ['PU', 'ZUBL'],
-	},
+	// 	mod: 'gen9',
+	// 	ruleset: ['[Gen 9] PU'],
+	// 	banlist: ['PU', 'ZUBL'],
+	// },
 	{
 		name: "[Gen 9] Free-For-All",
 		threads: [
@@ -443,14 +443,14 @@ export const Formats: FormatList = [
 
 		mod: 'gen6',
 		searchShow: false,
-		ruleset: ['Draft'],
+		ruleset: ['Standard Draft'],
 	},
 	{
 		name: "[Gen 9] NatDex Draft",
 
 		mod: 'gen9',
 		searchShow: false,
-		ruleset: ['Draft', '+Unobtainable', '+Past', '+PastMove'],
+		ruleset: ['Standard Draft', '+Unobtainable', '+Past', '+PastMove'],
 	},
 	{
 		name: "[Gen 9] Tera Preview NatDex Draft",
@@ -465,7 +465,7 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		gameType: 'doubles',
 		searchShow: false,
-		ruleset: ['Draft', '!Sleep Clause Mod', '!Evasion Moves Clause', '+Unobtainable', '+Past', '+PastMove', 'Min Source Gen = 3'],
+		ruleset: ['Standard Draft', '!Sleep Clause Mod', '!Evasion Moves Clause', '+Unobtainable', '+Past', '+PastMove', 'Min Source Gen = 3'],
 	},
 	{
 		name: "[Gen 9] NatDex 4v4 Doubles Draft",
@@ -473,7 +473,7 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		gameType: 'doubles',
 		searchShow: false,
-		ruleset: ['Draft', 'Item Clause', '!Sleep Clause Mod', '!OHKO Clause', '!Evasion Moves Clause', '!! Adjust Level = 50', 'Picked Team Size = 4', '+Unobtainable', '+Past', '+PastMove', 'Min Source Gen = 3'],
+		ruleset: ['Standard Draft', 'Item Clause', '!Sleep Clause Mod', '!OHKO Clause', '!Evasion Moves Clause', '!! Adjust Level = 50', 'Picked Team Size = 4', '+Unobtainable', '+Past', '+PastMove', 'Min Source Gen = 3'],
 	},
 	{
 		name: "[Gen 9] NatDex Draft LC",
@@ -488,7 +488,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['Draft', '+Past', '+PastMove'],
+		ruleset: ['Standard Draft', '+Past', '+PastMove'],
 	},
 	{
 		name: "[Gen 8] NatDex 4v4 Doubles Draft",
