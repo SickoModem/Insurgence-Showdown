@@ -235,6 +235,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			takedown: ["9M"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	ivysaur: {
@@ -428,6 +429,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			takedown: ["9M"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	venusaur: {
@@ -649,6 +651,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			takedown: ["9M"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	charmander: {
@@ -888,6 +891,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			metalclaw: ["9M"],
 			nightshade: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	charmeleon: {
@@ -1102,6 +1106,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			metalclaw: ["9M"],
 			nightshade: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	charizard: {
@@ -1376,6 +1381,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			metalclaw: ["9M"],
 			nightshade: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	squirtle: {
@@ -1621,6 +1627,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	wartortle: {
@@ -1841,6 +1848,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	blastoise: {
@@ -2097,6 +2105,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	caterpie: {
@@ -2947,6 +2956,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			dualwingbeat: ["8T"],
 			terablast: ["9M"],
 			pounce: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	rattata: {
@@ -3973,6 +3983,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			playrough: ["8M"],
 			terablast: ["9M"],
 			disarmingvoice: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	pikachu: {
@@ -5142,6 +5153,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terrainpulse: ["8T"],
 			terablast: ["9M"],
 			icespinner: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	raichu: {
@@ -5469,6 +5481,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			dualwingbeat: ["8T"],
 			terablast: ["9M"],
 			icespinner: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	sandshrew: {
@@ -10738,6 +10751,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scaleshot: ["8T"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	growlithehisui: {
@@ -11013,6 +11027,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scaleshot: ["8T"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	arcaninehisui: {
@@ -13434,6 +13449,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			psybeam: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	golem: {
@@ -13763,6 +13779,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			psybeam: ["9M"],
+			hardpress: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	ponyta: {
@@ -15431,6 +15449,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			confuseray: ["9M"],
 			twinbeam: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	dodrio: {
@@ -15629,6 +15648,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			confuseray: ["9M"],
 			twinbeam: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	seel: {
@@ -19475,6 +19495,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			eerieimpulse: ["8M"],
 			risingvoltage: ["8T"],
 			terablast: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	weezing: {
@@ -19735,6 +19756,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			risingvoltage: ["8T"],
 			terrainpulse: ["8T"],
 			terablast: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	rhyhorn: {
@@ -20884,6 +20906,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			trailblaze: ["9M"],
+			upperhand: ["9M"],
+			hardpress: ["9M"],
+			supercellslam: ["9M"],
 		},
 	},
 	kangaskhan: {
@@ -22499,6 +22524,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			metalclaw: ["9M"],
 			chillingwater: ["9M"],
 			icespinner: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	kleavor: {
@@ -23444,6 +23470,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			comeuppance: ["9M"],
+			dragoncheer: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	magby: {
@@ -24014,6 +24042,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			snowscape: ["9M"],
 			chillingwater: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	pinsir: {
@@ -27102,6 +27131,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			trailblaze: ["9M"],
+			hardpress: ["9M"],
+			supercellslam: ["9M"],
 		},
 	},
 	articuno: {
@@ -28309,6 +28340,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			chillingwater: ["9M"],
 			takedown: ["9M"],
 			wavecrash: ["9M"],
+			supercellslam: ["9M"],
 		},
 	},
 	mewtwo: {
@@ -29667,6 +29699,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			risingvoltage: ["8T"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			supercellslam: ["9M"],
 		},
 	},
 	typhlosion: {
@@ -29885,6 +29918,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			risingvoltage: ["8T"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			supercellslam: ["9M"],
 		},
 	},
 	typhlosionhisui: {
@@ -31395,6 +31429,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			burningjealousy: ["8T"],
 			poltergeist: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	lanturn: {
@@ -31579,6 +31614,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			burningjealousy: ["8T"],
 			poltergeist: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	togepi: {
@@ -33439,6 +33475,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			takedown: ["9M"],
 			trailblaze: ["9M"],
 			pounce: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	ambipom: {
@@ -33680,6 +33717,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			takedown: ["9M"],
 			trailblaze: ["9M"],
 			pounce: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	sunkern: {
@@ -33835,8 +33873,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			venomdrench: ["8M"],
 			burningjealousy: ["8T"],
 			corrosivegas: ["8T"],
-			terablast: ["8M"],
-			acidspray: ["8M"],
+			terablast: ["9M"],
+			acidspray: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	sunflora: {
@@ -34006,8 +34045,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			venomdrench: ["8M"],
 			burningjealousy: ["8T"],
 			corrosivegas: ["8T"],
-			terablast: ["8M"],
-			acidspray: ["8M"],
+			terablast: ["9M"],
+			acidspray: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	yanma: {
@@ -34558,6 +34598,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			confuseray: ["9M"],
 			trailblaze: ["9M"],
+			temperflare: ["9M"],
 		},
 		eventData: [
 			//6S0: https://wiki.p-insurgence.com/Mystery_Gift#List_of_Mystery_Gift_Pok.C3.A9mon
@@ -34852,6 +34893,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			confuseray: ["9M"],
 			trailblaze: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	clodsire: {
@@ -35335,6 +35377,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			chillingwater: ["9M"],
 			icespinner: ["9M"],
+			alluringvoice: ["9M"],
+			psychicnoise: ["9M"],
 		},
 		eventData: [
 			//6S0 & 6S1: https://wiki.p-insurgence.com/Mystery_Gift#List_of_Mystery_Gift_Pok.C3.A9mon
@@ -35546,6 +35590,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			chillingwater: ["9M"],
 			icespinner: ["9M"],
+			alluringvoice: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	unown: {
@@ -39008,6 +39054,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			burningjealousy: ["8T"],
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	octillery: {
@@ -39197,6 +39244,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			burningjealousy: ["8T"],
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	delibird: {
@@ -41556,6 +41604,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	grovyle: {
@@ -41760,6 +41810,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	sceptile: {
@@ -42007,6 +42059,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	torchic: {
@@ -42201,6 +42255,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			expandingforce: ["8T"],
 			terablast: ["9M"],
 			confuseray: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	combusken: {
@@ -42414,6 +42469,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			expandingforce: ["8T"],
 			terablast: ["9M"],
 			confuseray: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	blaziken: {
@@ -42699,6 +42755,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			confuseray: ["9M"],
 			revivalblessing: ["9M"],
 			esperwing: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	mudkip: {
@@ -44148,6 +44205,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			confuseray: ["9M"],
 			chillingwater: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	ludicolo: {
@@ -44377,6 +44435,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			confuseray: ["9M"],
 			chillingwater: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	seedot: {
@@ -44944,6 +45003,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			risingvoltage: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			supercellslam: ["9M"],
 		},
 	},
 	taillow: {
@@ -45470,6 +45530,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			disarmingvoice: ["9M"],
 			chillingwater: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	kirlia: {
@@ -45657,6 +45718,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			disarmingvoice: ["9M"],
 			chillingwater: ["9M"],
 			icespinner: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	gardevoir: {
@@ -45879,6 +45941,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			disarmingvoice: ["9M"],
 			chillingwater: ["9M"],
 			icespinner: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	gallade: {
@@ -46143,6 +46206,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			chillingwater: ["9M"],
 			icespinner: ["9M"],
 			aquacutter: ["9M"],
+			alluringvoice: ["9M"],
+			supercellslam: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	surskit: {
@@ -48196,6 +48262,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			metalclaw: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	mawile: {
@@ -48619,6 +48686,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	lairon: {
@@ -48797,6 +48865,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			ragingfury: ["9M"],
+			temperflare: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	aggron: {
@@ -49049,6 +49119,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			ragingfury: ["9M"],
+			temperflare: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	meditite: {
@@ -49845,6 +49917,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			playrough: ["8M"],
 			dualwingbeat: ["8T"],
 			terablast: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	minun: {
@@ -50043,6 +50116,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			snowscape: ["9M"],
 			chillingwater: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	volbeat: {
@@ -50394,6 +50468,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			psybeam: ["9M"],
 			confuseray: ["9M"],
 			nightshade: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	roselia: {
@@ -50588,6 +50663,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			psybeam: ["9M"],
 			confuseray: ["9M"],
 			nightshade: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	roserade: {
@@ -50781,6 +50857,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			psybeam: ["9M"],
 			confuseray: ["9M"],
 			nightshade: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	gulpin: {
@@ -51318,6 +51395,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			chillingwater: ["9M"],
 			icespinner: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	wailord: {
@@ -51498,6 +51576,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snowscape: ["9M"],
 			chillingwater: ["9M"],
 			icespinner: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	numel: {
@@ -51844,6 +51923,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			corrosivegas: ["8T"],
 			terablast: ["9M"],
 			acidspray: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	torkoal: {
@@ -56011,6 +56091,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			mysticalfire: ["8M"],
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	glalie: {
@@ -56187,6 +56268,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			ragingfury: ["9M"],
+			temperflare: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	froslass: {
@@ -56372,6 +56455,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			confuseray: ["9M"],
 			nightshade: ["9M"],
+			temperflare: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	spheal: {
@@ -56850,6 +56935,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scaleshot: ["8T"],
 			terablast: ["9M"],
 			chillingwater: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	gorebyss: {
@@ -56998,6 +57084,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scaleshot: ["8T"],
 			terablast: ["9M"],
 			chillingwater: ["9M"],
+			dragoncheer: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	relicanth: {
@@ -57767,6 +57855,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			grassyglide: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	metagross: {
@@ -57995,6 +58084,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			acidspray: ["9M"],
 			metalclaw: ["9M"],
 			pounce: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	metagrossdeltar: {
@@ -58102,6 +58192,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			grassyglide: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	regirock: {
@@ -58295,6 +58386,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			hardpress: ["9M"],
 		},
 		eventData: [
 			//6S0: https://wiki.p-insurgence.com/Holon_Desert#Pok.C3.A9mon
@@ -58500,6 +58592,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			takedown: ["9M"],
 			chillingwater: ["9M"],
 			wavecrash: ["9M"],
+			hardpress: ["9M"],
 		},
 		eventData: [
 			//6S0: https://wiki.p-insurgence.com/Holon_Lake#Holon_Undercave
@@ -58709,6 +58802,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			hardpress: ["9M"],
 		},
 		eventData: [
 			//6S0: https://wiki.p-insurgence.com/Holon_Volcano#Pok.C3.A9mon
@@ -60216,6 +60310,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			takedown: ["9M"],
 			chillingwater: ["9M"],
 			wavecrash: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	chimchar: {
@@ -62804,6 +62899,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			agility: ["8M"],
 			steelbeam: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	pachirisu: {
@@ -63596,6 +63692,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			airslash: ["8M"],
 			burningjealousy: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	drifblim: {
@@ -63793,6 +63890,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			airslash: ["8M"],
 			burningjealousy: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	buneary: {
@@ -64027,6 +64125,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			tripleaxel: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	lopunny: {
@@ -64286,6 +64385,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			axekick: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	glameow: {
@@ -65513,6 +65613,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			comeuppance: ["9M"],
 			lastrespects: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	lucario: {
@@ -65786,6 +65887,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			comeuppance: ["9M"],
 			lastrespects: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	hippopotas: {
@@ -66325,6 +66427,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scaryface: ["8M"],
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	toxicroak: {
@@ -66548,6 +66651,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
 			metalclaw: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	carnivine: {
@@ -69018,6 +69122,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			poisontail: ["9M"],
 			chillingwater: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	servine: {
@@ -69173,6 +69278,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			poisontail: ["9M"],
 			chillingwater: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	serperior: {
@@ -69361,6 +69467,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			poisontail: ["9M"],
 			chillingwater: ["9M"],
+			dragoncheer: ["9M"],
 		},
 	},
 	tepig: {
@@ -73279,6 +73386,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	whirlipede: {
@@ -73411,6 +73519,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	scolipede: {
@@ -73590,6 +73699,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			scorchingsands: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			temperflare: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	cottonee: {
@@ -73963,6 +74074,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			encore: ["8M"],
 			storedpower: ["8M"],
 			terablast: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	lilligant: {
@@ -74214,6 +74326,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			encore: ["8M"],
 			storedpower: ["8M"],
 			terablast: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	lilliganthisui: {
@@ -76916,6 +77029,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			acidspray: ["9M"],
 			metalclaw: ["9M"],
 			shelter: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	runerigus: {
@@ -79459,6 +79573,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			lashout: ["8T"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	karrablast: {
@@ -79602,6 +79717,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			disarmingvoice: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	escavalier: {
@@ -79768,6 +79884,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			drainingkiss: ["8M"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	foongus: {
@@ -81353,6 +81470,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			mistyexplosion: ["8T"],
 			terablast: ["9M"],
 			confuseray: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	lampent: {
@@ -81521,6 +81639,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			mistyexplosion: ["8T"],
 			terablast: ["9M"],
 			confuseray: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	chandelure: {
@@ -81689,6 +81808,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			mistyexplosion: ["8T"],
 			terablast: ["9M"],
 			confuseray: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	axew: {
@@ -82265,6 +82385,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			takedown: ["9M"],
 			chillingwater: ["9M"],
 			wavecrash: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	cubchoo: {
@@ -83276,6 +83397,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
+			hardpress: ["9M"],
 		},
 	},
 	golurk: {
@@ -83482,6 +83605,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
+			hardpress: ["9M"],
+			supercellslam: ["9M"],
 		},
 	},
 	pawniard: {
@@ -83670,6 +83796,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			coaching: ["8T"],
 			terablast: ["9M"],
 			takedown: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	bisharp: {
@@ -83866,6 +83993,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			takedown: ["9M"],
 			axekick: ["9M"],
+			upperhand: ["9M"],
 		},
 	},
 	kingambit: {
@@ -87137,7 +87265,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			expandingforce: ["8T"],
 			terablast: ["9M"],
 			confuseray: ["9M"],
-			disarmingvoice: ["9M"],
+			upperhand: ["9M"],
 		},
 		eventData: [
 			//6S0: https://wiki.p-insurgence.com/Mimry_Gardens
@@ -88517,6 +88645,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			burningjealousy: ["8T"],
 			terablast: ["9M"],
 			trailblaze: ["9M"],
+			temperflare: ["9M"],
 		},
 	},
 	bunnelby: {
@@ -93373,6 +93502,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			snowscape: ["9M"],
 			trailblaze: ["9M"],
+			alluringvoice: ["9M"],
 		},
 		eventData: [
 			//6S0: https://wiki.p-insurgence.com/Mystery_Gift#List_of_Mystery_Gift_Pok.C3.A9mon
@@ -93593,6 +93723,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			snowscape: ["9M"],
 			trailblaze: ["9M"],
+			alluringvoice: ["9M"],
 		},
 	},
 	pumpkaboo: {
@@ -94174,6 +94305,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terablast: ["9M"],
 			icespinner: ["9M"],
 			headlongrush: ["9M"],
+			hardpress: ["9M"],
+			supercellslam: ["9M"],
 		},
 	},
 	noibat: {
@@ -94588,6 +94721,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			disarmingvoice: ["9M"],
 			trailblaze: ["9M"],
 			pounce: ["9M"],
+			psychicnoise: ["9M"],
 		},
 	},
 	xerneas: {
@@ -95446,6 +95580,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			terrainpulse: ["8T"],
 			terablast: ["9M"],
 			confuseray: ["9M"],
+			psychicnoise: ["9M"],
 		},
 		eventData: [
 			//6S0: https://wiki.p-insurgence.com/Oort_Cloud_Object
