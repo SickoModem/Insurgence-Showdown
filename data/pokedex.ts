@@ -19928,7 +19928,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	boltund: {
 		num: 836,
 		name: "Boltund",
-		types: types: ["Electric", "Normal"],
+		types: ["Electric", "Normal"],
 		baseStats: {hp: 69, atk: 101, def: 60, spa: 101, spd: 60, spe: 121},
 		abilities: {0: "Strong Jaw", H: "Spectral Jaws"},
 		heightm: 1,
