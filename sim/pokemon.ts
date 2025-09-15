@@ -2340,7 +2340,7 @@ export class Pokemon {
 		if (this.fainted) return false;
 
 		if (source && this) {
-			if (source.hasAbility("Irrelephant")) {
+			if (source && source.hasAbility && source.hasAbility("Irrelephant")) {
 				if (this.ability === 'levitate' && type === 'Ground') {
 					this.battle.add('-immune', this, '[from] ability: Levitate');
 					return false
