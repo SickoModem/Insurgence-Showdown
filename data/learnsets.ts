@@ -30660,8 +30660,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			whirlwind: ["9E", "8E", "7E", "7V", "6E", "5E", "4E", "3E"],
 			wingattack: ["9E", "8E", "7E", "7V", "6E", "5E", "4E", "3E"],
 			workup: ["8M", "7M", "5M"],
-                        weatherball: ["8M", "7M", "5M"]
-                        uturn: ["8M", "7M", "5M"]
+                        weatherball: ["8M", "7M", "5M"],
+                        uturn: ["8M", "7M", "5M"],
 			zenheadbutt: ["9M", "8M", "7T", "7L16", "6T", "6L37", "5T", "5L37", "4T", "4L33"],
 		},
 		eventData: [
