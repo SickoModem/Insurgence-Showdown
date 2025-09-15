@@ -23303,7 +23303,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			poweruppunch: ["6M"],
 			protect: ["9M", "8M", "7M", "6M", "5M", "4M"],
 			psychic: ["9M", "8M", "7M", "6M", "5M", "4M"],
-                        plasmafists: ["8M]",
+                        plasmafists: ["8M"],
 			raindance: ["9M", "8M", "7M", "6M", "5M", "4M"],
 			reflect: ["9M"],
 			rest: ["9M", "8M", "7M", "6M", "5M", "4M"],
