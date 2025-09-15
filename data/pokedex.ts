@@ -768,7 +768,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Fearow",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 75, atk: 105, def: 80, spa: 79, spd: 70, spe: 101},
-		abilities: {0: "Fearow", 1: "Opportunist", H: "Sheer Force"},
+		abilities: {0: "Tough Claws", 1: "Opportunist", H: "Sheer Force"},
 		heightm: 1.2,
 		weightkg: 38,
 		color: "Brown",
