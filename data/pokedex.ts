@@ -18727,7 +18727,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Ground"],
 		gender: "N",
 		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
-		abilities: abilities: {0: "RKS System", H: "Tough Claws"},
+		abilities: {0: "RKS System", H: "Tough Claws"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
