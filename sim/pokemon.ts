@@ -614,7 +614,7 @@ export class Pokemon {
 		if (statName === 'hp') throw new Error("Please read `maxhp` directly");
 
 		// base stat
-		let stat = this.storedStats[statName];
+		let stat = this.species.baseStats[statName];
 
 		// Wonder Room swaps defenses before calculating anything else
 		if ('wonderroom' in this.battle.field.pseudoWeather) {
@@ -650,7 +650,7 @@ export class Pokemon {
 		if (statName === 'hp') throw new Error("Please read `maxhp` directly");
 
 		// base stat
-		let stat = this.storedStats[statName];
+		let stat = this.species.baseStats[statName];
 
 		// Download ignores Wonder Room's effect, but this results in
 		// stat stages being calculated on the opposite defensive stat
