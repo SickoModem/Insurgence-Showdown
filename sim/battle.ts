@@ -2163,7 +2163,7 @@ export class Battle {
 
 	/** Given a table of base stats and a pokemon set, return the actual stats. */
 	spreadModify(baseStats: StatsTable, set: PokemonSet): StatsTable {
-		const modStats: SparseStatsTable = {atk: 10, def: 10, spa: 10, spd: 10, spe: 10};
+		const modStats: SparseStatsTable = {atk: 0, def: 0, spa: 0, spd: 0, spe: 0};
 		const tr = this.trunc;
 		let statName: keyof StatsTable;
 		for (statName in modStats) {

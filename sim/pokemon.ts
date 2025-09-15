@@ -315,7 +315,7 @@ export class Pokemon {
 		this.name = set.name.substr(0, 20);
 		this.fullname = this.side.id + ': ' + this.name;
 
-		set.level = this.battle.clampIntRange(set.adjustLevel || set.level || 120, 1, 9999);
+		set.level = this.battle.clampIntRange(set.adjustLevel || set.level || 100, 1, 9999);
 		this.level = set.level;
 		const genders: {[key: string]: GenderName} = {M: 'M', F: 'F', N: 'N'};
 		this.gender = genders[set.gender] || defaultGender || this.species.gender || (this.battle.random() * 2 < 1 ? 'M' : 'F');
@@ -614,7 +614,7 @@ export class Pokemon {
 		if (statName === 'hp') throw new Error("Please read `maxhp` directly");
 
 		// base stat
-		let stat = this.species.baseStats[statName];
+		let stat = this.storedStats[statName];
 
 		// Wonder Room swaps defenses before calculating anything else
 		if ('wonderroom' in this.battle.field.pseudoWeather) {
@@ -650,7 +650,7 @@ export class Pokemon {
 		if (statName === 'hp') throw new Error("Please read `maxhp` directly");
 
 		// base stat
-		let stat = this.species.baseStats[statName];
+		let stat = this.storedStats[statName];
 
 		// Download ignores Wonder Room's effect, but this results in
 		// stat stages being calculated on the opposite defensive stat
