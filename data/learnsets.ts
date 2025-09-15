@@ -55285,7 +55285,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			memento: ["9E", "8E", "7E", "6E", "5E", "4E", "3E"],
 			mimic: ["3T"],
 			naturalgift: ["4M"],
-                        nastyplot: ["9M"]
+                        nastyplot: ["9M"],
 			nightmare: ["3T"],
 			nightshade: ["9M", "9L16", "8L16", "7L1", "6L1", "5L1", "4L1", "3L1"],
 			ominouswind: ["7E", "6E", "5E", "4T", "4E"],
