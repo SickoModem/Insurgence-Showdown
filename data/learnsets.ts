@@ -62994,7 +62994,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			raindance: ["9M", "7M", "6M", "5M", "4M"],
 			rest: ["9M", "7M", "6M", "5M", "4M"],
 			return: ["7M", "6M", "5M", "4M"],
-                        risingvoltage: ["9M"]
+                        risingvoltage: ["9M"],
 			rollout: ["9E", "7E", "6E", "5E", "4T", "4E"],
 			round: ["7M", "6M", "5M"],
 			secretpower: ["6M", "4M"],
