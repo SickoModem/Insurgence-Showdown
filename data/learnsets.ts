@@ -85939,7 +85939,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			laserfocus: ["7T"],
 			leer: ["9L1", "8L1", "7L1", "6L1", "5L1"],
 			megahorn: ["8M"],
-                        mightycleave ["9M"],
+                        mightycleave: ["9M"],
 			poisonjab: ["9M", "8M", "7M", "6M", "5M"],
 			protect: ["9M", "8M", "7M", "6M", "5M"],
 			psychup: ["9M", "7M", "6M", "5M"],
