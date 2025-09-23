@@ -32185,7 +32185,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			skyattack: ["7T", "6T", "5T", "4T", "3T"],
 			sleeptalk: ["8M", "7M", "7V", "6M", "5T", "4M", "3T"],
 			snore: ["8M", "7T", "7V", "6T", "5T", "4T", "3T"],
-			solarbeam: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			steelwing: ["8M", "7M", "6M", "4M", "3M"],
 			storedpower: ["8M", "8L1", "7L17", "6L17", "5L47"],
 			substitute: ["8M", "7M", "6M", "5M", "4M", "3T"],

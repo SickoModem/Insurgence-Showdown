@@ -236,7 +236,7 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120'],
 	},
 
-	// National Dex
+	// Ryuka Dex
 	///////////////////////////////////////////////////////////////////
 
 	{
@@ -255,11 +255,11 @@ export const Formats: FormatList = [
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
-		name: "[Gen 9] National Dex",
+		name: "[Gen 9] Ryuka Dex",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">National Dex Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3714511/">National Dex Viability Rankings</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3714863/">National Dex Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">Ryuka Dex Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3714511/">Ryuka Dex Viability Rankings</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3714863/">Ryuka Dex Sample Teams</a>`,
 		],
 
 		mod: 'gen9',
@@ -270,11 +270,11 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex Ubers",
+		name: "[Gen 9] Ryuka Dex Ubers",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3712168/">National Dex Ubers Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3712170/">National Dex Ubers Sample Teams</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3712169/">National Dex Ubers Viability Rankings</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3712168/">Ryuka Dex Ubers Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3712170/">Ryuka Dex Ubers Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3712169/">Ryuka Dex Ubers Viability Rankings</a>`,
 		],
 
 		mod: 'gen9',
@@ -282,27 +282,27 @@ export const Formats: FormatList = [
 		banlist: ['ND AG', 'Assist', 'Baton Pass'],
 	},
 	{
-		name: "[Gen 9] National Dex UU",
+		name: "[Gen 9] Ryuka Dex UU",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3711752/">National Dex UU Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3719079/">National Dex UU Viability Rankings</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3725988/">National Dex UU Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3711752/">Ryuka Dex UU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3719079/">Ryuka Dex UU Viability Rankings</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3725988/">Ryuka Dex UU Sample Teams</a>`,
 		],
 
 		mod: 'gen9',
-		ruleset: ['[Gen 9] National Dex', 'Terastal Clause'],
+		ruleset: ['[Gen 9] Ryuka Dex', 'Terastal Clause'],
 		banlist: ['ND OU', 'ND UUBL', 'Drizzle', 'Drought', 'Light Clay'],
 	},
 	{
-		name: "[Gen 9] National Dex RU",
+		name: "[Gen 9] Ryuka Dex RU",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">National Dex RU Resources</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">Ryuka Dex RU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">Ryuka Dex RU Resources</a>`,
 		],
 
 		mod: 'gen9',
 		searchShow: false,
-		ruleset: ['[Gen 9] National Dex UU'],
+		ruleset: ['[Gen 9] Ryuka Dex UU'],
 		banlist: ['ND UU', 'ND RUBL', 'Slowbro-Base + Slowbronite', 'Heat Rock'],
 	},
 	{
@@ -327,7 +327,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex LC",
+		name: "[Gen 9] Ryuka Dex LC",
 		mod: 'gen9',
 		ruleset: ['Little Cup', 'Standard NatDex', 'Dynamax Clause'],
 		banlist: [
@@ -338,7 +338,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex 1v1",
+		name: "[Gen 9] Ryuka Dex 1v1",
 		mod: 'gen9',
 		ruleset: [
 			'Picked Team Size = 1', 'Max Team Size = 3',
@@ -356,21 +356,21 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex CAP",
+		name: "[Gen 9] Ryuka Dex CAP",
 
 		mod: 'gen9',
-		ruleset: ['[Gen 9] National Dex', '+CAP'],
+		ruleset: ['[Gen 9] Ryuka Dex', '+CAP'],
 		banlist: ['Crucibellite'],
 	},
 	{
-		name: "[Gen 9] National Dex 3v3 Singles",
+		name: "[Gen 9] Ryuka Dex 3v3 Singles",
 
 		mod: 'gen9',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'VGC Timer'],
 		banlist: ['Sub-Legendary'],
 	},
 	{
-		name: "[Gen 9] National Dex Multi Battle",
+		name: "[Gen 9] Ryuka Dex Multi Battle",
 
 		mod: 'gen9',
 		gameType: 'multi',
@@ -380,7 +380,7 @@ export const Formats: FormatList = [
 		ruleset: ['Max Team Size = 3', 'Standard NatDex'],
 	},
 	{
-		name: "[Gen 9] National Dex Free-For-All",
+		name: "[Gen 9] Ryuka Dex Free-For-All",
 
 		mod: 'gen9',
 		gameType: 'freeforall',
@@ -399,7 +399,7 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
 	},
 
-	// National Dex Doubles
+	// Ryuka Dex Doubles
 	///////////////////////////////////////////////////////////////////
 
 	{
@@ -407,14 +407,14 @@ export const Formats: FormatList = [
 		column: 3,
 	},
 	{
-		name: "[Gen 9] National Dex Doubles AG",
+		name: "[Gen 9] Ryuka Dex Doubles AG",
 
 		mod: 'gen9',
 		gameType: 'doubles',
 		ruleset: ['Standard NatDex Doubles', '!Gravity Sleep Clause'],
 	},
 	{
-		name: "[Gen 9] National Dex 4v4 Doubles",
+		name: "[Gen 9] Ryuka Dex 4v4 Doubles",
 
 		mod: 'gen9',
 		gameType: 'doubles',
@@ -685,11 +685,11 @@ export const Formats: FormatList = [
 		column: 4,
 	},
 	{
-		name: "[Gen 8] National Dex",
+		name: "[Gen 8] Ryuka Dex",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3666135/">SS National Dex Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3667921/">SS National Dex Sample Teams</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3666572/">SS National Dex Viability Rankings</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3666135/">SS Ryuka Dex Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3667921/">SS Ryuka Dex Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3666572/">SS Ryuka Dex Viability Rankings</a>`,
 		],
 
 		mod: 'gen8',
@@ -697,33 +697,33 @@ export const Formats: FormatList = [
 		banlist: ['ND Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Razor Fang', 'Quick Claw', 'Baton Pass'],
 	},
 	{
-		name: "[Gen 8] National Dex UU",
+		name: "[Gen 8] Ryuka Dex UU",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3660920/">National Dex UU Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3672486/">National Dex UU Sample Teams</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3672482/">National Dex UU Viability Rankings</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3660920/">Ryuka Dex UU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3672486/">Ryuka Dex UU Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3672482/">Ryuka Dex UU Viability Rankings</a>`,
 		],
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex'],
+		ruleset: ['[Gen 8] Ryuka Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'Drizzle', 'Drought', 'Light Clay', 'Slowbronite'],
 	},
 	{
-		name: "[Gen 8] National Dex RU",
+		name: "[Gen 8] Ryuka Dex RU",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3660920/">National Dex UU Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3672486/">National Dex UU Sample Teams</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3672482/">National Dex UU Viability Rankings</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3660920/">Ryuka Dex UU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3672486/">Ryuka Dex UU Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3672482/">Ryuka Dex UU Viability Rankings</a>`,
 		],
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex UU'],
+		ruleset: ['[Gen 8] Ryuka Dex UU'],
 		banlist: ['ND UU', 'ND RUBL'],
 	},
 	{
-		name: "[Gen 8] National Dex LC",
+		name: "[Gen 8] Ryuka Dex LC",
 		mod: 'gen8',
 		searchShow: false,
 		ruleset: ['Little Cup', 'Standard NatDex', 'Dynamax Clause'],
@@ -735,7 +735,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8] National Dex Monotype",
+		name: "[Gen 8] Ryuka Dex Monotype",
 		desc: `All the Pok&eacute;mon on a team must share a type.`,
 		mod: 'gen8',
 		searchShow: false,
@@ -749,7 +749,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8] National Dex 1v1",
+		name: "[Gen 8] Ryuka Dex 1v1",
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
 		mod: 'gen8',
 		searchShow: false,
@@ -769,20 +769,20 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8] National Dex AG",
+		name: "[Gen 8] Ryuka Dex AG",
 		mod: 'gen8',
 		searchShow: false,
 		ruleset: ['Standard NatDex'],
 	},
 	{
-		name: "[Gen 8] National Dex CAP",
+		name: "[Gen 8] Ryuka Dex CAP",
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex', '+CAP'],
+		ruleset: ['[Gen 8] Ryuka Dex', '+CAP'],
 		banlist: ['Crucibellite'],
 	},
 	{
-		name: "[Gen 8] National Dex 3v3 Singles",
+		name: "[Gen 8] Ryuka Dex 3v3 Singles",
 		mod: 'gen8',
 		searchShow: false,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'VGC Timer'],
@@ -814,7 +814,7 @@ export const Formats: FormatList = [
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
 	},
 	{
-		name: "[Gen 8] National Dex Doubles AG",
+		name: "[Gen 8] Ryuka Dex Doubles AG",
 
 		mod: 'gen8',
 		gameType: 'doubles',
@@ -822,7 +822,7 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex Doubles', '!Gravity Sleep Clause'],
 	},
 	{
-		name: "[Gen 8] National Dex 4v4 Doubles",
+		name: "[Gen 8] Ryuka Dex 4v4 Doubles",
 
 		mod: 'gen8',
 		gameType: 'doubles',
