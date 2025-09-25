@@ -21422,6 +21422,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			bubblebeam: ["7V"],
 			captivate: ["4M"],
 			confide: ["7M", "6M"],
+                        chargebeam: ["9M"],
 			curse: ["7V"],
 			dive: ["8M", "6M", "5M", "4T", "3M"],
 			doubleedge: ["7V", "3T"],
@@ -21463,6 +21464,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			rest: ["8M", "8V", "7M", "7V", "6M", "5M", "4M", "3M"],
 			return: ["7M", "7V", "6M", "5M", "4M", "3M"],
 			round: ["8M", "7M", "6M", "5M"],
+                        risingvoltage: ["9M"]
 			scald: ["8M", "8V", "7M", "6M", "5M"],
 			scaleshot: ["8T"],
 			secretpower: ["6M", "4M", "3M"],
@@ -21474,6 +21476,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snore: ["8M", "7T", "7V", "6T", "5T", "4T", "3T"],
 			soak: ["8L44", "7L46", "6L46", "5L63"],
 			substitute: ["8M", "8V", "7M", "7V", "6M", "5M", "4M", "3T"],
+                        supercellslam: ["9M"],
 			supersonic: ["8L1", "8V", "7L1", "7V", "6L1", "5L1", "4L1", "3L1"],
 			surf: ["8M", "8V", "7M", "7V", "6M", "5M", "4M", "3M"],
 			swagger: ["7M", "7V", "6M", "5M", "4M", "3T"],
