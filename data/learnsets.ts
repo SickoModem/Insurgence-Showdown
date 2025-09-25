@@ -21464,7 +21464,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			rest: ["8M", "8V", "7M", "7V", "6M", "5M", "4M", "3M"],
 			return: ["7M", "7V", "6M", "5M", "4M", "3M"],
 			round: ["8M", "7M", "6M", "5M"],
-                        risingvoltage: ["9M"]
+                        risingvoltage: ["9M"],
 			scald: ["8M", "8V", "7M", "6M", "5M"],
 			scaleshot: ["8T"],
 			secretpower: ["6M", "4M", "3M"],
