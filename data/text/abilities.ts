@@ -1754,6 +1754,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Sharpness",
 		shortDesc: "This Pokemon's slicing moves have their power multiplied by 1.5.",
 	},
+        sharpenededge: {
+	name: "Sharpened Edge",
+	desc: "This Pokemon's slicing moves become special attacks and have their power multiplied by 1.5.",
+	shortDesc: "This Pokemon's slicing moves are special and 1.5x power.",
+        },
 	shedskin: {
 		name: "Shed Skin",
 		desc: "This Pokemon has a 33% chance to have its non-volatile status condition cured at the end of each turn.",
