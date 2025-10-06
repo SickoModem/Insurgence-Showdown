@@ -6651,6 +6651,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		contestType: "Beautiful",
 	},
+        frostingfinale: {
+	num: 30003,
+	accuracy: 85,
+	basePower: 75,
+	category: "Special",
+	name: "Frosting Finale",
+	pp: 10,
+	priority: 0,
+	flags: {protect: 1, mirror: 1, metronome: 1},
+	condition: {
+		noCopy: true,
+		duration: 4,
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Frosting Finale');
+		},
+		onResidualOrder: 14,
+		onResidual() {
+			this.boost({atk: -1});
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Frosting Finale', '[silent]');
+		},
+	},
+	secondary: {
+		chance: 100,
+		volatileStatus: 'frostingfinale',
+	},
+	target: "normal",
+	type: "Normal",
+
+        },
 	frustration: {
 		num: 218,
 		accuracy: 100,
