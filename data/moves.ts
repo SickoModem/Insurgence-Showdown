@@ -18714,7 +18714,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	spikecannon: {
 		num: 131,
 		accuracy: 100,
-		basePower: 20,
+		basePower: 25,
 		category: "Physical",
 		isNonstandard: "PastMove",
 		name: "Spike Cannon",

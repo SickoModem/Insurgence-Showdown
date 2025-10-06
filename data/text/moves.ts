@@ -2356,6 +2356,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
 		shortDesc: "Always results in a critical hit.",
 	},
+        frostingfinale: {
+	name: "Frosting Finale",
+	desc: "Has a 100% chance to lower the target's Attack by 1 stage at the end of each turn for 3 turns.",
+	shortDesc: "Lowers target's Attack by 1 for 3 turns.",
+        },
 	frustration: {
 		name: "Frustration",
 		desc: "Power is equal to the greater of ((255 - user's Happiness) * 2/5), rounded down, or 1.",

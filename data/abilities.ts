@@ -4958,6 +4958,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 292,
 	},
+        sharpenededge: {
+	onBasePowerPriority: 19,
+	onBasePower(basePower, attacker, defender, move) {
+		if (move.flags['slicing']) {
+			return this.chainModify(1.3);
+		}
+	},
+	onModifyMove(move, pokemon) {
+		if (move.flags['slicing']) {
+			move.category = 'Special';
+		}
+	},
+	name: "Sharpened Edge",
+	gen: 6,
+	rating: 3.5,
+	num: 30004,
+        },
 	shedskin: {
 		onResidualOrder: 5,
 		onResidualSubOrder: 3,
