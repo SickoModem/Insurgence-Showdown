@@ -4962,7 +4962,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	onBasePowerPriority: 19,
 	onBasePower(basePower, attacker, defender, move) {
 		if (move.flags['slicing']) {
-			return this.chainModify(1.3);
+			return this.chainModify(1.5);
 		}
 	},
 	onModifyMove(move, pokemon) {

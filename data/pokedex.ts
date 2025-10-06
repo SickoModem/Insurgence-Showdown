@@ -6578,7 +6578,7 @@
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 70, atk: 85, def: 65, spa: 105, spd: 85, spe: 120},
-		abilities: {0: "Overgrow", H: "Unburden"},
+		abilities: {0: "Overgrow", 1: "Unburden", H: "Sharpened Edge"},
 		heightm: 1.7,
 		weightkg: 52.2,
 		color: "Green",
