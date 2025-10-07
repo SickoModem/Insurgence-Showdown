@@ -15267,6 +15267,7 @@
 		gen: 6,
 		num: 625,
 		name: "Bisharp-Delta",
+                spriteid: "bisharp-delta",
 		types: ["Flying", "Fighting"],
 		baseStats: {hp: 65, atk: 125, def: 100, spa: 60, spd: 70, spe: 70},
 		abilities: {0: "Defiant", 1: "Frisk", H: "Wind Force"},
