@@ -2362,6 +2362,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         rating: 4,
         num: 184,
        },
+        infiltrator: {
+	onModifyMove(move) {
+		move.infiltrates = true;
+	},
+	flags: {breakable: 1},
+	name: "Infiltrator",
+	rating: 2.5,
+	num: 151,
+       },
 	innardsout: {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
