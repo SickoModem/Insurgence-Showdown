@@ -16954,7 +16954,7 @@
 	aurorus: {
 		num: 699,
 		name: "Aurorus",
-		types: ["Rock", "Ice"],
+		types: ["Ghost", "Ice"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 123, atk: 77, def: 72, spa: 99, spd: 92, spe: 58},
 		abilities: {0: "Refrigerate", 1: "Snow Warning", H: "Rocky Payload"},
