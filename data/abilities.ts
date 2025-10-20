@@ -2341,15 +2341,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 5,
 		num: 150,
 	},
-	infiltrator: {
-		onModifyMove(move) {
-			move.infiltrates = true;
-		},
-		flags: {},
-		name: "Infiltrator",
-		rating: 2.5,
-		num: 151,
-	},
+        infestate: {
+        onModifyTypePriority: -1,
+        onModifyType(move, pokemon) {
+                const noModifyType = [
+                        'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse',
+                ];
+                if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+                        !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+                        move.type = 'Bug';
+                        move.typeChangerBoosted = this.effect;
+                }
+        },
+        onBasePowerPriority: 23,
+        onBasePower(basePower, pokemon, target, move) {
+                if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+        },
+        flags: {},
+        name: "Infestate",
+        rating: 4,
+        num: 184,
+       },
 	innardsout: {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
