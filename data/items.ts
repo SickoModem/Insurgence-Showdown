@@ -5779,6 +5779,20 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1103,
 		gen: 8,
 	},
+        alltronarmor: {
+  name: "Alltron Armor",
+  spritenum: 698,
+  onTakeItem(item, pokemon, source) {
+    const needs = (m: Pokemon | null | undefined) =>
+      !!m && (m.species.requiredItem === 'Alltron Armor' ||
+              m.species.requiredItems?.includes('Alltron Armor'));
+    if (needs(source) || needs(pokemon)) return false;
+    return true;
+  },
+  num: 30001,
+  gen: 9,
+
+        },
 	sablenite: {
 		name: "Sablenite",
 		spritenum: 614,
