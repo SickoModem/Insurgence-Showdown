@@ -374,7 +374,7 @@
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
-		abilities: {0: "Torrent", 1: "Rain Dash", H: "Anger Shell"},
+		abilities: {0: "Torrent", 1: "Rain Dish", H: "Anger Shell"},
 		heightm: 1.6,
 		weightkg: 85.5,
 		color: "Blue",
