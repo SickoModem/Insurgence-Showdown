@@ -3994,7 +3994,7 @@
 		types: ["Normal"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
-		abilities: {0: "Immunity", 1: "Thick Fat", H: "Gluttony"},
+		abilities: {0: "Scrappy", 1: "Thick Fat", H: "Gluttony"},
 		heightm: 2.1,
 		weightkg: 460,
 		color: "Black",
