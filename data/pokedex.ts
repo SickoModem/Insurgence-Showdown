@@ -18236,7 +18236,7 @@
 	mudsdale: {
 		num: 750,
 		name: "Mudsdale",
-		types: ["Ground"],
+		types: ["Ground", "Fighting"],
 		baseStats: {hp: 100, atk: 125, def: 100, spa: 55, spd: 85, spe: 35},
 		abilities: {0: "Own Tempo", 1: "Stamina", H: "Inner Focus"},
 		heightm: 2.5,
