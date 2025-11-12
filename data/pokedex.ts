@@ -3027,7 +3027,7 @@
 	num: 103,
 	name: "Exeggutor-Alola-Armor",
 	baseSpecies: "Exeggutor-Alola",
-	forme: "Armor",
+	forme: "Alola",
 	types: ["Steel", "Dragon"],
 	baseStats: {hp: 95, atk: 128, def: 94, spa: 148, spd: 85, spe: 38},
 	abilities: {0: "Drought", H: "Mold Breaker"},
