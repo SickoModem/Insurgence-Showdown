@@ -12516,10 +12516,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Meteor Assault",
 		pp: 5,
 		priority: 0,
-		flags: {recharge: 1, protect: 1, mirror: 1, failinstruct: 1},
-		self: {
-			volatileStatus: 'mustrecharge',
-		},
+		flags: {protect: 1, mirror: 1, failinstruct: 1, cantusetwice: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
