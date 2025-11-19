@@ -6653,7 +6653,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
         frostingfinale: {
 	num: 30003,
-	accuracy: 85,
+	accuracy: 100,
 	basePower: 75,
 	category: "Special",
 	name: "Frosting Finale",
@@ -19670,8 +19670,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	submission: {
 		num: 66,
-		accuracy: 80,
-		basePower: 80,
+		accuracy: 95,
+		basePower: 85,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Submission",
@@ -19679,7 +19679,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
 		recoil: [1, 4],
-		secondary: null,
+		secondary: {
+                        chance: 30,
+                        status: 'par',
+                },
 		target: "normal",
 		type: "Fighting",
 		contestType: "Cool",
