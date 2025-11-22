@@ -194,7 +194,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	bigpecks: {
 		name: "Big Pecks",
-		shortDesc: "Prevents other Pokemon from lowering this Pokemon's Defense stat stage.",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Flying-type attack.",
 	},
 	blaze: {
 		name: "Blaze",
@@ -905,6 +905,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Justified",
 		shortDesc: "This Pokemon's Attack is raised by 1 stage after it is damaged by a Dark-type move.",
 	},
+        infestate: {
+                name: "Infestate",
+                shortDesc: "This Pokemon's Normal-Type moves become Bug type and have 1.5x power.",
+        },
 	keeneye: {
 		name: "Keen Eye",
 		desc: "Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage.",
