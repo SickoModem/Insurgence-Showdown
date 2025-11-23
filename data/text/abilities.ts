@@ -247,6 +247,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "#airlock",
 	},
+        conflagrate: {
+                name: "Conflagrate",
+                shortDesc: "This Pokemon changes Normal-Type moves into Fire moves, boosted by 1.3x",
+        },
 	colorchange: {
 		name: "Color Change",
 		desc: "This Pokemon's type changes to match the type of the last move that hit it, unless that type is already one of its types. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
