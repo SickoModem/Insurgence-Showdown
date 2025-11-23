@@ -3839,22 +3839,22 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
-	luckypunch: {
-		name: "Lucky Punch",
-		spritenum: 261,
-		fling: {
-			basePower: 40,
-		},
-		onModifyCritRatio(critRatio, user) {
-			if (user.baseSpecies.name === 'Chansey') {
-				return critRatio + 2;
-			}
-		},
-		itemUser: ["Chansey"],
-		num: 256,
-		gen: 2,
-		isNonstandard: "Past",
-	},
+        luckypunch: {
+                name: "Lucky Punch",
+                spritenum: 261,
+                fling: {
+                        basePower: 40,
+                },
+                onModifyCritRatio(critRatio, user) {
+                        if (user.baseSpecies.name === 'Chansey' || user.baseSpecies.name === 'Blissey') {
+                                return critRatio + 2;
+                        }
+                },
+                itemUser: ["Chansey", "Blissey"],
+                num: 256,
+                gen: 2,
+                isNonstandard: "Past",
+        },
 	lumberry: {
 		name: "Lum Berry",
 		spritenum: 262,
