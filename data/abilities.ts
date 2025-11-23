@@ -513,20 +513,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 201,
 	},
 	bigpecks: {
-		onTryBoost(boost, target, source, effect) {
-			if (source && target === source) return;
-			if (boost.def && boost.def < 0) {
-				delete boost.def;
-				if (!(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-					this.add("-fail", target, "unboost", "Defense", "[from] ability: Big Pecks", "[of] " + target);
-				}
-			}
-		},
-		flags: {breakable: 1},
-		name: "Big Pecks",
-		rating: 0.5,
-		num: 145,
-	},
+        onModifyAtkPriority: 5,
+        onModifyAtk(atk, attacker, defender, move) {
+                if (move.type === 'Flying') {
+                        this.debug('Big Pecks boost');
+                        return this.chainModify(1.5);
+                }
+        },
+        onModifySpAPriority: 5,
+        onModifySpA(atk, attacker, defender, move) {
+                if (move.type === 'Flying') {
+                        this.debug('Big Pecks boost');
+                        return this.chainModify(1.5);
+                }
+        },
+        flags: {},
+        name: "Big Pecks",
+        rating: 3.5,
+        num: 145,
+      },
 	blaze: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
@@ -783,6 +788,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 14,
 	},
+        conflagrate: {
+        onModifyTypePriority: -1,
+        onModifyType(move, pokemon) {
+                const noModifyType = [
+                        'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+                ];
+                if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+                        !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+                        move.type = 'Fire';
+                        move.typeChangerBoosted = this.effect;
+                }
+        },
+        onBasePowerPriority: 23,
+        onBasePower(basePower, pokemon, target, move) {
+                if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+        },
+        flags: {},
+        name: "Conflagrate",
+        rating: 4,
+        num: -184,
+        },
 	contrary: {
 		onChangeBoost(boost, target, source, effect) {
 			if (effect && effect.id === 'zpower') return;
@@ -5314,6 +5340,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 37,
 	},
+        spectralfist: {
+        onBasePowerPriority: 23,
+        onBasePower(basePower, attacker, defender, move) {
+                if (move.flags['punch']) {
+                        this.debug('Spectral Fist boost');
+                        return this.chainModify(1.3);
+                }
+        },
+        onModifyMove(move, pokemon) {
+                if (move.flags['punch']) {
+                        move.category = 'Special';
+                }
+        },
+        flags: {},
+        name: "Spectral Fist",
+        rating: 3,
+        num: -89,
+      },
 	speedboost: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,

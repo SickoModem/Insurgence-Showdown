@@ -1905,6 +1905,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's bite-based attacks have their power multiplied by 1.3 and become Special moves.",
 		shortDesc: "This Pokemon's bite-based attacks have 1.3x power and become Special.",
 	},
+        spectralfist: {
+                name: "Spectral Jaws",
+                desc: "This Pokemon's punch-based attacks have their power multiplied by 1.3 and become Special moves.",
+                shortDesc: "This Pokemon's punch-based attacks have 1.3x power and become Special.",
+        },
 	speedboost: {
 		name: "Speed Boost",
 		desc: "This Pokemon's Speed is raised by 1 stage at the end of each full turn it has been on the field.",
