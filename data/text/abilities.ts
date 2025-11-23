@@ -901,6 +901,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Irrelephant",
 		shortDesc: "Damage-dealing attacks ignore type-based immunities.",
 	},
+        irrelephancy: {
+                name: "Irrelephancy",
+                shortDesc: "Damage-dealing attacks ignore type-based immunities. It's an elephant.",
+        },
 	justified: {
 		name: "Justified",
 		shortDesc: "This Pokemon's Attack is raised by 1 stage after it is damaged by a Dark-type move.",

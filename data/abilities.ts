@@ -2506,6 +2506,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 17,
 	},
+        irrelephancy: {
+        onModifyMovePriority: -5,
+        onModifyMove(move) {
+                if (!move.ignoreImmunity) move.ignoreImmunity = {};
+                if (move.ignoreImmunity !== true) {
+                        move.ignoreImmunity['Normal'] = true;
+                        move.ignoreImmunity['Fighting'] = true;
+                        move.ignoreImmunity['Ground'] = true;
+                        move.ignoreImmunity['Ghost'] = true;
+                        move.ignoreImmunity['Electric'] = true;
+                        move.ignoreImmunity['Poison'] = true;
+                        move.ignoreImmunity['Psychic'] = true;
+                        move.ignoreImmunity['Dragon'] = true;
+                }
+        },
+        onTryBoost(boost, target, source, effect) {
+                if (effect.name === 'Intimidate' && boost.atk) {
+                        delete boost.atk;
+                        this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Irrelephancy', '[of] ' + target);
+                }
+        },
+        flags: {},
+        name: "Irrelephancy",
+        rating: 5,
+        num: 113,
+       },
 	justified: {
 		onDamagingHit(damage, target, source, move) {
 			if (move.type === 'Dark') {
