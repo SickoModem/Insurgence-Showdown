@@ -1225,6 +1225,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		start: "  Neutralizing gas filled the area!",
 		end: "  The effects of the neutralizing gas wore off!",
 	},
+        newtonslaw: {
+                name: "Newton's Law",
+                shortDesc: "On switch-in, this Pokemon summons Gravity.",
+        },
 	noctem: {
 		name: "Noctem",
 		shortDesc: "On switch-in, this Pokemon summons New Moon.",

@@ -6158,6 +6158,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		num: 40,
 	},
+        newtonslaw: {
+                onStart(source) {
+                        this.field.addPseudoWeather('Gravity');
+                },
+                name: "Newtons Law",
+                gen: 6,
+                rating: 4.5,
+                num: 40,
+        },
 	truant: {
 		onStart(pokemon) {
 			pokemon.removeVolatile('truant');
