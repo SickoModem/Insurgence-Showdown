@@ -205,6 +205,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Fire-type attacks have 1.5x power.",
 		},
 	},
+        blubber: {
+                name: "Blubber",
+                shortDesc: "This Pokemon takes 1/2 damage from Ice and Fire Moves. This Pokemon's weight is doubled.",
+        },
 	bulletproof: {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",

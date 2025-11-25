@@ -576,6 +576,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 12,
 	},
+        blubber: {
+        onSourceModifyAtkPriority: 6,
+        onSourceModifyAtk(atk, attacker, defender, move) {
+                if (move.type === 'Ice' || move.type === 'Fire') {
+                        this.debug('Blubber weaken');
+                        return this.chainModify(0.5);
+                }
+        },
+        onSourceModifySpAPriority: 5,
+        onSourceModifySpA(atk, attacker, defender, move) {
+                if (move.type === 'Ice' || move.type === 'Fire') {
+                        this.debug('Blubber weaken');
+                        return this.chainModify(0.5);
+                }
+        },
+        onModifyWeightPriority: 1,
+        onModifyWeight(weighthg) {
+                return weighthg * 2;
+        },
+        flags: {breakable: 1},
+        name: "Blubber",
+        rating: 3.5,
+        num: -4337, 
+        },
 	bulletproof: {
 		onTryHit(pokemon, target, move) {
 			if (move.flags['bullet']) {
