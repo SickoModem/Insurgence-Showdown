@@ -2435,6 +2435,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spd: 1}},
 		contestType: "Clever",
 	},
+        chantingchain: {
+        num: 921,
+        accuracy: 100, 
+        basePower: 0,
+        category: "Status",
+        name: "Chanting Chain",
+        pp: 10,
+        priority: 0,
+        flags: {protect: 1, reflectable: 1, mirror: 1, snatch: 1, metronome: 1},
+        onHit(pokemon, target, move) {
+                let success = false;
+                if (this.boost({spa: 1, spd: 1}, pokemon)) {
+                        success = true;
+                }
+                if (target.trySetStatus('tox', pokemon, move)) {
+                        success = true;
+                }
+                return success;
+        },
+        secondary: null,
+        target: "normal",
+        type: "Poison",
+        contestType: "Clever",
+
+       },
 	chargebeam: {
 		num: 451,
 		accuracy: 90,
@@ -2687,6 +2712,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 		contestType: "Beautiful",
 	},
+        clobberingchain: {
+        num: 9001,
+        accuracy: 100,
+        basePower: 110,
+        category: "Physical",
+        name: "Clobbering Chain",
+        pp: 5,
+        priority: 0,
+        flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+        self: {
+                boosts: {
+                        def: -1,
+                        spd: -1,
+                },
+        },
+        secondary: {
+                chance: 30,
+                status: 'tox',
+        },
+        target: "normal",
+        type: "Poison",
+        contestType: "Tough",
+  
+       },
 	closecombat: {
 		num: 370,
 		accuracy: 100,
@@ -3428,6 +3477,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 140},
 		contestType: "Tough",
 	},
+        crumblingchain: {
+        num: 3,
+        accuracy: 100,
+        basePower: 60,
+        category: "Special",
+        name: "Corrode",
+        pp: 10,
+        priority: 0,
+        flags: {protect: 1, mirror: 1},
+        onEffectiveness(typeMod, target, type) {
+                if (type === 'Steel') return 1;
+        },
+        ignoreImmunity: {'Poison': true},
+        secondary: {
+                chance: 30,
+                status: 'tox',
+        },
+        target: "allAdjacent",
+        type: "Poison",
+        contestType: "Beautiful",
+       
+       },
 	crystalrush: {
 		num: 4,
 		accuracy: 100,

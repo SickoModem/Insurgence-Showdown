@@ -3869,6 +3869,21 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 50% chance to badly poison the target.",
 		shortDesc: "50% chance to badly poison the target.",
 	},
+        clobberingchain: {
+                name: "Clobbering Chain",
+                desc: "Has a 30% chance to badly poison the target. Lowers Def and SpDef by -1",
+                shortDesc: "30% chance to badly poison, lowers Def and Spdef.",
+        },
+        chantingchain: {
+                name: "Chanting Chain",
+                desc: "Badly poisons target. Increases SpA and SpDef.",
+                shortDesc: "Badly poisons target. Increases SpA and SpDef.",
+        },
+        crumblingchain: {
+                name: "Crumbling Chain",
+                desc: "Super effective on Steel Types, 30% chance to badly poison the target..",
+                shortDesc: "Super effective on Steel Types, 30% chance to badly poison the target..",
+        },
 	matblock: {
 		name: "Mat Block",
 		desc: "The user and its party members are protected from damaging attacks made by other Pokemon, including allies, during this turn. Fails unless it is the user's first turn on the field, if the user moves last this turn, or if this move is already in effect for the user's side.",
