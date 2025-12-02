@@ -3482,7 +3482,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         accuracy: 100,
         basePower: 60,
         category: "Special",
-        name: "Corrode",
+        name: "Crumbling Chain",
         pp: 10,
         priority: 0,
         flags: {protect: 1, mirror: 1},
