@@ -2222,8 +2222,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	toxicboost: {
 		name: "Toxic Boost",
-		desc: "While this Pokemon is poisoned, the power of its physical attacks is doubled.",
-		shortDesc: "While this Pokemon is poisoned, its physical attacks are doubled.",
+		desc: "While this Pokemon is poisoned, the power of its physical attacks is raised by 1.75x.",
+		shortDesc: "While this Pokemon is poisoned, its physical attacks are raised by 1.75x.",
 	},
 	toxicchain: {
 		name: "Toxic Chain",
