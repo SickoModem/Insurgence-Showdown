@@ -6075,7 +6075,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if ((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical') {
-				return this.chainModify(2);
+				return this.chainModify(1.75);
 			}
 		},
 		flags: {},
