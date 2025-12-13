@@ -2222,8 +2222,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	toxicboost: {
 		name: "Toxic Boost",
-		desc: "While this Pokemon is poisoned, the power of its physical attacks is multiplied by 1.5.",
-		shortDesc: "While this Pokemon is poisoned, its physical attacks have 1.5x power.",
+		desc: "While this Pokemon is poisoned, the power of its physical attacks is doubled.",
+		shortDesc: "While this Pokemon is poisoned, its physical attacks are doubled.",
 	},
 	toxicchain: {
 		name: "Toxic Chain",
@@ -2234,6 +2234,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Toxic Debris",
 		shortDesc: "If this Pokemon is hit by a physical attack, Toxic Spikes are set on the opposing side.",
 	},
+        toxicpresence: {
+             name: "Toxic Presence",
+             shortDesc: "This Pokemon has the resistances, weaknesses, immunities, and power of the Poison Type.",
+        }, 
 	trace: {
 		name: "Trace",
 		desc: "On switch-in, this Pokemon copies a random opposing Pokemon's Ability. Abilities that cannot be copied are As One, Battle Bond, Comatose, Commander, Disguise, Embody Aspect, Flower Gift, Forecast, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Poison Puppeteer, Power Construct, Power of Alchemy, Protosynthesis, Quark Drive, Receiver, RKS System, Schooling, Shields Down, Stance Change, Teraform Zero, Tera Shell, Tera Shift, Trace, Zen Mode, and Zero to Hero. If no opposing Pokemon has an Ability that can be copied, this Ability will activate as soon as one does.",

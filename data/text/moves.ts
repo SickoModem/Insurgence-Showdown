@@ -6409,6 +6409,10 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		damage: "#mindblown",
 	},
+        steelburstbarrage: {
+                 name: "Steelburst Barrage",
+                 shortDesc: "Steel type move that hits 2-5 times.",
+        },
 	steelroller: {
 		name: "Steel Roller",
 		desc: "Fails if there is no terrain active. Ends the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain.",

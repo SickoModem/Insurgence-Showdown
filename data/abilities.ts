@@ -6075,7 +6075,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if ((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical') {
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		flags: {},
@@ -6111,6 +6111,58 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 295,
 	},
+        toxicpresence: {
+        onUpdate(pokemon) {
+                if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+                        this.add('-activate', pokemon, 'ability: Toxic Presence');
+                        pokemon.cureStatus();
+                }
+        },
+        onSetStatus(status, target, source, effect) {
+                if (status.id !== 'psn' && status.id !== 'tox') return;
+                if ((effect as Move)?.status) {
+                        this.add('-immune', target, '[from] ability: Toxic Presence');
+                }
+                return false;
+        },
+        onModifyAtk(atk, attacker, defender, move) {
+                if (move.type === 'Poison') {
+                        return this.chainModify(2);
+                }
+        },
+        onModifySpA(atk, attacker, defender, move) {
+                if (move.type === 'Poison') {
+                        return this.chainModify(2);
+                }
+        },
+        onSourceModifyAtkPriority: 6,
+        onSourceModifyAtk(atk, attacker, defender, move) {
+                if (move.type === 'Fighting' || move.type === 'Poison' || move.type === 'Bug' || move.type === 'Grass' || move.type === 'Fairy') {
+                        this.debug('Toxic Presence resist');
+                        return this.chainModify(0.5);
+                }
+                if (move.type === 'Ground' || move.type === 'Psychic') {
+                        this.debug('Toxic Presence weakness');
+                        return this.chainModify(2);
+                }
+        },
+        onSourceModifySpAPriority: 5,
+        onSourceModifySpA(atk, attacker, defender, move) {
+                if (move.type === 'Fighting' || move.type === 'Poison' || move.type === 'Bug' || move.type === 'Grass' || move.type === 'Fairy') {
+                        this.debug('Toxic Presence resist');
+                        return this.chainModify(0.5);
+                }
+                if (move.type === 'Ground' || move.type === 'Psychic') {
+                        this.debug('Toxic Presence weakness');
+                        return this.chainModify(2);
+                }
+        },
+        name: "Toxic Presence",
+        flags: {breakable: 1},
+        gen: 6,
+        rating: 3.5,
+        num: 10,
+        },
 	trace: {
 		onStart(pokemon) {
 			// n.b. only affects Hackmons
