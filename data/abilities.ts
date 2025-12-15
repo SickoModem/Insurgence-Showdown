@@ -6823,32 +6823,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 161,
 	},
 	zerotohero: {
-		onSwitchOut(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Palafin') return;
-			if (pokemon.species.forme !== 'Hero') {
-				pokemon.formeChange('Palafin-Hero', this.effect, true);
-			}
-		},
-		onSwitchIn() {
-			this.effectState.switchingIn = true;
-		},
-		onStart(pokemon) {
-			if (!this.effectState.switchingIn) return;
-			this.effectState.switchingIn = false;
-			if (pokemon.baseSpecies.baseSpecies !== 'Palafin') return;
-			if (!this.effectState.heroMessageDisplayed && pokemon.species.forme === 'Hero') {
-				this.add('-activate', pokemon, 'ability: Zero to Hero');
-				this.effectState.heroMessageDisplayed = true;
-			}
-		},
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
-		name: "Zero to Hero",
-		rating: 5,
-		num: 278,
-	},
-
-	// CAP
-	mountaineer: {
+        onSwitchOut(pokemon) {
+                if (pokemon.baseSpecies.baseSpecies !== 'Palafin') return;
+                if (pokemon.species.forme === 'Hero') {
+                        pokemon.formeChange('Palafin', this.effect, true);
+                } else {
+                        pokemon.formeChange('Palafin-Hero', this.effect, true);
+                }
+        },
+        onSwitchIn(pokemon) {
+                if (pokemon.baseSpecies.baseSpecies !== 'Palafin') return;
+                if (pokemon.species.forme === 'Hero') {
+                        this.add('-activate', pokemon, 'ability: Zero to Hero');
+                }
+        },
+        flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
+        name: "Zero to Hero",
+        rating: 5,
+        num: 278,
+       
+       },
+       mountaineer: {
 		onDamage(damage, target, source, effect) {
 			if (effect && effect.id === 'stealthrock') {
 				return false;
