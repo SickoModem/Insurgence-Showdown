@@ -260,6 +260,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
 	},
+        astralblast: {
+                name: "Astral Blast",
+                desc: "Cuts the user's health by 50%.",
+                shortDesc: "50% recoil.",
+        },
 	attackorder: {
 		name: "Attack Order",
 		desc: "Has a higher chance for a critical hit.",
@@ -2490,6 +2495,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
 	},
+        glacialblast: {
+                name: "Glacial Blast",
+                desc: "Cuts the user's HP by 50%.",
+                shortDesc: "50% recoil..",
+        },
 	glaciate: {
 		name: "Glaciate",
 		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",

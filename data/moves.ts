@@ -735,6 +735,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allAdjacentFoes",
 		type: "Ghost",
 	},
+         astralblast: {
+                num: 835,
+                accuracy: 95,
+                basePower: 150,
+                category: "Special",
+                name: "Astral Blast",
+                pp: 5,
+                priority: 0,
+                flags: {protect: 1, mirror: 1, metronome: 1},
+                // Recoil implemented in battle-actions.ts
+                secondary: null,
+                target: "normal",
+                type: "Ghost",
+        },
 	attackorder: {
 		num: 454,
 		accuracy: 100,
@@ -7159,6 +7173,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allAdjacentFoes",
 		type: "Ice",
 	},
+        glacialblast : {
+                num: 835,
+                accuracy: 95,
+                basePower: 150,
+                category: "Physical",
+                name: "Glacial Blast",
+                pp: 5,
+                priority: 0,
+                flags: {protect: 1, mirror: 1, metronome: 1},
+                // Recoil implemented in battle-actions.ts
+                secondary: null,
+                target: "normal",
+                type: "Ice",
+        },
 	glaciate: {
 		num: 549,
 		accuracy: 95,
