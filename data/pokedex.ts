@@ -21546,7 +21546,7 @@
 	},
         calyrexdelta: {
                 num: 898,
-                name: "Calyrex",
+                name: "Calyrex-Delta",
                 types: ["Ice", "Ghost"],
                 gender: "N",
                 baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
