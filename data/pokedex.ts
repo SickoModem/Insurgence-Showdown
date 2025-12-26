@@ -4854,7 +4854,7 @@
 		eggGroups: ["Bug"],
 	},
         betaleda: {
-                num: -5466,
+                num: -166,
                 name: "Betaleda",
                 types: ["Bug", "Normal"],
                 baseStats: {hp: 110, atk: 105, def: 70, spa: 30, spd: 80, spe: 85},
