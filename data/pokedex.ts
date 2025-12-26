@@ -4853,6 +4853,17 @@
 		evoLevel: 18,
 		eggGroups: ["Bug"],
 	},
+        betaleda: {
+                num: -5466,
+                name: "Betaleda",
+                types: ["Bug", "Normal"],
+                baseStats: {hp: 110, atk: 105, def: 70, spa: 30, spd: 80, spe: 85},
+                abilities: {0: "No Guard", 1: "Sturdy", H: "Poison Heal"},
+                heightm: 1.4,
+                weightkg: 35.6,
+                color: "Brown",
+                eggGroups: ["Bug"],
+        },
 	spinarak: {
 		num: 167,
 		name: "Spinarak",
