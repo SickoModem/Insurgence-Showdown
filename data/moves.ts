@@ -4900,7 +4900,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, metronome: 1, bullet: 1},
-		secondary: null,
+		secondary: {
+                        chance: 50,
+                        volatileStatus: 'confusion',
+                },
 		target: "normal",
 		type: "Normal",
 		contestType: "Cute",
