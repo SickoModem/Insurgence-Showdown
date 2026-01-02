@@ -11640,9 +11640,9 @@
 		evoMove: "Rollout",
 		eggGroups: ["Monster"],
 	},
-        lickilicking: {
+        lickiliking: {
                 num: -463,
-                name: "Lickilicking",
+                name: "Lickiliking",
                 types: ["Normal", "Poison"],
                 baseStats: {hp: 150, atk: 90, def: 70, spa: 85, spd: 70, spe: 50},
                 abilities: {0: "Sheer Force", 1: "Sticky Hold", H: "Cloud Nine"},
