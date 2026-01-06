@@ -14223,7 +14223,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	payday: {
 		num: 6,
 		accuracy: 100,
-		basePower: 40,
+		basePower: 60,
 		category: "Physical",
 		name: "Pay Day",
 		pp: 20,
@@ -14234,6 +14234,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Clever",
 	},
+        payload: {
+	num: -6,
+	accuracy: 90,
+	basePower: 100,
+	category: "Special",
+	name: "Payload",
+	pp: 10,
+	priority: 0,
+	flags: {protect: 1, mirror: 1},
+	onModifyMove(move, pokemon) {
+		if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		let type = pokemon.getTypes()[0];
+		if (type === "Bird") type = "???";
+		if (type === "Stellar") type = pokemon.getTypes(false, true)[0];
+		move.type = type;
+	},
+	self: {
+		boosts: {
+			atk: -1,
+			spa: -1,
+		},
+	},
+	secondary: null,
+	target: "normal",
+	type: "Normal",
+	contestType: "Cool",
+        
+        },
 	peck: {
 		num: 64,
 		accuracy: 100,

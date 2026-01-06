@@ -3869,6 +3869,13 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		activate: "#payday",
 	},
+        payload: {
+            name: "Payload",
+            desc: "Lowers users attack stats by one stage. Physical or Special attack depending on which is stronger. Changes to user's primary type.",
+            shortdesc: "Lowers users attacking stats. Phys or SpA depending on which is stronger. Type varies on user.",
+            
+            activate: "#payday",
+        },
 	maliciousmoonsault: {
 		name: "Malicious Moonsault",
 		desc: "Damage doubles and no accuracy check is done if the target has used Minimize while active.",

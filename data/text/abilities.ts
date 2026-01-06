@@ -213,6 +213,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",
 	},
+        catseye: {
+            name: "Cats' Eye",
+            desc: "This Pokemon can hit Ghost types with Normal- and Fighting-type moves. Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage. Increased Crit Rate",
+            shortDesc: "This Pokemon can hit Ghost Type with their immunities, cannot have its accuracy lowered, and has an increased crit rate. Lucky Cat huh?", 
+        },
 	cheekpouch: {
 		name: "Cheek Pouch",
 		desc: "If this Pokemon eats a held Berry, it restores 1/3 of its maximum HP, rounded down, in addition to the Berry's effect. This effect can also activate after the effects of Bug Bite, Fling, Pluck, Stuff Cheeks, and Teatime if the eaten Berry had an effect on this Pokemon.",

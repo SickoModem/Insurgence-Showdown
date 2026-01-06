@@ -3020,6 +3020,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 300,
 	},
+        catseye: {
+	onModifyCritRatio(critRatio) {
+		return critRatio + 1;
+	},
+	onTryBoost(boost, target, source, effect) {
+		if (source && target === source) return;
+		if (boost.accuracy && boost.accuracy < 0) {
+			delete boost.accuracy;
+			if (!(effect as ActiveMove).secondaries) {
+				this.add("-fail", target, "unboost", "accuracy", "[from] ability: Cats' Eye", "[of] " + target);
+			}
+		}
+	},
+	onModifyMovePriority: -5,
+	onModifyMove(move) {
+		move.ignoreEvasion = true;
+		if (!move.ignoreImmunity) move.ignoreImmunity = {};
+		if (move.ignoreImmunity !== true) {
+			move.ignoreImmunity['Fighting'] = true;
+			move.ignoreImmunity['Normal'] = true;
+		}
+	},
+	flags: {breakable: 1},
+	name: "Cats' Eye",
+	rating: 3,
+	num: -300,
+
+        },
 	minus: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa, pokemon) {
