@@ -4129,6 +4129,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 168,
 	},
+        proteanprimera: {
+	onPrepareHit(source, target, move) {
+		if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+		const type = move.type;
+		if (type && type !== '???' && source.getTypes().join() !== type) {
+			if (!source.setType(type)) return;
+			this.add('-start', source, 'typechange', type, '[from] ability: Protean Primera');
+		}
+	},
+	flags: {},
+	name: "Protean Primera",
+	rating: 4.5,
+	num: -168,
+
+       },
 	proteanmaxima: {
 		onAfterMega(pokemon) {
 			if (!pokemon.baseSpecies.id.includes('eeveemega') || !pokemon.species.id.includes('eeveemega')) {

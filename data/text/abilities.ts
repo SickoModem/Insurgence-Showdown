@@ -1504,6 +1504,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			shortDesc: "This Pokemon's type changes to match the type of the move it is about to use.",
 		},
 	},
+        proteanprimera: {
+              name: "Protean Primera",
+               desc: "This Pokemon's type changes to match the type of the move it is about to use.",
+               shortDesc: "This Pokemon's type changes to the type of the move it is using.",
+        },
 	protosynthesis: {
 		name: "Protosynthesis",
 		desc: "If Sunny Day is active or this Pokemon uses a held Booster Energy, this Pokemon's highest stat is multiplied by 1.3, or by 1.5 if the highest stat is Speed. Stat stage changes are considered at the time this Ability activates. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order. If this effect was started by Sunny Day, a held Booster Energy will not activate and the effect ends when Sunny Day is no longer active. If this effect was started by a held Booster Energy, it ends when this Pokemon is no longer active.",
