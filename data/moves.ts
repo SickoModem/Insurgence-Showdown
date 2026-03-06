@@ -3526,7 +3526,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Crystal",
 		contestType: "Cool",
-	},
+	}, 
+        crystaltail: {
+                num: 231,
+                accuracy: 75,
+                basePower: 100,
+                category: "Physical",
+                name: "Crystal Tail",
+                pp: 15,
+                priority: 0,
+                flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+                secondary: {
+                        chance: 30,
+                        boosts: {
+                                def: -1,
+                        },
+                },
+                target: "normal",
+                type: "Crystal",
+                contestType: "Cool",
+        },
 	curse: {
 		num: 174,
 		accuracy: true,
