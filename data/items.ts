@@ -6180,6 +6180,19 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
+        snowbronite: {
+    name: "Snowbronite",
+    spritenum: 620,
+    megaStone: "Snowbro-Mega",
+    megaEvolves: "Snowbro",
+    itemUser: ["Snowbro"],
+    onTakeItem(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+        return true;
+    },
+    num: 30002,
+    gen: 9,
+},
 	smoothrock: {
 		name: "Smooth Rock",
 		spritenum: 453,
