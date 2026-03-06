@@ -599,11 +599,21 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "UU",
 	},
+        snowbro: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
 	slowbromega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+        snowbromega: {
+                isNonstandard: "Past",
+                tier: "Illegal",
+                natDexTier: "RU",
+        },
 	slowbrogalar: {
 		tier: "NU",
 		doublesTier: "(DUU)",
