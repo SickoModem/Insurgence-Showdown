@@ -5461,8 +5461,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rockwrecker: {
 		name: "Rock Wrecker",
-		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User cannot move next turn.",
+		desc: "User charges Atk for one turn, then fires the next.",
+		shortDesc: "User charges for one turn, gains attack and fires.",
 	},
 	roleplay: {
 		name: "Role Play",

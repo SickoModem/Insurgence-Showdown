@@ -16542,23 +16542,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		contestType: "Clever",
 	},
-	rockwrecker: {
-		num: 439,
-		accuracy: 90,
-		basePower: 150,
-		category: "Physical",
-		name: "Rock Wrecker",
-		pp: 5,
-		priority: 0,
-		flags: {recharge: 1, protect: 1, mirror: 1, metronome: 1, bullet: 1},
-		self: {
-			volatileStatus: 'mustrecharge',
-		},
-		secondary: null,
-		target: "normal",
-		type: "Rock",
-		contestType: "Tough",
-	},
+        rockwrecker: {
+                num: 439,
+                accuracy: 90,
+                basePower: 120,
+                category: "Physical",
+                name: "Rock Wrecker",
+                pp: 5,
+                priority: 0,
+                flags: {charge: 1, protect: 1, mirror: 1, metronome: 1},
+                onTryMove(attacker, defender, move) {
+                        if (attacker.removeVolatile(move.id)) {
+                                return;
+                        }
+                        this.add('-prepare', attacker, move.name);
+                        this.boost({spa: 1}, attacker, attacker, move);
+                        if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+                                return;
+                        }
+                        attacker.addVolatile('twoturnmove', defender);
+                        return null;
+                },
+                secondary: null,
+                target: "normal",
+                type: "Rock",
+        },
 	roleplay: {
 		num: 272,
 		accuracy: true,
