@@ -2513,7 +2513,8 @@ snowbromega: {
     weightkg: 120,
     color: "White",
     eggGroups: ["Monster", "Water 1"],
-        
+    requiredItem: "Snowbronite",
+
         },
 	slowbromega: {
 		num: 80,
