@@ -14830,7 +14830,7 @@ swampertdelta: {
 		baseSpecies: "Emolga-Delta",
 		forme: "Delta",
 		types: ["Fire", "Dark"],
-		baseStats: {hp: 55, atk: 95, def: 60, spa: 118, spd: 60, spe: 133},
+		baseStats: {hp: 55, atk: 90, def: 60, spa: 123, spd: 60, spe: 133},
 		abilities: {0: "Blaze Boost"},
 		weightkg: 5,
 		heightm: 1,
