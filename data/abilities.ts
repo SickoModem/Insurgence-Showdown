@@ -553,29 +553,56 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 66,
 	},
 	blazeboost: {
-		onBeforeMovePriority: 0.5,
-		onBeforeMove(attacker, defender, move) {
-			if (move.category === 'Status') return;
-			if (move.type === 'Fire') {
-				this.boost({spa: 1, atk: 1, spe: 1}, attacker);
-				if (attacker.species.id === 'emolgadelta') {
-					attacker.formeChange('Emolga-Delta-Fired');
-				}
-			}
-		},
-		onDamagingHit(damage, target, source, move) {
-			if (target.species.id !== 'emolgadeltafired') return;
-			if (this.checkMoveMakesContact(move, source, target)) {
-				if (this.randomChance(1, 10)) {
-					source.trySetStatus('brn', target);
-				}
-			}
-		},
-		name: "Blaze Boost",
-		gen: 6,
-		rating: 4,
-		num: 12,
-	},
+    onSwitchIn(pokemon) {
+        if (pokemon.species.id === 'emolgadelta' && pokemon.volatiles['blazeboost']) {
+            pokemon.formeChange('Emolga-Delta-Fired', this.effect, false);
+        }
+    },
+    onTryHit(target, source, move) {
+        if (target !== source && move.type === 'Fire') {
+            move.accuracy = true;
+            if (!target.addVolatile('blazeboost')) {
+                this.add('-immune', target, '[from] ability: Blaze Boost');
+            }
+            if (target.species.id === 'emolgadelta') {
+                target.formeChange('Emolga-Delta-Fired', this.effect, false);
+            }
+            return null;
+        }
+    },
+    onEnd(pokemon) {
+        pokemon.removeVolatile('blazeboost');
+    },
+    condition: {
+        noCopy: true,
+        onStart(target) {
+            this.add('-start', target, 'ability: Blaze Boost');
+        },
+        onModifyAtkPriority: 5,
+        onModifyAtk(atk, attacker, defender, move) {
+            if (move.type === 'Fire' && attacker.hasAbility('blazeboost')) {
+                this.debug('Blaze Boost boost');
+                return this.chainModify(1.5);
+            }
+        },
+        onModifySpAPriority: 5,
+        onModifySpA(atk, attacker, defender, move) {
+            if (move.type === 'Fire' && attacker.hasAbility('blazeboost')) {
+                this.debug('Blaze Boost boost');
+                return this.chainModify(1.5);
+            }
+        },
+        onEnd(target) {
+            this.add('-end', target, 'ability: Blaze Boost', '[silent]');
+        },
+    },
+    flags: {breakable: 1},
+    name: "Blaze Boost",
+    gen: 6,
+    rating: 4,
+    num: 12,
+
+        },
         blubber: {
         onSourceModifyAtkPriority: 6,
         onSourceModifyAtk(atk, attacker, defender, move) {
