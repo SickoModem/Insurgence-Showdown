@@ -527,8 +527,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	blazeboost: {
 		name: "Blaze Boost",
-		desc: "Before this Pokemon uses a Fire-type attack its Attack, Special Attack, and Speed are all increased by 1 stage each. 10% chance to burn upon contact.",
-		shortDesc: "Raises Attack, Sp. Atk and Speed before using a Fire-type attack. Can burn on contact.",
+		desc: "This Pokemon is powered up once hit by a fire move.",
+		shortDesc: "Raises this Pokemon's power when hit by a fire move",
 	},
 	flamebody: {
 		name: "Flame Body",
