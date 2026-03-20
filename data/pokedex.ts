@@ -14408,7 +14408,7 @@ swampertdelta: {
                 num: -568,
                 name: "Spectrubb",
                 types: ["Poison"],
-                baseStats: {hp: 50, atk: 50, def: 102, spa: 96, spd: 62, spe: 134},
+                baseStats: {hp: 50, atk: 60, def: 52, spa: 96, spd: 62, spe: 124},
                 abilities: {0: "Adaptability", 1: "Ethereal Shroud", H: "Sturdy"},
                 heightm: 1.9,
                 weightkg: 107.3,
