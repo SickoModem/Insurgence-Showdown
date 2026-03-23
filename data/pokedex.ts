@@ -2903,6 +2903,18 @@ snowbromega: {
 		evos: ["Steelix"],
 		eggGroups: ["Mineral"],
 	},
+        onixcrystal: {
+                num: -95,
+                name: "Onix-Crystal",
+                types: ["Crystal"],
+                baseStats: {hp: 35, atk: 160, def: 45, spa: 30, spd: 45, spe: 70},
+                abilities: {0: "Water Absorb", 1: "Sturdy", H: "Clear Body"},
+                heightm: 8.8,
+                weightkg: 210,
+                color: "Gray",
+                evos: ["Steelix-Crystal"],
+                eggGroups: ["Mineral"],
+        },
 	drowzee: {
 		num: 96,
 		name: "Drowzee",
