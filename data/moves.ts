@@ -16858,22 +16858,27 @@ export const Moves: {[moveid: string]: MoveData} = {
         priority: 4,
         flags: {noassist: 1, failcopycat: 1, failinstruct: 1},
         stallingMove: true,
-        volatileStatus: 'swarmsreform',
+        volatileStatus: 'swarmreform',
         onPrepareHit(pokemon) {
                 return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
         },
         onHit(pokemon) {
                 pokemon.addVolatile('stall');
+                if (pokemon.species.name === 'Aegiswarm') {
+                        pokemon.formeChange('Aegiswarm-Bow');
+                } else if (pokemon.species.name === 'Aegiswarm-Bow') {
+                        pokemon.formeChange('Aegiswarm');
+                }
         },
         condition: {
                 duration: 1,
                 onStart(target) {
-                        this.add('-singleturn', target, 'move: Swarm\'s Reform');
+                        this.add('-singleturn', target, 'move: Swarm Reform');
                 },
                 onDamagePriority: -10,
                 onDamage(damage, target, source, effect) {
                         if (effect?.effectType === 'Move' && damage >= target.hp) {
-                                this.add('-activate', target, 'move: Swarm\'s Reform');
+                                this.add('-activate', target, 'move: Swarm Reform');
                                 return target.hp - 1;
                         }
                 },
