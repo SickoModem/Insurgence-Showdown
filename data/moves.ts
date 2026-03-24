@@ -16848,6 +16848,43 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		contestType: "Cool",
 	},
+        swarmreform: {
+        num: -681,
+        accuracy: true,
+        basePower: 0,
+        category: "Status",
+        name: "Swarm Reform",
+        pp: 10,
+        priority: 4,
+        flags: {noassist: 1, failcopycat: 1, failinstruct: 1},
+        stallingMove: true,
+        volatileStatus: 'swarmsreform',
+        onPrepareHit(pokemon) {
+                return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+        },
+        onHit(pokemon) {
+                pokemon.addVolatile('stall');
+        },
+        condition: {
+                duration: 1,
+                onStart(target) {
+                        this.add('-singleturn', target, 'move: Swarm\'s Reform');
+                },
+                onDamagePriority: -10,
+                onDamage(damage, target, source, effect) {
+                        if (effect?.effectType === 'Move' && damage >= target.hp) {
+                                this.add('-activate', target, 'move: Swarm\'s Reform');
+                                return target.hp - 1;
+                        }
+                },
+        },
+        secondary: null,
+        target: "self",
+        type: "Bug",
+        zMove: {effect: 'clearnegativeboost'},
+        contestType: "Cool",
+        
+        },
 	safeguard: {
 		num: 219,
 		accuracy: true,

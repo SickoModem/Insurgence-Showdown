@@ -5537,10 +5537,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     onModifyMove(move, attacker, defender) {
         if (attacker.species.baseSpecies !== 'Aegislash' && attacker.species.baseSpecies !== 'Aegiswarm') return;
         if (attacker.transformed) return;
-        if (move.category === 'Status' && move.id !== 'kingsshield' && move.id !== 'swarmsreform') return;
+        if (move.category === 'Status' && move.id !== 'kingsshield' && move.id !== 'swarmreform') return;
         let targetForme;
         if (attacker.species.baseSpecies === 'Aegiswarm') {
-            targetForme = (move.id === 'swarmsreform' ? 'Aegiswarm' : 'Aegiswarm-Bow');
+            targetForme = (move.id === 'swarmreform' ? 'Aegiswarm' : 'Aegiswarm-Bow');
         } else {
             targetForme = (move.id === 'kingsshield' ? 'Aegislash' : 'Aegislash-Blade');
         }

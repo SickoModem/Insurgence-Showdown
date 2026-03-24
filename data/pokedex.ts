@@ -17129,7 +17129,7 @@ swampertdelta: {
                 heightm: 0.8,
                 weightkg: 4.5,
                 color: "Brown",
-                prevo: "Honedge",
+                prevo: "Hivedge",
                 evoLevel: 35,
                 evos: ["Aegiswarm"],
                 eggGroups: ["Mineral"],
