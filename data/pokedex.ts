@@ -17096,7 +17096,7 @@ swampertdelta: {
 	},
         hivedge: {
                 num: -679,
-                name: "Honedge",
+                name: "Hivedge",
                 types: ["Bug"],
                 baseStats: {hp: 45, atk: 80, def: 100, spa: 35, spd: 37, spe: 28},
                 abilities: {0: "Sharpness"},
