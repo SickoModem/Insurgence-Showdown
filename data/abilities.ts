@@ -5533,18 +5533,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 192,
 	},
 	stancechange: {
-		onModifyMovePriority: 1,
-		onModifyMove(move, attacker, defender) {
-			if (attacker.species.baseSpecies !== 'Aegislash' || attacker.transformed) return;
-			if (move.category === 'Status' && move.id !== 'kingsshield') return;
-			const targetForme = (move.id === 'kingsshield' ? 'Aegislash' : 'Aegislash-Blade');
-			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
-		},
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
-		name: "Stance Change",
-		rating: 4,
-		num: 176,
-	},
+    onModifyMovePriority: 1,
+    onModifyMove(move, attacker, defender) {
+        if (attacker.species.baseSpecies !== 'Aegislash' && attacker.species.baseSpecies !== 'Aegiswarm') return;
+        if (attacker.transformed) return;
+        if (move.category === 'Status' && move.id !== 'kingsshield' && move.id !== 'swarmsreform') return;
+        let targetForme;
+        if (attacker.species.baseSpecies === 'Aegiswarm') {
+            targetForme = (move.id === 'swarmsreform' ? 'Aegiswarm' : 'Aegiswarm-Bow');
+        } else {
+            targetForme = (move.id === 'kingsshield' ? 'Aegislash' : 'Aegislash-Blade');
+        }
+        if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+    },
+    flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
+    name: "Stance Change",
+    rating: 4,
+    num: 176,
+
+       },
 	static: {
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
