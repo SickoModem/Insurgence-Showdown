@@ -14396,7 +14396,7 @@ swampertdelta: {
 		types: ["Rock", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 140, def: 65, spa: 112, spd: 65, spe: 110},
-		abilities: {0: "Solid Rock", H: "Early Bird"},
+		abilities: {0: "Defeatist", H: "Early Bird"},
 		heightm: 1.4,
 		weightkg: 32,
 		color: "Yellow",

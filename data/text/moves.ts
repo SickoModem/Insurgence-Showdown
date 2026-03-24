@@ -1231,6 +1231,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",
 	},
+        crystaltail: {
+                name: "Crystal Tail",
+                desc: "Chance to drop defense by one stage..",
+                shortDesc: "Crystal version of Iron Tail.",
+        },
+        crystaledge: {
+                name: "Crystal Edge",
+                desc: "Higher Chance for a critical hit.",
+                shortDesc: "High crit rate.",
+        },
 	curse: {
 		name: "Curse",
 		desc: "If the user is not a Ghost type, lowers the user's Speed by 1 stage and raises the user's Attack and Defense by 1 stage. If the user is a Ghost type, the user loses 1/2 of its maximum HP, rounded down and even if it would cause fainting, in exchange for the target losing 1/4 of its maximum HP, rounded down, at the end of each turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected.",
@@ -6761,6 +6771,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises the user's Attack by 2 stages.",
 		shortDesc: "Raises the user's Attack by 2.",
 	},
+         swarmreform: {
+                name: "Swarm Reform",
+                desc: "User uses swarm to reform. Endures an attack.",
+                shortDesc: "User endures and reforms.",
+        },
 	synchronoise: {
 		name: "Synchronoise",
 		desc: "The target is immune if it does not share a type with the user.",
