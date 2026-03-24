@@ -3858,6 +3858,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	aegislashblade: {
 		isNonstandard: "Past",
 	},
+        aegiswarm: {
+            tier: "OU",
+        },
+        aegiswarmbow: {
+              tier: "OU",
+        },
 	spritzee: {
 		isNonstandard: "Past",
 		tier: "Illegal",
