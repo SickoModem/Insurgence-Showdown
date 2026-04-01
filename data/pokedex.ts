@@ -22979,9 +22979,9 @@ revavroomsegin: {
 		color: "Green",
 		eggGroups: ["Field"],
 	},
-        cyclizararmorscarlet: {
+        cyclizarscarletarmor: {
 	num: 967,
-	name: "Cyclizar-Armor-Scarlet",
+	name: "Cyclizar-Scarlet-Armor",
 	baseSpecies: "Cyclizar",
 	forme: "Armor",
 	types: ["Dragon", "Fire"],
@@ -22996,9 +22996,9 @@ revavroomsegin: {
 	gen: 9,
 
        },
-       cyclizararmorviolet: {
+       cyclizarvioletarmor: {
 	num: 967,
-	name: "Cyclizar-Armor-Violet",
+	name: "Cyclizar-Violet-Armor",
 	baseSpecies: "Cyclizar",
 	forme: "Armor",
 	types: ["Dragon", "Electric"],
