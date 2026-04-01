@@ -2757,6 +2757,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to lower the target's Defense by 1 stage. Power is multiplied by 1.5 during Gravity's effect.",
 		shortDesc: "Target: 100% -1 Def. During Gravity: 1.5x power.",
 	},
+        giganticmeteor: {
+                name: "Gigantic Meteor",
+                desc: "Cannot use this attack twice in a row. Ignores Ability. Maximium.",
+                shortDesc: "Ignores abilites, Special = Physical if stronger. Maximum.",
+        },
 	gravity: {
 		name: "Gravity",
 		desc: "For 5 turns, the evasiveness of all active Pokemon is multiplied by 0.6. At the time of use, Bounce, Fly, Magnet Rise, Sky Drop, and Telekinesis end immediately for all active Pokemon. During the effect, Bounce, Fly, Flying Press, High Jump Kick, Jump Kick, Magnet Rise, Sky Drop, Splash, and Telekinesis are prevented from being used by all active Pokemon. Ground-type attacks, Spikes, Toxic Spikes, Sticky Web, and the Arena Trap Ability can affect Flying types or Pokemon with the Levitate Ability. Fails if this move is already in effect.",

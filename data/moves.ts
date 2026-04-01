@@ -8409,6 +8409,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Grass",
 	},
+        giganticmeteor: {
+    num: 722,
+    accuracy: 100,
+    basePower: 150,
+    category: "Special",
+    name: "Gigantic Meteor",
+    pp: 5,
+    priority: 0,
+    flags: {protect: 1, mirror: 1, metronome: 1, cantusetwice: 1},
+    onModifyMove(move, pokemon) {
+        if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+    },
+    ignoreAbility: true,
+    secondary: null,
+    target: "normal",
+    type: "Crystal",
+    contestType: "Cool",
+
+       },
 	gravity: {
 		num: 356,
 		accuracy: true,

@@ -14,6 +14,18 @@
 		otherFormes: ["Bulbasaur-Delta"],
 		formeOrder: ["Bulbasaur", "Bulbasaur-Delta"],
 	},
+        broly: {
+                num: 10000,
+                name: "Broly",
+                types: ["Crystal", "Fighting"],
+                genderRatio: "M",
+                baseStats: {hp: 136, atk: 199, def: 100, spa: 174, spd: 100, spe: 130},
+                abilities: {0: "Protean Primera"},
+                heightm: 0.7,
+                weightkg: 6.9,
+                color: "Green",
+                eggGroups: ["Monster", "Grass"],
+        },
 	bulbasaurdelta: {
 		gen: 6,
 		num: 1,
