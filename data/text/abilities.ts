@@ -1212,6 +1212,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's Status moves ignore certain Abilities of other Pokemon, and go last among Pokemon using the same or greater priority moves.",
 		shortDesc: "This Pokemon's Status moves go last in their priority bracket and ignore Abilities.",
 	},
+        moltenhelm: {
+              name: "Molten Helm"
+              desc: "This Pokemon's rock type moves become fire type, and it takes no recoil.",
+              shortDesc: "Rock becomes fire, no recoil on recoil moves.",
+        },
 	naturalcure: {
 		name: "Natural Cure",
 		shortDesc: "This Pokemon has its non-volatile status condition cured when it switches out.",
