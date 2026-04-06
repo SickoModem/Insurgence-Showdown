@@ -3220,6 +3220,36 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 152,
 	},
+        moltenhelm: {
+        onModifyTypePriority: -1,
+        onModifyType(move, pokemon) {
+                const noModifyType = [
+                        'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+                ];
+                if (move.type === 'Rock' && !noModifyType.includes(move.id) &&
+                        !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+                        move.type = 'Fire';
+                }
+        },
+        onTryMovePriority: -2,
+        onTryMove(pokemon, target, move) {
+                if (move.id === 'stealthrock') {
+                        this.actions.useMove('stealthcoal', pokemon, target);
+                        return null;
+                }
+        },
+        onDamage(damage, target, source, effect) {
+                if (effect.id === 'recoil') {
+                        if (!this.activeMove) throw new Error("Battle.activeMove is null");
+                        if (this.activeMove.id !== 'struggle') return null;
+                }
+        },
+        flags: {},
+        name: "Molten Helm",
+        rating: 4,
+        num: 2000,
+
+        },
 	myceliummight: {
 		onFractionalPriorityPriority: -1,
 		onFractionalPriority(priority, pokemon, target, move) {
