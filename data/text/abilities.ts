@@ -1213,7 +1213,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's Status moves go last in their priority bracket and ignore Abilities.",
 	},
         moltenhelm: {
-              name: "Molten Helm"
+              name: "Molten Helm",
               desc: "This Pokemon's rock type moves become fire type, and it takes no recoil.",
               shortDesc: "Rock becomes fire, no recoil on recoil moves.",
         },
