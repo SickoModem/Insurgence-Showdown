@@ -16223,8 +16223,8 @@ export const Moves: {[moveid: string]: MoveData} = {
         onHit(target, source, move) {
                 const result = target.setStatus('slp', source, move);
                 if (!result) return result;
-                target.statusState.time = 2;
-                target.statusState.startTime = 2;
+                target.statusState.time = 3;
+                target.statusState.startTime = 3;
                 target.statusState.isRest = true;
                 this.heal(target.maxhp);
         },
