@@ -465,7 +465,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	appleacid: {
 		num: 787,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Special",
 		name: "Apple Acid",
 		pp: 10,
@@ -1213,7 +1213,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	beakblast: {
 		num: 690,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 120,
 		category: "Physical",
 		name: "Beak Blast",
 		pp: 15,
@@ -1783,7 +1783,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	bonerush: {
 		num: 198,
 		accuracy: 90,
-		basePower: 25,
+		basePower: 30,
 		category: "Physical",
 		name: "Bone Rush",
 		pp: 10,
@@ -3352,7 +3352,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	crabhammer: {
 		num: 152,
-		accuracy: 90,
+		accuracy: 95,
 		basePower: 100,
 		category: "Physical",
 		name: "Crabhammer",
@@ -4070,7 +4070,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
 		secondary: {
-			chance: 50,
+			chance: 30,
 			onHit(target, source) {
 				const result = this.random(3);
 				if (result === 0) {
@@ -4480,7 +4480,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Dragon Claw",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -5839,7 +5839,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	firelash: {
 		num: 680,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "Fire Lash",
 		pp: 15,
@@ -5954,7 +5954,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	firstimpression: {
 		num: 660,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 100,
 		category: "Physical",
 		name: "First Impression",
 		pp: 10,
@@ -8389,7 +8389,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	gravapple: {
 		num: 788,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "Grav Apple",
 		pp: 10,
@@ -8554,7 +8554,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "self",
-		type: "Normal",
+		type: "Grass",
 		zMove: {boost: {spa: 1}},
 		contestType: "Beautiful",
 	},
@@ -10279,7 +10279,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	infernalparade: {
 		num: 844,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 65,
 		basePowerCallback(pokemon, target, move) {
 			if (target.status || target.hasAbility('comatose')) return move.basePower * 2;
 			return move.basePower;
@@ -10471,7 +10471,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
 		secondary: {
-			chance: 30,
+			chance: 20,
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
@@ -13180,7 +13180,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, metronome: 1},
 		secondary: {
-			chance: 30,
+			chance: 10,
 			boosts: {
 				spa: -1,
 			},
@@ -13355,7 +13355,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	mountaingale: {
 		num: 836,
 		accuracy: 85,
-		basePower: 100,
+		basePower: 120,
 		category: "Physical",
 		name: "Mountain Gale",
 		pp: 10,
@@ -13711,7 +13711,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	nightdaze: {
 		num: 539,
 		accuracy: 95,
-		basePower: 85,
+		basePower: 90,
 		category: "Special",
 		name: "Night Daze",
 		pp: 10,
@@ -15438,7 +15438,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	psyshieldbash: {
 		num: 828,
 		accuracy: 90,
-		basePower: 70,
+		basePower: 90,
 		category: "Physical",
 		name: "Psyshield Bash",
 		pp: 10,
@@ -16201,39 +16201,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	rest: {
-		num: 156,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Rest",
-		pp: 5,
-		priority: 0,
-		flags: {snatch: 1, heal: 1, metronome: 1},
-		onTry(source) {
-			if (source.status === 'slp' || source.hasAbility('comatose')) return false;
+        num: 156,
+        accuracy: true,
+        basePower: 0,
+        category: "Status",
+        name: "Rest",
+        pp: 5,
+        priority: 0,
+        flags: {snatch: 1, heal: 1, metronome: 1},
+        onTry(source) {
+                if (source.status === 'slp' || source.hasAbility('comatose')) return false;
+                if (source.hp === source.maxhp) {
+                        this.add('-fail', source, 'heal');
+                        return null;
+                }
+                if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+                        this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+                        return null;
+                }
+        },
+        onHit(target, source, move) {
+                const result = target.setStatus('slp', source, move);
+                if (!result) return result;
+                target.statusState.time = 1;
+                target.statusState.startTime = 1;
+                target.statusState.isRest = true;
+                this.heal(target.maxhp);
+        },
+        secondary: null,
+        target: "self",
+        type: "Psychic",
+        zMove: {effect: 'clearnegativeboost'},
+        contestType: "Cute",
 
-			if (source.hp === source.maxhp) {
-				this.add('-fail', source, 'heal');
-				return null;
-			}
-			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
-				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
-				return null;
-			}
-		},
-		onHit(target, source, move) {
-			const result = target.setStatus('slp', source, move);
-			if (!result) return result;
-			target.statusState.time = 3;
-			target.statusState.startTime = 3;
-			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
-		},
-		secondary: null,
-		target: "self",
-		type: "Psychic",
-		zMove: {effect: 'clearnegativeboost'},
-		contestType: "Cute",
-	},
+        },
 	retaliate: {
 		num: 514,
 		accuracy: 100,
@@ -16983,7 +16984,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onResidualOrder: 13,
 			onResidual(pokemon) {
-				this.damage(pokemon.baseMaxhp / (pokemon.hasType(['Water', 'Steel']) ? 4 : 8));
+				this.damage(pokemon.baseMaxhp / (pokemon.hasType(['Water', 'Steel']) ? 8 : 16));
 			},
 			onEnd(pokemon) {
 				this.add('-end', pokemon, 'Salt Cure');
@@ -17416,7 +17417,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Shadow Claw",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -18524,7 +18525,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
-		type: "Grass",
+		type: "Steel",
 	},
 	snarl: {
 		num: 555,
@@ -19181,7 +19182,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	spiritshackle: {
 		num: 662,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "Spirit Shackle",
 		pp: 10,
@@ -21781,7 +21782,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	tropkick: {
 		num: 688,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 85,
 		category: "Physical",
 		name: "Trop Kick",
 		pp: 15,

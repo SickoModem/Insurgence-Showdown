@@ -21963,7 +21963,7 @@ swampertdelta: {
 		name: "Sneasler",
 		types: ["Fighting", "Poison"],
 		baseStats: {hp: 80, atk: 130, def: 60, spa: 40, spd: 80, spe: 120},
-		abilities: {0: "Pressure", 1: "Unburden", H: "Poison Touch"},
+		abilities: {0: "Pressure", 1: "Pickpocket", H: "Poison Touch"},
 		heightm: 1.3,
 		weightkg: 43,
 		color: "Purple",
