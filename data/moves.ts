@@ -406,7 +406,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	anchorshot: {
 		num: 677,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Anchor Shot",
@@ -1632,7 +1632,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	bloodmoon: {
 		num: 901,
 		accuracy: 100,
-		basePower: 140,
+		basePower: 130,
 		category: "Special",
 		name: "Blood Moon",
 		pp: 5,
@@ -1709,7 +1709,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	boltbeak: {
 		num: 754,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 80,
 		basePowerCallback(pokemon, target, move) {
 			if (target.newlySwitched || this.queue.willMove(target)) {
 				this.debug('Bolt Beak damage boost');
@@ -4542,7 +4542,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	dragonhammer: {
 		num: 692,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 100,
 		category: "Physical",
 		name: "Dragon Hammer",
 		pp: 15,
@@ -5974,7 +5974,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	fishiousrend: {
 		num: 755,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 80,
 		basePowerCallback(pokemon, target, move) {
 			if (target.newlySwitched || this.queue.willMove(target)) {
 				this.debug('Fishious Rend damage boost');
@@ -7034,8 +7034,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	geargrind: {
 		num: 544,
-		accuracy: 85,
-		basePower: 50,
+		accuracy: 90,
+		basePower: 60,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Gear Grind",
@@ -9847,7 +9847,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hyperdrill: {
 		num: 887,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 120,
 		category: "Physical",
 		name: "Hyper Drill",
 		pp: 5,
@@ -11834,7 +11834,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	makeitrain: {
 		num: 874,
-		accuracy: 100,
+		accuracy: 95,
 		basePower: 120,
 		category: "Special",
 		name: "Make It Rain",
@@ -16296,7 +16296,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	revelationdance: {
 		num: 686,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 100,
 		category: "Special",
 		name: "Revelation Dance",
 		pp: 15,
@@ -20429,7 +20429,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	syrupbomb: {
 		num: 903,
-		accuracy: 85,
+		accuracy: 90,
 		basePower: 60,
 		category: "Special",
 		name: "Syrup Bomb",
@@ -21501,7 +21501,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1, metronome: 1},
 		status: 'psn',
 		boosts: {
-			spe: -1,
+			spe: -2,
 		},
 		secondary: null,
 		target: "normal",
@@ -21747,7 +21747,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	tripledive: {
 		num: 865,
 		accuracy: 95,
-		basePower: 30,
+		basePower: 35,
 		category: "Physical",
 		name: "Triple Dive",
 		pp: 10,
