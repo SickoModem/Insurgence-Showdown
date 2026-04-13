@@ -385,6 +385,72 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 1,
 		num: 188,
 	},
+        allterrain: {
+    onStart(pokemon) {
+        this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+    },
+    onTerrainChange(pokemon) {
+        if (this.field.terrain) {
+            pokemon.addVolatile('allterrain');
+        } else if (!pokemon.volatiles['allterrain']?.fromBooster) {
+            pokemon.removeVolatile('allterrain');
+        }
+    },
+    onEnd(pokemon) {
+        delete pokemon.volatiles['allterrain'];
+        this.add('-end', pokemon, 'All-Terrain', '[silent]');
+    },
+    condition: {
+        noCopy: true,
+        onStart(pokemon, source, effect) {
+            if (effect?.name === 'Booster Energy') {
+                this.effectState.fromBooster = true;
+                this.add('-activate', pokemon, 'ability: All-Terrain', '[fromitem]');
+            } else {
+                this.add('-activate', pokemon, 'ability: All-Terrain');
+            }
+            this.effectState.bestStat = pokemon.getBestStat(false, true);
+            this.add('-start', pokemon, 'allterrain' + this.effectState.bestStat);
+        },
+        onModifyAtkPriority: 5,
+        onModifyAtk(atk, pokemon) {
+            if (this.effectState.bestStat !== 'atk' || pokemon.ignoringAbility()) return;
+            this.debug('All-Terrain atk boost');
+            return this.chainModify([5325, 4096]);
+        },
+        onModifyDefPriority: 6,
+        onModifyDef(def, pokemon) {
+            if (this.effectState.bestStat !== 'def' || pokemon.ignoringAbility()) return;
+            this.debug('All-Terrain def boost');
+            return this.chainModify([5325, 4096]);
+        },
+        onModifySpAPriority: 5,
+        onModifySpA(spa, pokemon) {
+            if (this.effectState.bestStat !== 'spa' || pokemon.ignoringAbility()) return;
+            this.debug('All-Terrain spa boost');
+            return this.chainModify([5325, 4096]);
+        },
+        onModifySpDPriority: 6,
+        onModifySpD(spd, pokemon) {
+            if (this.effectState.bestStat !== 'spd' || pokemon.ignoringAbility()) return;
+            this.debug('All-Terrain spd boost');
+            return this.chainModify([5325, 4096]);
+        },
+        onModifySpe(spe, pokemon) {
+            if (this.effectState.bestStat !== 'spe' || pokemon.ignoringAbility()) return;
+            this.debug('All-Terrain spe boost');
+            return this.chainModify([5325, 4096]);
+        },
+        onEnd(pokemon) {
+            this.add('-end', pokemon, 'All-Terrain');
+        },
+    },
+    flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1},
+    name: "All-Terrain",
+    rating: 3,
+    num: 22283,
+
+        },
 	baddreams: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,

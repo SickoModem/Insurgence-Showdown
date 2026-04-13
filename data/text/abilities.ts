@@ -50,6 +50,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Damage-dealing attacks used by this Pokemon will always get a STAB bonus and hit neutrally. It does not ignore abilities, items or other effects.",
 		shortDesc: "Damage-dealing attacks from this Pokemon get STAB and hit neutrally.",
 	},
+        allterrain: {
+                name: "All-Terrain",
+                desc: "Highest stat raised in grassy, psychic, misty and elecitrc terrain.",
+                shortDesc: "Highest stat in any terrain.",
+        },
 	angerpoint: {
 		name: "Anger Point",
 		desc: "If this Pokemon, but not its substitute, is struck by a critical hit, its Attack is raised by 12 stages.",
