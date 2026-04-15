@@ -4860,7 +4860,7 @@ snowbromega: {
 		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 85, atk: 160, def: 125, spa: 89, spd: 93, spe: 78},
-		abilities: {0: "Tough Claws"},
+		abilities: {0: "Dragonize"},
 		weightkg: 88.8,
 		heightm: 1,
 		color: "Red",
