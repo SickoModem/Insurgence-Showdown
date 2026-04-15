@@ -370,23 +370,23 @@ export const Formats: FormatList = [
 		banlist: ['Sub-Legendary'],
 	},
 	{
-		name: "[Gen 9] Ryuka Dex Multi Battle",
+		name: "[Gen 9] Full Ryuka Dex Multi Battle",
 
 		mod: 'gen9',
 		gameType: 'multi',
 		searchShow: false,
 		tournamentShow: false,
 		rated: false,
-		ruleset: ['Max Team Size = 3', 'Standard NatDex'],
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 3', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
 	},
 	{
-		name: "[Gen 9] Ryuka Dex Free-For-All",
+		name: "[Gen 9] Full Ryuka Dex Free-For-All",
 
 		mod: 'gen9',
 		gameType: 'freeforall',
 		tournamentShow: false,
 		rated: false,
-		ruleset: ['Standard NatDex'],
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
 	},
 	{
 		name: "[Gen 9] Custom Game",
