@@ -7729,6 +7729,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	zombiestrike: {
 		name: "Zombie Strike",
-		shortDesc: "No additional effect.",
+		shortDesc: "20% chance to badly poison.",
 	},
 };

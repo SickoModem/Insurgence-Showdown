@@ -2012,6 +2012,20 @@ dragoninite: {
     gen: 9,
     isNonstandard: "Past",
 },
+starminite: {
+    name: "Starminite",
+    spritenum: 597,
+    megaStone: "Starmie-Mega",
+    megaEvolves: "Starmie",
+    itemUser: ["Starmie"],
+    onTakeItem(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+        return true;
+    },
+    num: 25860,
+    gen: 9,
+    isNonstandard: "Past",
+},
 floettite: {
     name: "Floettite",
     spritenum: 562,
