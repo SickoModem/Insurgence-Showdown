@@ -1200,6 +1200,90 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 		natDexTier: "OU",
 	},
+        clefablemega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	victreebelmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	starmiemega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	dragonitemega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	skarmorymega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	chimechomega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	emboarmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	excadrillmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	chandeluremega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	golurkmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	chesnaughtmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	delphoxmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	greninjamega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	floettemega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	meowsticmmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	meowsticfmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	hawluchamega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	crabominablemega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	drampamega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	scovillainmega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	glimmoramega: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	mewtwo: {
 		tier: "Uber",
 		doublesTier: "DUber",
