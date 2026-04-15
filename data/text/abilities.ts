@@ -220,8 +220,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
         catseye: {
             name: "Cats' Eye",
-            desc: "This Pokemon can hit Ghost types with Normal- and Fighting-type moves. Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage. Increased Crit Rate",
-            shortDesc: "This Pokemon can hit Ghost Type with their immunities, cannot have its accuracy lowered, and has an increased crit rate. Lucky Cat huh?", 
+            desc: "Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage. Increased Crit Rate",
+            shortDesc: "This Pokemon cannot have its accuracy lowered, and has an increased crit rate. Lucky Cat huh?", 
         },
 	cheekpouch: {
 		name: "Cheek Pouch",
@@ -430,6 +430,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Dragon's Maw",
 		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Dragon-type attack.",
 	},
+        dragonize: {
+                name: "Dragonize",
+                shortDesc: "This Pokemon's normal type moves are turned dragon type and boosted by 1.2.",
+        },
 	drizzle: {
 		name: "Drizzle",
 		shortDesc: "On switch-in, this Pokemon summons Rain Dance.",
@@ -1176,9 +1180,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's Attack is raised by 1 stage if it attacks and knocks out another Pokemon.",
 		shortDesc: "This Pokemon's Attack is raised by 1 stage if it attacks and KOes another Pokemon.",
 	},
-	multiscale: {
-		name: "Multiscale",
-		shortDesc: "If this Pokemon is at full HP, damage taken from attacks is halved.",
+        multiscale: {
+                name: "Multiscale",
+                shortDesc: "If this Pokemon is at full HP, damage taken from attacks is halved.",
+        },
+	megasol: {
+		name: "Mega Sol",
+		shortDesc: "This Pokemon acts as if it's in harsh sunlight.",
 	},
 	multitype: {
 		name: "Multitype",
@@ -1459,6 +1467,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's allies have the power of their moves multiplied by 1.3. This affects Doom Desire and Future Sight, even if the user is not on the field.",
 		shortDesc: "This Pokemon's allies have the power of their moves multiplied by 1.3.",
 	},
+        piercingdrill: {
+                name: "Piercing Drill",
+                shortDesc: "This Pokemon's contact moves ignore the target's protection, dealing 25% of the damage.",
+        },
 	prankster: {
 		name: "Prankster",
 		desc: "This Pokemon's non-damaging moves have their priority increased by 1. Opposing Dark-type Pokemon are immune to these moves, and any move called by these moves, if the resulting user of the move has this Ability.",

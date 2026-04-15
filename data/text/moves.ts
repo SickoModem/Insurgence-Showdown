@@ -33,8 +33,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	acid: {
 		name: "Acid",
-		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-		shortDesc: "10% chance to lower the foe(s) Sp. Def by 1.",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. Hits steel neutrally.",
+		shortDesc: "10% chance to lower the foe(s) Sp. Def by 1. Hits steel neutrally",
 		gen3: {
 			desc: "Has a 10% chance to lower the target's Defense by 1 stage.",
 			shortDesc: "10% chance to lower the foe(s) Defense by 1.",
@@ -58,8 +58,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	acidspray: {
 		name: "Acid Spray",
-		desc: "Has a 100% chance to lower the target's Special Defense by 2 stages.",
-		shortDesc: "100% chance to lower the target's Sp. Def by 2.",
+		desc: "Has a 100% chance to lower the target's Special Defense by 2 stages. Hits steel neutrally.",
+		shortDesc: "100% chance to lower the target's Sp. Def by 2. Hits steel neutrally.",
 	},
 	acrobatics: {
 		name: "Acrobatics",
@@ -1110,8 +1110,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	corrode: {
 		name: "Corrode",
-		desc: "This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
-		shortDesc: "Super effective on Steel.",
+		desc: "This move's type effectiveness against Steel is changed to be neutral effective no matter what this move's type is.",
+		shortDesc: "Neutral on Steel.",
 	},
 	corrosivegas: {
 		name: "Corrosive Gas",
@@ -1646,8 +1646,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	drakonvoice: {
 		name: "Drakon Voice",
-		desc: "No additional effect.",
-		shortDesc: "No additional effect. Hits adjacent foes.",
+		desc: "10% chance to drop special defense.",
+		shortDesc: "10% chance to drop special defense. Hits adjacent foes.",
 	},
 	dreameater: {
 		name: "Dream Eater",

@@ -1314,6 +1314,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 263,
 	},
+         dragonize: {
+                onModifyTypePriority: -1,
+                onModifyType(move, pokemon) {
+                        const noModifyType = [
+                                'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+                        ];
+                        if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+                                !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+                                move.type = 'Dragon';
+                                move.typeChangerBoosted = this.effect;
+                        }
+                },
+                onBasePowerPriority: 23,
+                onBasePower(basePower, pokemon, target, move) {
+                        if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+                },
+                flags: {},
+                name: "Dragonize",
+                rating: 4,
+                num: 312,
+        },
 	drizzle: {
 		onStart(source) {
 			for (const action of this.queue) {
@@ -3146,6 +3167,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 58,
 	},
+	megasol: {
+		isNonstandard: "Future",
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (this.field.weather !== 'sunnyday') {
+				(this.dex.conditions.getByID('sunnyday' as ID) as any).onWeatherModifyDamage
+					.call(this, damage, attacker, defender, move);
+			}
+		},
+		flags: {},
+		name: "Mega Sol",
+		rating: 3,
+		num: 315,
+		// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
+	},
 	mirrorarmor: {
 		onTryBoost(boost, target, source, effect) {
 			// Don't bounce self stat changes, or boosts that have already bounced
@@ -4131,6 +4166,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 249,
 	},
+	piercingdrill: {
+    onModifyMove(move) {
+        if (move.flags['contact']) {
+            delete move.flags['protect']; 
+        }
+    },
+    onModifyDamage(damage, source, target, move) {
+        // If the target is protected, slash the final damage to 25%
+        if (target.volatiles['protect']) {
+            this.debug('Piercing Drill damage nerf');
+            return this.chainModify(0.25);
+        }
+    },
+    flags: {},
+    name: "Piercing Drill",
+    rating: 1,
+    num: 311,
+   
+      },
 	prankster: {
 		onModifyPriority(priority, pokemon, target, move) {
 			if (move?.category === 'Status') {
@@ -5551,6 +5605,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Speed Boost",
 		rating: 4.5,
 		num: 3,
+	},
+        spicyspray: {
+		isNonstandard: "Future",
+		onDamagingHit(damage, target, source, move) {
+			source.trySetStatus('brn', target);
+		},
+		flags: {},
+		name: "Spicy Spray",
+		rating: 3,
+		num: 318,
 	},
 	spiritcall: {
 		onModifyAtkPriority: 5,
