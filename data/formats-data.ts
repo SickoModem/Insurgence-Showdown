@@ -1201,87 +1201,87 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
         clefablemega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	victreebelmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	starmiemega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	dragonitemega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	skarmorymega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	chimechomega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	emboarmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	excadrillmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	chandeluremega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	golurkmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	chesnaughtmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	delphoxmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	greninjamega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	floettemega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	meowsticmmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	meowsticfmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	hawluchamega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	crabominablemega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	drampamega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	scovillainmega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	glimmoramega: {
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 		tier: "Illegal",
 	},
 	mewtwo: {
