@@ -118,24 +118,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	acidspray: {
-		num: 491,
-		accuracy: 100,
-		basePower: 40,
-		category: "Special",
-		name: "Acid Spray",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, metronome: 1, bullet: 1},
-		secondary: {
-			chance: 100,
-			boosts: {
-				spd: -2,
-			},
-		},
-		target: "normal",
-		type: "Poison",
-		contestType: "Beautiful",
-	},
+    num: 491,
+    accuracy: 100,
+    basePower: 40,
+    category: "Special",
+    name: "Acid Spray",
+    pp: 20,
+    priority: 0,
+    flags: {protect: 1, mirror: 1, metronome: 1, bullet: 1},
+    ignoreImmunity: {'Poison': true},
+    secondary: {
+        chance: 100,
+        boosts: {
+            spd: -2,
+        },
+    },
+    target: "normal",
+    type: "Poison",
+    contestType: "Beautiful",
+
+       },
 	acrobatics: {
 		num: 512,
 		accuracy: 100,
@@ -3111,15 +3113,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	corrode: {
 		num: 3,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 60,
 		category: "Special",
 		name: "Corrode",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onEffectiveness(typeMod, target, type) {
-			if (type === 'Steel') return 1;
-		},
 		ignoreImmunity: {'Poison': true},
 		secondary: null,
 		target: "allAdjacent",
