@@ -126,7 +126,6 @@ export const Moves: {[moveid: string]: MoveData} = {
     pp: 20,
     priority: 0,
     flags: {protect: 1, mirror: 1, metronome: 1, bullet: 1},
-    ignoreImmunity: {'Poison': true},
     secondary: {
         chance: 100,
         boosts: {
