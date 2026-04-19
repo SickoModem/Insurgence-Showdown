@@ -58,8 +58,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	acidspray: {
 		name: "Acid Spray",
-		desc: "Has a 100% chance to lower the target's Special Defense by 2 stages. Hits steel neutrally.",
-		shortDesc: "100% chance to lower the target's Sp. Def by 2. Hits steel neutrally.",
+		desc: "Has a 100% chance to lower the target's Special Defense by 2 stages.",
+		shortDesc: "100% chance to lower the target's Sp. Def by 2.",
 	},
 	acrobatics: {
 		name: "Acrobatics",
