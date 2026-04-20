@@ -1241,8 +1241,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.25.",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.25x damage.",
 	},
-        nimbusstratus: {
-                name: "Nimbus Stratus",
+        archaicaviation: {
+                name: "Archaic Aviation",
                 desc: "This Pokemon's attacks and defense gain the power of the sky.",
                 shortDesc: "This Pokemon gains the power of the sky.",
         },

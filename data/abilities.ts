@@ -3535,7 +3535,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		num: 19,
 	},
-        nimbusstratus: {
+        archaicaviation: {
     onImmunity(type, pokemon) {
         if (type === 'Ground') return false;
     },
@@ -3552,26 +3552,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     onSourceModifyAtkPriority: 6,
     onSourceModifyAtk(atk, attacker, defender, move) {
         if (move.type === 'Fighting' || move.type === 'Bug' || move.type === 'Grass') {
-            this.debug('Nimbus Stratus resist');
+            this.debug('Archaic Aviation resist');
             return this.chainModify(0.5);
         }
         if (move.type === 'Rock' || move.type === 'Electric' || move.type === 'Ice') {
-            this.debug('Nimbus Stratus weakness');
+            this.debug('Archaic Aviation weakness');
             return this.chainModify(2);
         }
     },
     onSourceModifySpAPriority: 5,
     onSourceModifySpA(atk, attacker, defender, move) {
         if (move.type === 'Fighting' || move.type === 'Bug' || move.type === 'Grass') {
-            this.debug('Nimbus Stratus resist');
+            this.debug('Archaic Aviation resist');
             return this.chainModify(0.5);
         }
         if (move.type === 'Rock' || move.type === 'Electric' || move.type === 'Ice') {
-            this.debug('Nimbus Stratus weakness');
+            this.debug('Archaic Aviation weakness');
             return this.chainModify(2);
         }
     },
-    name: "Nimbus Stratus",
+    name: "Archaic Aviation",
     flags: {breakable: 1},
     gen: 6,
     rating: 3.5,
