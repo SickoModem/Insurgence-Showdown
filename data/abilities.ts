@@ -3535,6 +3535,49 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		num: 19,
 	},
+        nimbusstratus: {
+    onImmunity(type, pokemon) {
+        if (type === 'Ground') return false;
+    },
+    onModifyAtk(atk, attacker, defender, move) {
+        if (move.type === 'Flying') {
+            return this.chainModify(2);
+        }
+    },
+    onModifySpA(atk, attacker, defender, move) {
+        if (move.type === 'Flying') {
+            return this.chainModify(2);
+        }
+    },
+    onSourceModifyAtkPriority: 6,
+    onSourceModifyAtk(atk, attacker, defender, move) {
+        if (move.type === 'Fighting' || move.type === 'Bug' || move.type === 'Grass') {
+            this.debug('Nimbus Stratus resist');
+            return this.chainModify(0.5);
+        }
+        if (move.type === 'Rock' || move.type === 'Electric' || move.type === 'Ice') {
+            this.debug('Nimbus Stratus weakness');
+            return this.chainModify(2);
+        }
+    },
+    onSourceModifySpAPriority: 5,
+    onSourceModifySpA(atk, attacker, defender, move) {
+        if (move.type === 'Fighting' || move.type === 'Bug' || move.type === 'Grass') {
+            this.debug('Nimbus Stratus resist');
+            return this.chainModify(0.5);
+        }
+        if (move.type === 'Rock' || move.type === 'Electric' || move.type === 'Ice') {
+            this.debug('Nimbus Stratus weakness');
+            return this.chainModify(2);
+        }
+    },
+    name: "Nimbus Stratus",
+    flags: {breakable: 1},
+    gen: 6,
+    rating: 3.5,
+    num: 11,
+
+       },
 	noguard: {
 		onAnyInvulnerabilityPriority: 1,
 		onAnyInvulnerability(target, source, move) {

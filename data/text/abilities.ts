@@ -1241,6 +1241,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.25.",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.25x damage.",
 	},
+        nimbusstratus: {
+                name: "Nimbus Stratus",
+                desc: "This Pokemon's attacks and defense gain the power of the sky.",
+                shortDesc: "This Pokemon gains the power of the sky.",
+        },
 	neutralizinggas: {
 		name: "Neutralizing Gas",
 		desc: "While this Pokemon is active, Abilities have no effect. This Ability activates before hazards and other Abilities take effect. Does not affect the As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Neutralizing Gas, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Tera Shift, Zen Mode, or Zero to Hero Abilities.",
