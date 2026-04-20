@@ -19852,11 +19852,11 @@ swampertdelta: {
                 formeOrder: ["Drampa", "Drampa-Mega"],
 	},
         drampaorigin: {
-                num: 780,
+                num: -780,
                 name: "Drampa-Origin",
                 types: ["Normal", "Dragon"],
                 baseStats: {hp: 98, atk: 115, def: 86, spa: 135, spd: 100, spe: 66},
-                abilities: {0: "Berserk", 1: "Dragonize", H: "Nimbus Stratus"},
+                abilities: {0: "Berserk", 1: "Dragonize", H: "Archaic Aviation"},
                 heightm: 3,
                 weightkg: 185,
                 color: "White",
