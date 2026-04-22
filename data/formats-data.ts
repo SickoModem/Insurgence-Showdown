@@ -5536,75 +5536,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 		natDexTier: "Uber",
 	},
-	greattusk: {
-		tier: "OU",
-		doublesTier: "DUU",
-		natDexTier: "OU",
-	},
-	brutebonnet: {
-		tier: "NU",
-		doublesTier: "DUU",
-		natDexTier: "RU",
-	},
-	sandyshocks: {
-		tier: "UU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
-	},
-	screamtail: {
-		tier: "NU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
-	},
-	fluttermane: {
-		tier: "Uber",
-		doublesTier: "DUber",
-		natDexTier: "Uber",
-	},
-	slitherwing: {
+	reptalada: {
 		tier: "RU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
-	},
-	roaringmoon: {
-		tier: "OU",
-		doublesTier: "DUU",
-		natDexTier: "Uber",
-	},
-	irontreads: {
-		tier: "OU",
-		doublesTier: "(DUU)",
-		natDexTier: "OU",
-	},
-	ironmoth: {
-		tier: "UU",
-		doublesTier: "(DUU)",
-		natDexTier: "UU",
-	},
-	ironhands: {
-		tier: "UUBL",
-		doublesTier: "DOU",
-		natDexTier: "UU",
-	},
-	ironjugulis: {
-		tier: "RUBL",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
-	},
-	ironthorns: {
-		tier: "NUBL",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
-	},
-	ironbundle: {
-		tier: "Uber",
-		doublesTier: "DUU",
-		natDexTier: "Uber",
-	},
-	ironvaliant: {
-		tier: "OU",
-		doublesTier: "(DUU)",
-		natDexTier: "OU",
 	},
 	tinglu: {
 		tier: "OU",
@@ -5685,16 +5620,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUber",
 		natDexTier: "Uber",
 	},
-	walkingwake: {
-		tier: "OU",
-		doublesTier: "DUU",
-		natDexTier: "Uber",
-	},
-	ironleaves: {
-		tier: "RU",
-		doublesTier: "(DUU)",
-		natDexTier: "RUBL",
-	},
 	poltchageist: {
 		tier: "LC",
 	},
@@ -5747,26 +5672,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 		doublesTier: "(DUU)",
 		natDexTier: "UU",
-	},
-	gougingfire: {
-		tier: "OU",
-		doublesTier: "DOU",
-		natDexTier: "OU",
-	},
-	ragingbolt: {
-		tier: "OU",
-		doublesTier: "DOU",
-		natDexTier: "OU",
-	},
-	ironboulder: {
-		tier: "OU",
-		doublesTier: "DUU",
-		natDexTier: "OU",
-	},
-	ironcrown: {
-		tier: "UU",
-		doublesTier: "DUU",
-		natDexTier: "OU",
 	},
 	terapagos: {
 		tier: "Uber",
