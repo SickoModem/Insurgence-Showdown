@@ -23654,7 +23654,7 @@ revavroomsegin: {
                 eggGroups: ["Human-Like"],
 	},
 	reptalada: {
-		num: -687,
+		num: -637,
 		name: "Reptalada",
 		types: ["Bug", "Fighting"],
 		baseStats: {hp: 85, atk: 135, def: 79, spa: 85, spd: 105, spe: 81},
@@ -23802,19 +23802,6 @@ revavroomsegin: {
 		weightkg: 4.9,
 		color: "Red",
 		tags: ["Sub-Legendary"],
-		eggGroups: ["Undiscovered"],
-	},
-	roaringmoon: {
-		num: 1005,
-		name: "Roaring Moon",
-		types: ["Dragon", "Dark"],
-		gender: "N",
-		baseStats: {hp: 105, atk: 139, def: 71, spa: 55, spd: 101, spe: 119},
-		abilities: {0: "Protosynthesis"},
-		heightm: 2,
-		weightkg: 380,
-		color: "Green",
-		tags: ["Paradox"],
 		eggGroups: ["Undiscovered"],
 	},
 	koraidon: {
