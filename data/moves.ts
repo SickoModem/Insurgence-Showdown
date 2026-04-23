@@ -16990,7 +16990,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onResidualOrder: 13,
 			onResidual(pokemon) {
-				this.damage(pokemon.baseMaxhp / (pokemon.hasType(['Water', 'Steel']) ? 8 : 16));
+				this.damage(pokemon.baseMaxhp / (pokemon.hasType(['Water', 'Steel']) ? 4 : 8));
 			},
 			onEnd(pokemon) {
 				this.add('-end', pokemon, 'Salt Cure');
