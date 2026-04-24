@@ -5639,7 +5639,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
       },
       fistsofsteel: {
         onModifyMove(move) {
-                delete move.flags['contact'];
+                if (move.flags['punch']) delete move.flags['contact'];
         },
         onBasePowerPriority: 23,
         onBasePower(basePower, attacker, defender, move) {
@@ -5652,7 +5652,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         name: "Fists Of Steel",
         rating: 3,
         num: 203,
-      
+        
        },
 	speedboost: {
 		onResidualOrder: 28,
