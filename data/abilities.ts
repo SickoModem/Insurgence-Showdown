@@ -5635,7 +5635,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         name: "Spectral Fist",
         rating: 3,
         num: -89,
+
       },
+      fistsofsteel: {
+        onModifyMove(move) {
+                delete move.flags['contact'];
+        },
+        onBasePowerPriority: 23,
+        onBasePower(basePower, attacker, defender, move) {
+                if (move.flags['punch']) {
+                        this.debug('Fists Of Steel boost');
+                        return this.chainModify([5325, 4096]);
+                }
+        },
+        flags: {},
+        name: "Fists Of Steel",
+        rating: 3,
+        num: 203,
+      
+       },
 	speedboost: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,

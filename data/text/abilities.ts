@@ -919,6 +919,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.2.",
 		shortDesc: "This Pokemon's punch-based attacks have 1.2x power. Sucker Punch is not boosted.",
 	},
+        fistsofsteel: {
+                name: "Fists Of Steel",
+                desc: "This Pokemon's punch-based attacks have their power multiplied by 1.3. No contact moves are able to be punished.",
+                shortDesc: "This Pokemon's punch-based attacks have 1.3x power. Contact moves are protected.",
+        },
 	irrelephant: {
 		name: "Irrelephant",
 		shortDesc: "Damage-dealing attacks ignore type-based immunities.",
