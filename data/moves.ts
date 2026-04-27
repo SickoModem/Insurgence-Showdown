@@ -21694,6 +21694,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				if (source?.hasItem('trickgem')) {
 					this.add('-activate', source, 'item: Trick Gem', effect);
+                                        source.useItem();
 					return 7;
 				}
 				return 5;

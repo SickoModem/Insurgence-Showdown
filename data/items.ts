@@ -8078,11 +8078,6 @@ skarmorite: {
         fling: {
                 basePower: 60,
         },
-        onSourceTryPrimaryHit(target, source, move) {
-                if (move.id === 'trickroom' && source.useItem()) {
-                        source.addVolatile('gem');
-                }
-        },
         num: 928,
         gen: 6,
 
