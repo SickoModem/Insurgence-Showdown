@@ -2490,9 +2490,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "TR99",
 		desc: "Teaches certain Pokemon the move Body Press. One use.",
 	},
-	trickrock: {
-		name: "Trick Rock",
-		desc: "Holder's use of Trick Room lasts 8 turns instead of 5.",
+	trickgem: {
+		name: "Trick Gem",
+		desc: "Holder's use of Trick Room lasts 7 turns instead of 5. One use only.",
 	},
 	twistedspoon: {
 		name: "Twisted Spoon",
