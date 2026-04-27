@@ -21693,7 +21693,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return 7;
 				}
 				if (source?.hasItem('trickgem')) {
-					this.add('-activate', source, 'item: Trick Rock', effect);
+					this.add('-activate', source, 'item: Trick Gem', effect);
 					return 7;
 				}
 				return 5;

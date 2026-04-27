@@ -8074,20 +8074,19 @@ skarmorite: {
 	},
 	trickgem: {
         name: "Trick Gem",
-        spritenum: 369,
+        spritenum: 752 + 64,
         fling: {
                 basePower: 60,
         },
-        onAnyTryMove(target, source, move) {
-                if (source !== this.effectState.target) return;
+        onSourceTryPrimaryHit(target, source, move) {
                 if (move.id === 'trickroom' && source.useItem()) {
-                        // consumed
+                        source.addVolatile('gem');
                 }
         },
         num: 928,
         gen: 6,
-        
-      },
+
+        },
 	twistedspoon: {
 		name: "Twisted Spoon",
 		spritenum: 520,
