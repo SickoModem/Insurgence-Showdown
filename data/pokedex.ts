@@ -3233,7 +3233,7 @@ snowbromega: {
 		name: "Hitmonchan",
 		types: ["Fighting"],
 		gender: "M",
-		baseStats: {hp: 110, atk: 105, def: 120, spa: 25, spd: 79, spe: 76},
+		baseStats: {hp: 90, atk: 105, def: 110, spa: 55, spd: 79, spe: 76},
 		abilities: {0: "Unseen Fist", 1: "Fists Of Steel", H: "Regenerator"},
 		heightm: 1.4,
 		weightkg: 50.2,
