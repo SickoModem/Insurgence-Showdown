@@ -1484,6 +1484,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
+        deltaswampertite: {
+    name: "Delta Swampertite",
+    spritenum: 575,
+    megaStone: "Swampert-Delta-Mega",
+    megaEvolves: "Swampert-Delta",
+    itemUser: ["Swampert-Delta"],
+    onTakeItem(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+        return true;
+    },
+    num: 999,
+    gen: 6,
+    isNonstandard: "Custom",
+  
+       },
 	deltaetigirafarigite: {
 		name: "Delta Etigirafarigite",
 		spritenum: 752 + 14,
