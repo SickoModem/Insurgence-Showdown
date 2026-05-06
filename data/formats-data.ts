@@ -1830,11 +1830,27 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
+        mudkipdelta: {
+                tier: "LC",
+        },
+        marshtompdelta: {
+                tier: "NFE",
+        },
+        swampertdelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "RU",
+        },
 	swampertmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
+        swampertdeltamega: {
+                isNonstandard: "Past",
+                tier: "Illegal",
+                natDexTier: "OU",
+        },
 	poochyena: {
 		tier: "LC",
 	},
