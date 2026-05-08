@@ -255,18 +255,13 @@ export const Formats: FormatList = [
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
-		    name: "[Gen 9] Ryuka Dex",
-    		   threads: [
-        `&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">Ryuka Dex Metagame Discussion</a>`,
-        `&bullet; <a href="https://www.smogon.com/forums/threads/3714511/">Ryuka Dex Viability Rankings</a>`,
-        `&bullet; <a href="https://www.smogon.com/forums/threads/3714863/">Ryuka Dex Sample Teams</a>`,
-    ],
+		        name: "[Gen 9] Ryuka Dex",
     mod: 'gen9',
     searchShow: false,
     debug: true,
     battle: {trunc: Math.trunc},
-    ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', '+Unobtainable', '+Past', '+PastMove'],
-   
+    ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod', '+Unobtainable', '+Past', '+PastMove'],
+
         },
 	{
 		name: "[Gen 9] Ryuka Dex Ubers",
