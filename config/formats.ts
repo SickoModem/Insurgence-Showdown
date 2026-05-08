@@ -27,7 +27,7 @@ export const Formats: FormatList = [
 		column: 1,
 	},
         {
-                name: "[Gen 9] NatDex Draft",
+                name: "[Gen 9] Full Ryuka Dex",
 
                 mod: 'gen9',
                 searchShow: false,
