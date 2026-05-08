@@ -214,6 +214,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
                 name: "Blubber",
                 shortDesc: "This Pokemon takes 1/2 damage from Ice and Fire Moves. This Pokemon's weight is doubled.",
         },
+        backtobasics: {
+        	name: "Back To Basics",
+    		desc: "This Pokemon's Fighting-type moves become Normal-type and get a 1.2x power boost.",
+    		shortDesc: "This Pokemon's Fighting-type moves become Normal-type and have their power multiplied by 1.2.",
+        },
 	bulletproof: {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",

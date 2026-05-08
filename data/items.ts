@@ -1499,6 +1499,21 @@ export const Items: {[itemid: string]: ItemData} = {
     isNonstandard: "Custom",
   
        },
+       deltasceptilite: {
+    name: "Delta Sceptilite",
+    spritenum: 575,
+    megaStone: "Sceptile-Delta-Mega",
+    megaEvolves: "Sceptile-Delta",
+    itemUser: ["Sceptile-Delta"],
+    onTakeItem(item, source) {
+        if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+        return true;
+    },
+    num: 700,
+    gen: 6,
+    isNonstandard: "Custom",
+
+       },
 	deltaetigirafarigite: {
 		name: "Delta Etigirafarigite",
 		spritenum: 752 + 14,

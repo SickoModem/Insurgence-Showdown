@@ -255,20 +255,19 @@ export const Formats: FormatList = [
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
-		name: "[Gen 9] Ryuka Dex",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">Ryuka Dex Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3714511/">Ryuka Dex Viability Rankings</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3714863/">Ryuka Dex Sample Teams</a>`,
-		],
-
-		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
-		banlist: [
-			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
-			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
-		],
-	},
+		    name: "[Gen 9] Ryuka Dex",
+    		   threads: [
+        `&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">Ryuka Dex Metagame Discussion</a>`,
+        `&bullet; <a href="https://www.smogon.com/forums/threads/3714511/">Ryuka Dex Viability Rankings</a>`,
+        `&bullet; <a href="https://www.smogon.com/forums/threads/3714863/">Ryuka Dex Sample Teams</a>`,
+    ],
+    mod: 'gen9',
+    searchShow: false,
+    debug: true,
+    battle: {trunc: Math.trunc},
+    ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', '+Unobtainable', '+Past', '+PastMove'],
+   
+        },
 	{
 		name: "[Gen 9] Ryuka Dex Ubers",
 		threads: [

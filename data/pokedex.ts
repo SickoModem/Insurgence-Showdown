@@ -6937,7 +6937,7 @@ snowbromega: {
 		prevo: "Grovyle-Delta",
 		evoLevel: 36,
 		eggGroups: ["Undiscovered"],
-	},
+       },
 	sceptilemega: {
 		num: 254,
 		name: "Sceptile-Mega",
