@@ -26,6 +26,13 @@ export const Formats: FormatList = [
 		section: "Insurgence Singles",
 		column: 1,
 	},
+        {
+                name: "[Gen 9] NatDex Draft",
+
+                mod: 'gen9',
+                searchShow: false,
+                ruleset: ['Standard Draft', '+Unobtainable', '+Past', '+PastMove'],
+        },
 	{
 		name: "[Gen 6] Random Battle",
 
