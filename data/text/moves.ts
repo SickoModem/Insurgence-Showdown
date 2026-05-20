@@ -1264,6 +1264,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Ignores the target's stat stage changes, including evasiveness.",
 		shortDesc: "Ignores the target's stat stage changes.",
 	},
+        lightninglariat: {
+                name: "Lightning Lariat",
+                desc: "Ignores the target's stat stage changes, including evasiveness.",
+                shortDesc: "Ignores the target's stat stage changes.",
+        },
 	darkmatter: {
 		name: "Dark Matter",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",

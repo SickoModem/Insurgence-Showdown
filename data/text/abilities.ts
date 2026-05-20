@@ -867,7 +867,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	innerfocus: {
 		name: "Inner Focus",
 		desc: "This Pokemon cannot be made to flinch. This Pokemon is immune to the effect of the Intimidate Ability.",
-		shortDesc: "This Pokemon cannot be made to flinch. Immune to Intimidate.",
+		shortDesc: "This Pokemon cannot be made to flinch. Immune to Intimidate/Disruption.",
 		gen7: {
 			desc: "This Pokemon cannot be made to flinch.",
 			shortDesc: "This Pokemon cannot be made to flinch.",
@@ -896,6 +896,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			desc: "On switch-in, this Pokemon lowers the Attack of opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
 		},
 	},
+        disruption: {
+    name: "Disruption",
+    desc: "On switch-in, this Pokemon lowers the Special Attack of opposing Pokemon by 1 stage.",
+    shortDesc: "On switch-in, this Pokemon lowers the Sp. Atk of opponents by 1 stage.",
+        
+        },
 	intoxicate: {
 		name: "Intoxicate",
 		desc: "This Pokemon's Normal-type moves become Poison-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
@@ -1294,7 +1300,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	oblivious: {
 		name: "Oblivious",
 		desc: "This Pokemon cannot be infatuated or taunted. Gaining this Ability while infatuated or taunted cures it. This Pokemon is immune to the effect of the Intimidate Ability.",
-		shortDesc: "This Pokemon cannot be infatuated or taunted. Immune to Intimidate.",
+		shortDesc: "This Pokemon cannot be infatuated or taunted. Immune to Intimidate/Disruption.",
 		gen7: {
 			desc: "This Pokemon cannot be infatuated or taunted. Gaining this Ability while infatuated or taunted cures it.",
 			shortDesc: "This Pokemon cannot be infatuated or taunted.",
@@ -1758,7 +1764,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	scrappy: {
 		name: "Scrappy",
 		desc: "This Pokemon can hit Ghost types with Normal- and Fighting-type moves. This Pokemon is immune to the effect of the Intimidate Ability.",
-		shortDesc: "Fighting, Normal moves hit Ghost. Immune to Intimidate.",
+		shortDesc: "Fighting, Normal moves hit Ghost. Immune to Intimidate/Disruption.",
 		gen7: {
 			desc: "This Pokemon can hit Ghost types with Normal- and Fighting-type moves.",
 			shortDesc: "This Pokemon can hit Ghost types with Normal- and Fighting-type moves.",
