@@ -553,7 +553,7 @@
     evos: ["Metapod-Delta"],
     eggGroups: ["Bug"],
 },
-metapodelta: {
+metapoddelta: {
     num: 11,
     name: "Metapod-Delta",
     types: ["Ice", "Fire"],
