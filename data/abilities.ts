@@ -1782,6 +1782,46 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 166,
 	},
+        pixiegardna: {
+    onAllyTryBoost(boost, target, source, effect) {
+        if ((source && target === source) || !target.hasType('Fairy')) return;
+        let showMsg = false;
+        let i: BoostID;
+        for (i in boost) {
+            if (boost[i]! < 0) {
+                delete boost[i];
+                showMsg = true;
+            }
+        }
+        if (showMsg && !(effect as ActiveMove).secondaries) {
+            const effectHolder = this.effectState.target;
+            this.add('-block', target, 'ability: Pixie Gardna', '[of] ' + effectHolder);
+        }
+    },
+    onAllySetStatus(status, target, source, effect) {
+        if (target.hasType('Fairy') && source && target !== source && effect && effect.id !== 'yawn') {
+            this.debug('interrupting setStatus with Pixie Gardna');
+            if (effect.name === 'Synchronize' || (effect.effectType === 'Move' && !effect.secondaries)) {
+                const effectHolder = this.effectState.target;
+                this.add('-block', target, 'ability: Pixie Gardna', '[of] ' + effectHolder);
+            }
+            return null;
+        }
+    },
+    onAllyTryAddVolatile(status, target) {
+        if (target.hasType('Fairy') && status.id === 'yawn') {
+            this.debug('Pixie Gardna blocking yawn');
+            const effectHolder = this.effectState.target;
+            this.add('-block', target, 'ability: Pixie Gardna', '[of] ' + effectHolder);
+            return null;
+        }
+    },
+    flags: {breakable: 1},
+    name: "Pixie Gardna",
+    rating: 0,
+    num: 166,
+
+        },
 	fluffy: {
 		onSourceModifyDamage(damage, source, target, move) {
 			let mod = 1;
