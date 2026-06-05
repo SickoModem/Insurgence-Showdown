@@ -4195,7 +4195,7 @@ snowbromega: {
 		eggGroups: ["Water 1", "Water 3"],
 	},
         reanamastar: {
-                num: 139,
+                num: -139,
                 name: "Reanamastar",
                 types: ["Rock", "Dark"],
                 genderRatio: {M: 0.875, F: 0.125},
