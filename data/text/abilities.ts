@@ -1349,7 +1349,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Grass-type attacks have 1.5x power.",
 		},
 	},
-	owntempo: {
+        reverselichforce: {
+                name: "Reverse Lichforce",
+                desc: "This Pokemon's moves have their power multiplied by 1+(X*0.1).",
+                shortDesc: "This Pokemon's moves have 10% more power for each KO.",
+
+                activate: "[POKEMON] gained strength from the fallen!",
+        },
+       	owntempo: {
 		name: "Own Tempo",
 		desc: "This Pokemon cannot be confused. Gaining this Ability while confused cures it. This Pokemon is immune to the effect of the Intimidate Ability.",
 		shortDesc: "This Pokemon cannot be confused. Immune to Intimidate.",

@@ -3389,6 +3389,42 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 121,
 	},
+        reverselichforce: {
+    onStart(pokemon) {
+        if (this.effectState.fallen) {
+            this.add('-activate', pokemon, 'ability: Reverse Lichforce');
+            const fallen = this.effectState.fallen;
+            this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+        }
+    },
+    onSourceAfterFaint(length, target, source, effect) {
+        if (effect && effect.effectType === 'Move') {
+            const fallen = Math.min((this.effectState.fallen || 0) + length, 5);
+            if (fallen > (this.effectState.fallen || 0)) {
+                this.add('-activate', source, 'ability: Reverse Lichforce');
+                this.add('-end', source, `fallen${this.effectState.fallen || 0}`, '[silent]');
+                this.effectState.fallen = fallen;
+                this.add('-start', source, `fallen${fallen}`, '[silent]');
+            }
+        }
+    },
+    onEnd(pokemon) {
+        this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+    },
+    onBasePowerPriority: 21,
+    onBasePower(basePower, attacker, defender, move) {
+        if (this.effectState.fallen) {
+            const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+            this.debug(`Reverse Lichforce boost: ${powMod[this.effectState.fallen]}/4096`);
+            return this.chainModify([powMod[this.effectState.fallen], 4096]);
+        }
+    },
+    flags: {},
+    name: "Reverse Lichforce",
+    rating: 4,
+    num: 0,
+
+       },
 	mummy: {
 		onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();
