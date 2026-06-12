@@ -2297,6 +2297,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
         toxicpresence: {
              name: "Toxic Presence",
              shortDesc: "This Pokemon has the resistances, weaknesses, immunities, and power of the Poison Type.",
+        },
+        hardheaded: {
+             name: "Hard-Headed",
+             shortDesc: "Ground 2x, Fire 2x. Gains stab and resists of Steel Type.",
         }, 
 	trace: {
 		name: "Trace",

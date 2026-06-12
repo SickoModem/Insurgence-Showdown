@@ -6372,6 +6372,59 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 308,
 	},
+        hardheaded: {
+        onUpdate(pokemon) {
+                if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+                        this.add('-activate', pokemon, 'ability: Hard-Headed');
+                        pokemon.cureStatus();
+                }
+        },
+        onSetStatus(status, target, source, effect) {
+                if (status.id !== 'psn' && status.id !== 'tox') return;
+                if ((effect as Move)?.status) {
+                        this.add('-immune', target, '[from] ability: Hard-Headed');
+                }
+                return false;
+        },
+        onModifyAtk(atk, attacker, defender, move) {
+                if (move.type === 'Steel') {
+                        return this.chainModify(2);
+                }
+        },
+        onModifySpA(atk, attacker, defender, move) {
+                if (move.type === 'Steel') {
+                        return this.chainModify(2);
+                }
+        },
+        onSourceModifyAtkPriority: 6,
+        onSourceModifyAtk(atk, attacker, defender, move) {
+                if (move.type === 'Normal' || move.type === 'Flying' || move.type === 'Rock' || move.type === 'Bug' || move.type === 'Steel' || move.type === 'Grass' || move.type === 'Psychic' || move.type === 'Ice' || move.type === 'Dragon' || move.type === 'Fairy' || move.type === 'Poison') {
+                        this.debug('Hard-Headed resist');
+                        return this.chainModify(0.5);
+                }
+                if (move.type === 'Fire' || move.type === 'Ground') {
+                        this.debug('Hard-Headed weakness');
+                        return this.chainModify(2);
+                }
+        },
+        onSourceModifySpAPriority: 5,
+        onSourceModifySpA(atk, attacker, defender, move) {
+                if (move.type === 'Normal' || move.type === 'Flying' || move.type === 'Rock' || move.type === 'Bug' || move.type === 'Steel' || move.type === 'Grass' || move.type === 'Psychic' || move.type === 'Ice' || move.type === 'Dragon' || move.type === 'Fairy' || move.type === 'Poison') {
+                        this.debug('Hard-Headed resist');
+                        return this.chainModify(0.5);
+                }
+                if (move.type === 'Fire' || move.type === 'Ground') {
+                        this.debug('Hard-Headed weakness');
+                        return this.chainModify(2);
+                }
+        },
+        name: "Hard-Headed",
+        flags: {breakable: 1},
+        gen: 6,
+        rating: 3.5,
+        num: 11,
+
+        },
 	terashift: {
 		onPreStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Terapagos') return;

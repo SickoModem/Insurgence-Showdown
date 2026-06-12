@@ -14400,7 +14400,7 @@ swampertdeltamega: {
 		baseSpecies: "Maractus",
 		forme: "Delta",
 		types: ["Steel"],
-		baseStats: {hp: 75, atk: 106, def: 67, spa: 106, spd: 67, spe: 85},
+		baseStats: {hp: 75, atk: 108, def: 65, spa: 108, spd: 65, spe: 85},
 		abilities: {0: "Motor Drive", 1: "Levitate", H: "Trace"},
 		weightkg: 28,
 		heightm: 1,
