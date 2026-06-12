@@ -6386,6 +6386,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
                 }
                 return false;
         },
+        onImmunity(type, pokemon) {
+                if (type === 'Poison') return false;
+        },
         onModifyAtk(atk, attacker, defender, move) {
                 if (move.type === 'Steel') {
                         return this.chainModify(2);
@@ -6398,7 +6401,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         },
         onSourceModifyAtkPriority: 6,
         onSourceModifyAtk(atk, attacker, defender, move) {
-                if (move.type === 'Normal' || move.type === 'Flying' || move.type === 'Rock' || move.type === 'Bug' || move.type === 'Steel' || move.type === 'Grass' || move.type === 'Psychic' || move.type === 'Ice' || move.type === 'Dragon' || move.type === 'Fairy' || move.type === 'Poison') {
+                if (move.type === 'Normal' || move.type === 'Flying' || move.type === 'Rock' || move.type === 'Bug' || move.type === 'Steel' || move.type === 'Grass' || move.type === 'Psychic' || move.type === 'Ice' || move.type === 'Dragon' || move.type === 'Fairy') {
                         this.debug('Hard-Headed resist');
                         return this.chainModify(0.5);
                 }
@@ -6409,7 +6412,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         },
         onSourceModifySpAPriority: 5,
         onSourceModifySpA(atk, attacker, defender, move) {
-                if (move.type === 'Normal' || move.type === 'Flying' || move.type === 'Rock' || move.type === 'Bug' || move.type === 'Steel' || move.type === 'Grass' || move.type === 'Psychic' || move.type === 'Ice' || move.type === 'Dragon' || move.type === 'Fairy' || move.type === 'Poison') {
+                if (move.type === 'Normal' || move.type === 'Flying' || move.type === 'Rock' || move.type === 'Bug' || move.type === 'Steel' || move.type === 'Grass' || move.type === 'Psychic' || move.type === 'Ice' || move.type === 'Dragon' || move.type === 'Fairy') {
                         this.debug('Hard-Headed resist');
                         return this.chainModify(0.5);
                 }
@@ -6423,7 +6426,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         gen: 6,
         rating: 3.5,
         num: 11,
-
+ 
         },
 	terashift: {
 		onPreStart(pokemon) {
