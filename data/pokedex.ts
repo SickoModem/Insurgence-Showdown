@@ -16048,7 +16048,7 @@ swampertdeltamega: {
 		name: "Bouffalant",
 		types: ["Normal"],
 		baseStats: {hp: 95, atk: 110, def: 95, spa: 40, spd: 95, spe: 55},
-		abilities: {0: "Reckless", 1: "Sap Sipper", H: "Soundproof"},
+		abilities: {0: "Reckless", 1: "Sap Sipper", H: "Hard-Headed"},
 		heightm: 1.6,
 		weightkg: 94.6,
 		color: "Brown",
