@@ -9874,9 +9874,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     self: {
         volatileStatus: 'mustrecharge',
     },
-    onTryImmunity(target) {
-        if (target.hasType('Ground')) return true;
-    },
+    ignoreImmunity: {'Electric': true},
     secondary: null,
     target: "normal",
     type: "Electric",
