@@ -1276,7 +1276,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
         nihilspark: {
                 name: "Nihil Spark",
-                desc: "Ignores Immunity. If this move is successful, the user must recharge on the following turn and c$
+                desc: "Ignores Immunity. If this move is successful, the user must recharge on the following turn",
                 shortDesc: "User cannot move next turn. Ignores Immunity",
         },
 	darkpulse: {
