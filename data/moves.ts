@@ -9862,6 +9862,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Cool",
 	},
+        nihilspark: {
+    num: 63,
+    accuracy: 90,
+    basePower: 150,
+    category: "Special",
+    name: "Nihil Spark",
+    pp: 5,
+    priority: 0,
+    flags: {recharge: 1, protect: 1, mirror: 1, metronome: 1},
+    self: {
+        volatileStatus: 'mustrecharge',
+    },
+    onTryImmunity(target) {
+        if (target.hasType('Ground')) return true;
+    },
+    secondary: null,
+    target: "normal",
+    type: "Electric",
+    contestType: "Cool",
+},
 	hyperdrill: {
 		num: 887,
 		accuracy: 100,

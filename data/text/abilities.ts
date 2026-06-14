@@ -2506,6 +2506,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "#electromorphosis",
 	},
+        chargedconstruct: {
+    name: "Charged Construct",
+    desc: "If this Pokemon is Zygarde in its 10% Forme, it changes to 50% Forme if at 1/2 max HP or less at end of turn. When this Pokemon is hit by a move, it becomes charged, boosting the power of its next Electric-type move.",
+    shortDesc: "If Zygarde 10%, changes to 50% at end of turn if at 1/2 max HP or less. Charges on hit.",
+    activate: "The cells are charged up!",
+    transform: "[POKEMON] transformed into its 50% Forme!",
+    start: "Electricity is building up in [POKEMON]!",
+},
 	windrider: {
 		name: "Wind Rider",
 		desc: "This Pokemon is immune to wind moves and raises its Attack by 1 stage when hit by a wind move or when Tailwind begins on this Pokemon's side.",
