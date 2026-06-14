@@ -1009,6 +1009,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 238,
 	},
+        chargedconstruct: {
+    onDamagingHitOrder: 1,
+    onDamagingHit(damage, target, source, move) {
+        target.addVolatile('charge');
+    },
+    onResidualOrder: 29,
+    onResidual(pokemon) {
+        if (pokemon.baseSpecies.baseSpecies !== 'Zygarde' || pokemon.transformed || !pokemon.hp) return;
+        if (pokemon.species.id === 'zygarde' || pokemon.hp > pokemon.maxhp / 2) return;
+        if (pokemon.species.id !== 'zygarde10') return;
+        this.add('-activate', pokemon, 'ability: Charged Construct');
+        pokemon.formeChange('Zygarde', this.effect, true);
+        pokemon.baseMaxhp = Math.floor(Math.floor(
+            2 * pokemon.species.baseStats['hp'] + pokemon.set.ivs['hp'] + Math.floor(pokemon.set.evs['hp'] / 4) + 100
+        ) * pokemon.level / 100 + 10);
+        const newMaxHP = pokemon.volatiles['dynamax'] ? (2 * pokemon.baseMaxhp) : pokemon.baseMaxhp;
+        pokemon.hp = newMaxHP - (pokemon.maxhp - pokemon.hp);
+        pokemon.maxhp = newMaxHP;
+        this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
+    },
+    flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
+    name: "Charged Construct",
+    rating: 4,
+    num: -876,
+},
 	cudchew: {
 		onEatItem(item, pokemon) {
 			if (item.isBerry && pokemon.addVolatile('cudchew')) {
