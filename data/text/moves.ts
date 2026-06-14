@@ -1274,6 +1274,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
 		shortDesc: "User cannot move next turn.",
 	},
+        nihilspark: {
+                name: "Nihil Spark",
+                desc: "Ignores Immunity. If this move is successful, the user must recharge on the following turn and c$
+                shortDesc: "User cannot move next turn. Ignores Immunity",
+        },
 	darkpulse: {
 		name: "Dark Pulse",
 		desc: "Has a 20% chance to make the target flinch.",
