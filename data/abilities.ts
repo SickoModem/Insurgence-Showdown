@@ -2504,31 +2504,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 246,
 	},
 	illuminate: {
-		onTryBoost(boost, target, source, effect) {
-			if (source && target === source) return;
-			if (boost.accuracy && boost.accuracy < 0) {
-				delete boost.accuracy;
-				if (!(effect as ActiveMove).secondaries) {
-					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Illuminate", "[of] " + target);
-				}
-			}
-		},
-		onModifyMove(move) {
-			move.ignoreEvasion = true;
-		},
-		flags: {breakable: 1},
-		name: "Illuminate",
-		onModifyAccuracyPriority: -1,
-		onModifyAccuracy(accuracy) {
-			if (typeof accuracy !== 'number') return;
-			if (this.field.isWeather('newmoon')) {
-				this.debug('Illuminate - decreasing accuracy');
-				return this.chainModify([3277, 4096]);
-			}
-		},
-		rating: 1.5,
-		num: 35,
-	},
+        onSourceModifyAccuracyPriority: -1,
+        onSourceModifyAccuracy(accuracy) {
+                if (typeof accuracy !== 'number') return;
+                this.debug('compoundeyes - enhancing accuracy');
+                return this.chainModify([5325, 4096]);
+        },
+        flags: {},
+        name: "Illuminate",
+        rating: 3,
+        num: 35,
+
+        },
 	illusion: {
 		onBeforeSwitchIn(pokemon) {
 			pokemon.illusion = null;

@@ -825,8 +825,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	illuminate: {
 		name: "Illuminate",
-		desc: "If Darkness is active, this Pokemon's evasiveness is multiplied by 1.25.",
-		shortDesc: "If Darkness is active, this Pokemon's evasiveness is 1.25x.",
+		desc: "Boosts Accuracy.",
+		shortDesc: "Boosts Accuracy!",
 	},
 	illusion: {
 		name: "Illusion",
