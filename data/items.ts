@@ -1496,7 +1496,6 @@ export const Items: {[itemid: string]: ItemData} = {
     },
     num: 999,
     gen: 6,
-    isNonstandard: "Custom",
   
        },
        deltasceptilite: {
@@ -1511,7 +1510,7 @@ export const Items: {[itemid: string]: ItemData} = {
     },
     num: 700,
     gen: 6,
-    isNonstandard: "Custom",
+    isNonstandard: "Past",
 
        },
 	deltaetigirafarigite: {

@@ -7063,6 +7063,23 @@ snowbromega: {
 		evoLevel: 36,
 		eggGroups: ["Undiscovered"],
        },
+       sceptiledeltamega: {
+	gen: 6,
+	num: 254,
+	name: "Sceptile-Delta-Mega",
+	baseSpecies: "Sceptile-Delta",
+	forme: "Mega",
+	types: ["Dragon", "Normal"],
+	genderRatio: {M: 0.875, F: 0.125},
+	baseStats: {hp: 70, atk: 145, def: 75, spa: 145, spd: 85, spe: 110},
+	abilities: {0: "Back To Basics"},
+	weightkg: 55.2,
+	heightm: 1.9,
+	color: "Green",
+	eggGroups: ["Undiscovered"],
+	requiredItem: "Delta Sceptilite",
+        
+       },
 	sceptilemega: {
 		num: 254,
 		name: "Sceptile-Mega",
