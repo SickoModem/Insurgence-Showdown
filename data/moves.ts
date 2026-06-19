@@ -11877,7 +11877,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		self: {
 			boosts: {
-				spa: -1,
+				spa: -2,
 			},
 		},
 		secondary: null,

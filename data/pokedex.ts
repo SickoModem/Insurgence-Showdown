@@ -4359,6 +4359,23 @@ snowbromega: {
 		formeOrder: ["Snorlax", "Snorlax-Delta"],
 		canGigantamax: "G-Max Replenish",
 	},
+        snorlaxarmor: {
+	num: 143,
+	name: "Snorlax-Armor",
+	baseSpecies: "Snorlax",
+	forme: "Armor",
+	types: ["Steel"],
+	baseStats: {hp: 160, atk: 118, def: 68, spa: 76, spd: 118, spe: 28},
+	abilities: {0: "Scrappy", 1: "Thick Fat", H: "Gluttony"},
+	weightkg: 520,
+	heightm: 2.1,
+	color: "Black",
+	eggGroups: ["Monster"],
+	requiredItem: "Alltron Armor",
+	changesFrom: "Snorlax",
+	gen: 9,
+
+       },
 	snorlaxgmax: {
 		num: 143,
 		name: "Snorlax-Gmax",

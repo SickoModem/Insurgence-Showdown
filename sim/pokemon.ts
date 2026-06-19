@@ -2275,6 +2275,7 @@ export class Pokemon {
 		if (!negateImmunity && this.hasType('Flying') && !(this.hasType('???') && 'roost' in this.volatiles)) return false;
 		if (this.hasAbility('levitate') && !this.battle.suppressingAbility(this)) return null;
                 if (this.hasAbility('archaicaviation') && !this.battle.suppressingAbility(this)) return null;
+                if (this.hasAbility('eelevate') && !this.battle.suppressingAbility(this)) return null;
 		if (this.hasAbility('omnitype') && !this.battle.suppressingAbility(this)) return false;
 		if ('magnetrise' in this.volatiles) return false;
 		if ('telekinesis' in this.volatiles) return false;
