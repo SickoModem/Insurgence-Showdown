@@ -6420,6 +6420,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "RU",
     },
+    sceptiledeltamega: {
+                isNonstandard: "Past",
+                tier: "Illegal",
+                natDexTier: "OU",
+        },
 	torchicdelta: {
 		isNonstandard: "Past",
 		tier: "Illegal",
