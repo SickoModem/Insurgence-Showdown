@@ -7062,6 +7062,8 @@ snowbromega: {
 		prevo: "Grovyle-Delta",
 		evoLevel: 36,
 		eggGroups: ["Undiscovered"],
+                otherFormes: ["Sceptile-Delta-Mega"],
+    		formeOrder: ["Sceptile-Delta", "Sceptile-Delta-Mega"],
        },
        sceptiledeltamega: {
 	gen: 6,
