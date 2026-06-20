@@ -2252,10 +2252,10 @@ staraptite: {
 	gen: 6,
 	isNonstandard: "Past",
 },
-raichunite: {
-	name: "Raichunite",
+raichunitex: {
+	name: "Raichunite-X",
 	spritenum: 579,
-	megaStone: "Raichu-Mega",
+	megaStone: "Raichu-Mega-X",
 	megaEvolves: "Raichu",
 	itemUser: ["Raichu"],
 	onTakeItem(item, source) {
