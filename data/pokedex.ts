@@ -19148,9 +19148,9 @@ fulgeroar: {
 	crabrawler: {
 		num: 739,
 		name: "Crabrawler",
-		types: ["Fighting"],
-		baseStats: {hp: 47, atk: 82, def: 57, spa: 42, spd: 47, spe: 63},
-		abilities: {0: "Hyper Cutter", 1: "Iron Fist", H: "Anger Point"},
+		types: ["Fighting", "Water"],
+		baseStats: {hp: 77, atk: 102, def: 57, spa: 42, spd: 57, spe: 93},
+		abilities: {0: "Underdog", 1: "Iron Fist", H: "Scrappy"},
 		heightm: 0.6,
 		weightkg: 7,
 		color: "Purple",

@@ -2209,7 +2209,39 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 275,
 	},
-	gulpmissile: {
+        underdog: {
+	onDragOutPriority: 1,
+	onDragOut(pokemon) {
+		this.add('-activate', pokemon, 'ability: Underdog');
+		return null;
+	},
+	onTryBoost(boost, target, source, effect) {
+		if (effect.name === 'Intimidate' && boost.atk) {
+			delete boost.atk;
+			this.boost({atk: 1}, target, target, null, false, true);
+		}
+	},
+	onModifyAtkPriority: 5,
+	onModifyAtk(atk, attacker, defender, move) {
+		if (move.type === 'Fighting' && attacker.hp <= attacker.maxhp / 3) {
+			this.debug('Underdog boost');
+			return this.chainModify(1.5);
+		}
+	},
+	onModifySpAPriority: 5,
+	onModifySpA(spa, attacker, defender, move) {
+		if (move.type === 'Fighting' && attacker.hp <= attacker.maxhp / 3) {
+			this.debug('Underdog boost');
+			return this.chainModify(1.5);
+		}
+	},
+	flags: {breakable: 1},
+	name: "Underdog",
+	rating: 3,
+	num: 9298,
+
+      },
+      gulpmissile: {
 		onDamagingHit(damage, target, source, move) {
 			if (!source.hp || !source.isActive || target.isSemiInvulnerable()) return;
 			if (['cramorantgulping', 'cramorantgorging'].includes(target.species.id)) {
