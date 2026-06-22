@@ -701,7 +701,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
         underdog: {
                 name: "Underdog",
-                desc: "This Pokemon is immune to the effect of the Intimidate Ability and raises its Attack by 1 stage $
+                desc: "This Pokemon is immune to the effect of the Intimidate Ability and raises its Attack by 1 stage.",
                 shortDesc: "Low health, stronger Fighting moves.. Intimidated: +1 Attack. Cannot be forced to switch out. ",
         },
 	gulpmissile: {
