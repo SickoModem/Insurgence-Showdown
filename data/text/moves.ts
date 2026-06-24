@@ -4478,8 +4478,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	nanorepair: {
 		name: "Nanorepair",
-		desc: "The user restores 1/2 of its maximum HP, rounded half up and boosts its defense by 1 stage.",
-		shortDesc: "Heals the user by 50% and raises def by 1.",
+		desc: "The user restores 1/2 of its maximum HP, and heals overtime.",
+		shortDesc: "Heals the user by 50% and heals overtime",
 	},
 	mysticalpower: {
 		name: "Mystical Power",
