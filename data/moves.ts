@@ -13555,24 +13555,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	nanorepair: {
-		num: 13,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Nanorepair",
-		pp: 5,
-		priority: 0,
-		flags: {snatch: 1, heal: 1},
-		heal: [1, 2],
-		boosts: {
-			def: 1,
+	num: 13,
+	accuracy: true,
+	basePower: 0,
+	category: "Status",
+	name: "Nanorepair",
+	pp: 5,
+	priority: 0,
+	flags: {snatch: 1, heal: 1},
+	heal: [1, 2],
+	volatileStatus: 'nanorepair',
+	condition: {
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Nanorepair');
 		},
-		secondary: null,
-		target: "self",
-		type: "Steel",
-		zMove: {effect: 'clearnegativeboost'},
-		contestType: "Cute",
+		onResidualOrder: 6,
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 16);
+		},
 	},
+	secondary: null,
+	target: "self",
+	type: "Steel",
+	zMove: {boost: {def: 1}},
+	contestType: "Cute",
+
+       },
 	mysticalpower: {
 		num: 832,
 		accuracy: 90,
