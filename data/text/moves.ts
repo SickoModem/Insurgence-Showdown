@@ -5035,6 +5035,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated.",
 		shortDesc: "Destroys screens, unless the target is immune.",
 	},
+        dracojaw: {
+                name: "Draco Jaw",
+                desc: "Biting move, 10% flinch.",
+                shortDesc: "Biting move, 10%.",
+        },
 	psychicnoise: {
 		name: "Psychic Noise",
 		desc: "For 2 turns, the target is prevented from restoring any HP as long as it remains active. During the effect, healing and draining moves are unusable, and Abilities and items that grant healing will not heal the user. If an affected Pokemon uses Baton Pass, the replacement will remain unable to restore its HP. Pain Split and the Regenerator Ability are unaffected.",
