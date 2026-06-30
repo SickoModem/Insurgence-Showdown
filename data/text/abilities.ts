@@ -954,7 +954,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
         infestate: {
                 name: "Infestate",
-                shortDesc: "This Pokemon's Normal-Type moves become Bug type and have 1.5x power.",
+                shortDesc: "This Pokemon's Normal-Type moves become Bug type and have 1.2x power.",
         },
 	keeneye: {
 		name: "Keen Eye",
