@@ -2347,6 +2347,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Speed Swap",
 		shortDesc: "On switch-in, this Pokemon sets up Trick Room.",
 	},
+        mindshuffle: {
+                name: "Mind Shuffle",
+                shortDesc: "On switch-in, this Pokemon shuffles your mind.",
+        },
 	truant: {
 		name: "Truant",
 		shortDesc: "This Pokemon skips every other turn instead of using a move.",
