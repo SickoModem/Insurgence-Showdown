@@ -3344,6 +3344,47 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 315,
 		// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
 	},
+        mindshuffle: {
+	onStart(pokemon) {
+		for (const target of pokemon.adjacentFoes()) {
+			let success = false;
+			let i: BoostID;
+			for (i in target.boosts) {
+				if (target.boosts[i] === 0) continue;
+				target.boosts[i] = -target.boosts[i];
+				success = true;
+			}
+			if (success) {
+				this.add('-invertboost', target, '[from] ability: Mind Shuffle');
+			}
+		}
+
+		this.field.addPseudoWeather('mindshuffle', pokemon, this.effect);
+	},
+	onSwitchOut(pokemon) {
+		this.field.removePseudoWeather('mindshuffle');
+	},
+	condition: {
+		onFieldStart(target, source) {
+			this.add('-fieldstart', 'ability: Mind Shuffle', '[of] ' + source);
+		},
+		onFieldEnd() {
+			this.add('-fieldend', 'ability: Mind Shuffle');
+		},
+		onChangeBoost(boost, target, source, effect) {
+			if (effect && effect.id === 'zpower') return;
+			let i: BoostID;
+			for (i in boost) {
+				boost[i]! *= -1;
+			}
+		},
+	},
+	flags: {},
+	name: "Mind Shuffle",
+	rating: 4,
+	num: 1000,
+
+       },
 	mirrorarmor: {
 		onTryBoost(boost, target, source, effect) {
 			// Don't bounce self stat changes, or boosts that have already bounced
