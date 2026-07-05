@@ -73,7 +73,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
         hypershell: {
                 name: "Hyper Shell",
-                desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Attack, Special Attack, and Speed are raised by 1 st$
+                desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Attack, Special Attack, and Speed are raised by 1 stage.",
                 shortDesc: "At 1/2 or less of this Pokemon's max HP: +2 Atk, Sp. Atk, Spe, and -1 Def, Sp. Def.",
         },
 	anticipation: {
@@ -92,6 +92,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] shuddered!",
 	},
+        aurumarmor: {
+	name: "Aurum Armor",
+	desc: "This Pokemon is immune to OHKO moves. This Pokemon does not take recoil damage, except from Struggle. If this Pokemon has full HP, it survives an attack that would otherwise cause it to faint with 1 HP.",
+	shortDesc: "Immune to OHKO. No recoil damage. Survives an attack at full HP with 1 HP.",
+
+        },
 	arenatrap: {
 		name: "Arena Trap",
 		desc: "Prevents opposing Pokemon from choosing to switch out unless they are airborne, are holding a Shed Shell, or are a Ghost type.",
