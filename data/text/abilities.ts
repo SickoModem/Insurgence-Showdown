@@ -71,6 +71,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Attack, Special Attack, and Speed are raised by 1 stage, and its Defense and Special Defense are lowered by 1 stage. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
 		shortDesc: "At 1/2 or less of this Pokemon's max HP: +1 Atk, Sp. Atk, Spe, and -1 Def, Sp. Def.",
 	},
+        hypershell: {
+                name: "Hyper Shell",
+                desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Attack, Special Attack, and Speed are raised by 1 st$
+                shortDesc: "At 1/2 or less of this Pokemon's max HP: +2 Atk, Sp. Atk, Spe, and -1 Def, Sp. Def.",
+        },
 	anticipation: {
 		name: "Anticipation",
 		desc: "On switch-in, this Pokemon is alerted if any opposing Pokemon has an attack that is super effective against this Pokemon, or an OHKO move. This effect considers any move that deals direct damage as an attacking move of its respective type, Hidden Power counts as its determined type, and Judgment, Multi-Attack, Natural Gift, Revelation Dance, Techno Blast, and Weather Ball are considered Normal-type moves.",
@@ -227,6 +232,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
             name: "Cats' Eye",
             desc: "Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage. Increased Crit Rate",
             shortDesc: "This Pokemon cannot have its accuracy lowered, and has an increased crit rate. Lucky Cat huh?", 
+        },
+        felinemind: {
+            name: "Feline Mind",
+            desc: "Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage. Increased Crit Rate",
+            shortDesc: "Psychic hits dark. This Pokemon cannot have its accuracy lowered, and has an increased crit rate. Lucky Cat huh?",
         },
 	cheekpouch: {
 		name: "Cheek Pouch",
@@ -1182,6 +1192,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] breaks the mold!",
 	},
+        burnoutbreaker: {
+	name: "Burnout Breaker",
+	desc: "On switch-in, this Pokemon's identity is announced. This Pokemon's moves and their effects ignore the Abilities of other Pokemon. Powers up moves that have recoil or crash damage.",
+	shortDesc: "Moves ignore target's Ability. Powers up recoil/crash-damage moves.",
+	start: "  [POKEMON]'s Burnout Breaker burns away!",
+         
+        },
 	moody: {
 		name: "Moody",
 		desc: "This Pokemon has a random stat, other than accuracy or evasiveness, raised by 2 stages and another stat lowered by 1 stage at the end of each turn.",

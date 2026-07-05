@@ -59,6 +59,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 5,
 	},
+        aurumarmor: {
+	onTryHit(pokemon, target, move) {
+		if (move.ohko) {
+			this.add('-immune', pokemon, '[from] ability: Aurum Armor');
+			return null;
+		}
+	},
+	onDamagePriority: -30,
+	onDamage(damage, target, source, effect) {
+		if (effect && effect.id === 'recoil') {
+			if (!this.activeMove) throw new Error("Battle.activeMove is null");
+			if (this.activeMove.id !== 'struggle') return null;
+		}
+		if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+			this.add('-ability', target, 'Aurum Armor');
+			return target.hp - 1;
+		}
+	},
+	flags: {breakable: 1},
+	name: "Aurum Armor",
+	rating: 4,
+	num: -302,
+         
+        },
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
 			if (move.forceSTAB || source.hasType(move.type)) {
@@ -242,6 +266,43 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 271,
 	},
+        hypershell: {
+	onDamage(damage, target, source, effect) {
+		if (
+			effect.effectType === "Move" &&
+			!effect.multihit &&
+			(!effect.negateSecondary && !(effect.hasSheerForce && source.hasAbility('sheerforce')))
+		) {
+			this.effectState.checkedAngerShell = false;
+		} else {
+			this.effectState.checkedAngerShell = true;
+		}
+	},
+	onTryEatItem(item) {
+		const healingItems = [
+			'aguavberry', 'enigmaberry', 'figyberry', 'iapapaberry', 'magoberry', 'sitrusberry', 'wikiberry', 'oranberry', 'berryjuice',
+		];
+		if (healingItems.includes(item.id)) {
+			return this.effectState.checkedAngerShell;
+		}
+		return true;
+	},
+	onAfterMoveSecondary(target, source, move) {
+		this.effectState.checkedAngerShell = true;
+		if (!source || source === target || !target.hp || !move.totalDamage) return;
+		const lastAttackedBy = target.getLastAttackedBy();
+		if (!lastAttackedBy) return;
+		const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+		if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
+			this.boost({atk: 2, spa: 2, spe: 2, def: -1, spd: -1}, target, target);
+		}
+	},
+	flags: {},
+	name: "Hyper Shell",
+	rating: 4,
+	num: 2071,
+         
+        },
 	anticipation: {
 		onStart(pokemon) {
 			for (const target of pokemon.foes()) {
@@ -5103,6 +5164,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 120,
 	},
+        burnoutbreaker: {
+	onStart(pokemon) {
+		this.add('-ability', pokemon, 'Burnout Breaker');
+	},
+	onModifyMove(move) {
+		move.ignoreAbility = true;
+	},
+	onBasePowerPriority: 23,
+	onBasePower(basePower, attacker, defender, move) {
+		if (move.recoil || move.hasCrashDamage) {
+			this.debug('Burnout Breaker boost');
+			return this.chainModify([4915, 4096]);
+		}
+	},
+	flags: {},
+	name: "Burnout Breaker",
+	rating: 3.5,
+	num: -303,
+          
+        },
 	refrigerate: {
 		onModifyTypePriority: -1,
 		onModifyType(move, pokemon) {
@@ -5442,6 +5523,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 251,
 	},
+        felinemind: {
+	onModifyCritRatio(critRatio) {
+		return critRatio + 1;
+	},
+	onModifyMovePriority: -5,
+	onModifyMove(move) {
+		if (!move.ignoreImmunity) move.ignoreImmunity = {};
+		if (move.ignoreImmunity !== true) {
+			move.ignoreImmunity['Psychic'] = true;
+		}
+	},
+	onTryBoost(boost, target, source, effect) {
+		if (source && target === source) return;
+		if (boost.accuracy && boost.accuracy < 0) {
+			delete boost.accuracy;
+			if (!(effect as ActiveMove).secondaries) {
+				this.add("-fail", target, "unboost", "accuracy", "[from] ability: Feline Mind", "[of] " + target);
+			}
+		}
+	},
+	flags: {breakable: 1},
+	name: "Feline Mind",
+	rating: 3.5,
+	num: -301,
+
+        },
 	seedsower: {
 		onDamagingHit(damage, target, source, move) {
 			this.field.setTerrain('grassyterrain');
