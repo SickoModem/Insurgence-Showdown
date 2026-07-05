@@ -2140,20 +2140,23 @@ hawluchanite: {
     isNonstandard: "Past",
 },
 meowsticite: {
-    name: "Meowsticite",
-    spritenum: 0,
-    megaStone: "Meowstic-Mega",
-    megaEvolves: "Meowstic",
-    itemUser: ["Meowstic", "Meowstic-F"],
-    onTakeItem(item, source) {
-        if (source.baseSpecies.baseSpecies === "Meowstic") return false;
-        return true;
-    },
-    num: 2643,
-    gen: 9,
-    isNonstandard: "Past",
-},
-scovillainite: {
+		name: "Meowsticite",
+		spritenum: 506,
+		megaStone: {
+			"Meowstic": "Meowstic-M-Mega",
+			"Meowstic-F": "Meowstic-F-Mega",
+		},
+		itemUser: ["Meowstic", "Meowstic-F"],
+		onTakeItem(item, source) {
+			return !item.megaStone || (!item.megaStone[source.baseSpecies.name] &&
+				!Object.values(item.megaStone).includes(source.baseSpecies.name));
+		},
+		num: 2643,
+		gen: 9,
+		isNonstandard: "Future",
+   },
+
+   scovillainite: {
     name: "Scovillainite",
     spritenum: 0,
     megaStone: "Scovillain-Mega",
