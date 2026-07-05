@@ -6033,6 +6033,7 @@ snowbromega: {
                 num: 982,
                 name: "Dudunsparce-Delta",
                 baseSpecies: "Dudunsparce",
+                forme: "Delta",
                 types: ["Water", "Bug"],
                 baseStats: {hp: 125, atk: 85, def: 80, spa: 100, spd: 75, spe: 55},
                 abilities: {0: "Hyper Cutter", 1: "Water Absorb", H: "Skill Link"},
