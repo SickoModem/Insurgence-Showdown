@@ -3364,6 +3364,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	onSwitchOut(pokemon) {
 		this.field.removePseudoWeather('mindshuffle');
 	},
+	onFaint(pokemon) {
+		this.field.removePseudoWeather('mindshuffle');
+	},
 	condition: {
 		onFieldStart(target, source) {
 			this.add('-fieldstart', 'ability: Mind Shuffle', '[of] ' + source);
@@ -3382,9 +3385,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	flags: {},
 	name: "Mind Shuffle",
 	rating: 4,
-	num: 1000,
-
-       },
+	num: 9090,
+        
+        },
 	mirrorarmor: {
 		onTryBoost(boost, target, source, effect) {
 			// Don't bounce self stat changes, or boosts that have already bounced
