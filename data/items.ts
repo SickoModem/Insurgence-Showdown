@@ -2154,7 +2154,7 @@ meowsticite: {
 		num: 2643,
 		gen: 9,
 		isNonstandard: "Future",
-   },
+	},
 
    scovillainite: {
     name: "Scovillainite",
