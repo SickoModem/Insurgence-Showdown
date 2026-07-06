@@ -1893,30 +1893,29 @@ export class BattleActions {
 		}
 		return null;
 	}
-
-	runMegaEvo(pokemon: Pokemon) {
-		let speciesid = pokemon.canMegaEvo || pokemon.canUltraBurst;
-		if (!speciesid) return false;
-
-		if (pokemon.species.id === 'sunflora' && pokemon.gender === 'F') {
-			speciesid = "Sunflora-Mega-F";
-		}
-
-		pokemon.formeChange(speciesid, pokemon.getItem(), true);
-
-		// Limit one mega evolution
-		const wasMega = pokemon.canMegaEvo;
-		for (const ally of pokemon.side.pokemon) {
-			if (wasMega) {
-				ally.canMegaEvo = null;
-			} else {
-				ally.canUltraBurst = null;
-			}
-		}
-
-		this.battle.runEvent('AfterMega', pokemon);
-		return true;
+        runMegaEvo(pokemon: Pokemon) {
+	let speciesid = pokemon.canMegaEvo || pokemon.canUltraBurst;
+	if (!speciesid) return false;
+	if (pokemon.species.id === 'sunflora' && pokemon.gender === 'F') {
+		speciesid = "Sunflora-Mega-F";
 	}
+	if (pokemon.species.id === 'meowsticf') {
+		speciesid = "Meowstic-F-Mega";
+	}
+	pokemon.formeChange(speciesid, pokemon.getItem(), true);
+	// Limit one mega evolution
+	const wasMega = pokemon.canMegaEvo;
+	for (const ally of pokemon.side.pokemon) {
+		if (wasMega) {
+			ally.canMegaEvo = null;
+		} else {
+			ally.canUltraBurst = null;
+		}
+	}
+	this.battle.runEvent('AfterMega', pokemon);
+	return true;
+       
+       }
 
 	canTerastallize(pokemon: Pokemon) {
 		if (pokemon.getItem().zMove || pokemon.canMegaEvo || this.dex.gen !== 9) {
