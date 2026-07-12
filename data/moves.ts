@@ -47,6 +47,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		contestType: "Cool",
 	},
+        lullabash: {
+	num: 10100
+	accuracy: 95,
+	basePower: 40,
+	category: "Physical",
+	name: "Lullabash",
+	pp: 10,
+	priority: 0,
+	flags: {contact: 1, protect: 1, mirror: 1},
+	onHit(target) {
+		if (target.status || !target.runStatusImmunity('slp')) return;
+		target.addVolatile('yawn');
+	},
+	secondary: null,
+	target: "normal",
+	type: "Normal",
+	contestType: "Cool",
+         
+        },
 	achillesheel: {
 		num: 1,
 		accuracy: 100,

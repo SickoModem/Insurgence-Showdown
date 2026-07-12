@@ -7293,16 +7293,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 199,
 	},
 	watercompaction: {
-		onDamagingHit(damage, target, source, move) {
-			if (move.type === 'Water') {
-				this.boost({def: 2});
+	onTryHit(target, source, move) {
+		if (target !== source && move.type === 'Water') {
+			if (!this.boost({def: 2})) {
+				this.add('-immune', target, '[from] ability: Water Compaction');
 			}
-		},
-		flags: {},
-		name: "Water Compaction",
-		rating: 1.5,
-		num: 195,
+			return null;
+		}
 	},
+	flags: {breakable: 1},
+	name: "Water Compaction",
+	rating: 3.5,
+	num: 195,
+
+        },
 	waterveil: {
 		onUpdate(pokemon) {
 			if (pokemon.status === 'brn') {
