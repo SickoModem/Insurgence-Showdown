@@ -26,6 +26,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",
 	},
+        lullabash: {
+           name: "Lullabash",
+           desc: "When it connects, inflict yawn.",
+           shortDesc: "Inflicts yawn.",
+        },
 	achillesheel: {
 		name: "Achilles Heel",
 		desc: "Always deals super effective damage (unless the target is immune).",

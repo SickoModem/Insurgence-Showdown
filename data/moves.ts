@@ -48,7 +48,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
         lullabash: {
-	num: 10100
+	num: 10100,
 	accuracy: 95,
 	basePower: 40,
 	category: "Physical",
