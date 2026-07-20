@@ -601,6 +601,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Damage is calculated using the user's Defense stat as its Attack, including stat stage changes. Other effects that modify the Attack stat are used as normal.",
 		shortDesc: "Uses user's Def stat as Atk in damage calculation.",
 	},
+        breakingpoint: {
+                name: "Breaking Point",
+                desc: "Damage is calculated using the user's Defense stat as its Attack, including stat stage changes. Other effects that modify the Attack stat are used as normal.",
+                shortDesc: "Uses user's Def stat as Atk in damage calculation.",
+        },
 	bodyslam: {
 		name: "Body Slam",
 		desc: "Has a 30% chance to paralyze the target. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
@@ -2359,6 +2364,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
 		shortDesc: "10% chance to freeze. Super effective on Water.",
 	},
+        freezingpoint: {
+                name: "Freezing Point",
+                desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
+                shortDesc: "10% chance to freeze. Super effective on Water.",
+        },
 	freezeshock: {
 		name: "Freeze Shock",
 		desc: "Has a 30% chance to paralyze the target. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
@@ -3596,6 +3606,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 30% chance to burn the target.",
 		shortDesc: "30% chance to burn adjacent Pokemon.",
 	},
+        meltingpoint: {
+                name: "Melting Point",
+                desc: "Has a 30% chance to burn the target.",
+                shortDesc: "30% chance to burn Pokemon.",
+        },
 	leafage: {
 		name: "Leafage",
 		shortDesc: "No additional effect.",

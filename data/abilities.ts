@@ -2048,6 +2048,49 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 13,
 	},
+        regiforcemoltenfoundry: {
+    onModifyTypePriority: -1,
+    onModifyType(move, pokemon) {
+        const noModifyType = [
+            'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+        ];
+        if (move.type === 'Rock' && !noModifyType.includes(move.id) &&
+            !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+            move.type = 'Fire';
+            move.typeChangerBoosted = this.effect;
+        }
+    },
+    onBasePowerPriority: 23,
+    onBasePower(basePower, pokemon, target, move) {
+        if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+    },
+    onTryMovePriority: -2,
+    onTryMove(pokemon, target, move) {
+        if (move.id === 'stealthrock') {
+            this.actions.useMove('stealthcoal', pokemon, target);
+            return null;
+        }
+    },
+    onTryBoost(boost, target, source, effect) {
+        if (source && target === source) return;
+        let showMsg = false;
+        let i: BoostID;
+        for (i in boost) {
+            if (boost[i]! < 0) {
+                delete boost[i];
+                showMsg = true;
+            }
+        }
+        if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+            this.add("-fail", target, "unboost", "[from] ability: Regiforce: Molten Foundry", "[of] " + target);
+        }
+    },
+    flags: {breakable: 1},
+    name: "Regiforce: Molten Foundry",
+    rating: 4.5,
+    num: -12345, 
+
+       },
 	friendguard: {
 		onAnyModifyDamage(damage, source, target, move) {
 			if (target !== this.effectState.target && target.isAlly(this.effectState.target)) {
@@ -3045,6 +3088,41 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 26,
 	},
+        regiforceterrafirma: {
+    onTryBoost(boost, target, source, effect) {
+        if (source && target === source) return;
+        let showMsg = false;
+        let i: BoostID;
+        for (i in boost) {
+            if (boost[i]! < 0) {
+                delete boost[i];
+                showMsg = true;
+            }
+        }
+        if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+            this.add("-fail", target, "unboost", "[from] ability: Regiforce: Terra Firma", "[of] " + target);
+        }
+    },
+    onModifyAtkPriority: 5,
+    onModifyAtk(atk, attacker, defender, move) {
+        if (move.type === 'Ground') {
+            this.debug('Regiforce: Terra Firma boost');
+            return this.chainModify([5325, 4096]);
+        }
+    },
+    onModifySpAPriority: 5,
+    onModifySpA(atk, attacker, defender, move) {
+        if (move.type === 'Ground') {
+            this.debug('Regiforce: Terra Firma boost');
+            return this.chainModify([5325, 4096]);
+        }
+    },
+    flags: {breakable: 1},
+    name: "Regiforce: Terra Firma",
+    rating: 4,
+    num: -12000,
+ 
+       },
 	libero: {
 		onPrepareHit(source, target, move) {
 			if (this.effectState.libero) return;
@@ -4699,7 +4777,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			pokemon.maxhp = newMaxHP;
 		},
 
-		onBeforeTurn(pokemon) {
+		onAfterMove(pokemon) {
 			if (!pokemon.baseSpecies.id.includes('eeveemega') || !pokemon.species.id.includes('eeveemega')) {
 				return;
 			}
@@ -7292,6 +7370,64 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		num: 199,
 	},
+        regiforcedryice: {
+    onSourceModifyAtkPriority: 5,
+    onSourceModifyAtk(atk, attacker, defender, move) {
+        if (move.type === 'Fire') {
+            return this.chainModify(0.5);
+        }
+    },
+    onSourceModifySpAPriority: 5,
+    onSourceModifySpA(atk, attacker, defender, move) {
+        if (move.type === 'Fire') {
+            return this.chainModify(0.5);
+        }
+    },
+    onModifyAtk(atk, attacker, defender, move) {
+        if (move.type === 'Ice') {
+            this.debug('Regiforce: Dry Ice boost');
+            return this.chainModify([5325, 4096]);
+        }
+    },
+    onModifySpA(atk, attacker, defender, move) {
+        if (move.type === 'Ice') {
+            this.debug('Regiforce: Dry Ice boost');
+            return this.chainModify([5325, 4096]);
+        }
+    },
+    onUpdate(pokemon) {
+        if (pokemon.status === 'brn') {
+            this.add('-activate', pokemon, 'ability: Regiforce: Dry Ice');
+            pokemon.cureStatus();
+        }
+    },
+    onSetStatus(status, target, source, effect) {
+        if (status.id !== 'brn') return;
+        if ((effect as Move)?.status) {
+            this.add('-immune', target, '[from] ability: Regiforce: Dry Ice');
+        }
+        return false;
+    },
+    onTryBoost(boost, target, source, effect) {
+        if (source && target === source) return;
+        let showMsg = false;
+        let i: BoostID;
+        for (i in boost) {
+            if (boost[i]! < 0) {
+                delete boost[i];
+                showMsg = true;
+            }
+        }
+        if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+            this.add("-fail", target, "unboost", "[from] ability: Regiforce: Dry Ice", "[of] " + target);
+        }
+    },
+    flags: {breakable: 1},
+    name: "Regiforce: Dry Ice",
+    rating: 5,
+    num: -1329,
+ 
+      },
 	watercompaction: {
 	onTryHit(target, source, move) {
 		if (target !== source && move.type === 'Water') {

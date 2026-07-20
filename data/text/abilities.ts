@@ -152,8 +152,25 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "While this Pokemon is active, the effects of the Dark Aura and Fairy Aura Abilities are reversed, multiplying the power of Dark- and Fairy-type moves, respectively, by 3/4 instead of 1.33.",
 		shortDesc: "While this Pokemon is active, the Dark Aura and Fairy Aura power modifier is 0.75x.",
 
-		start: "  [POKEMON] reversed all other Pok\u00E9mon's auras!",
+		start: "  [POKEMON] reversed all other Pokemon's auras!",
 	},
+        regiforceterrafirma: {
+    name: "Regiforce: Terra Firma",
+    shortDesc: "This Pokemon's stats cannot be lowered by other Pokemon. Its Ground-type attacks have 1.3x power.",
+ 
+ },
+
+regiforcedryice: {
+    name: "Regiforce: Dry Ice",
+    shortDesc: "This Pokemon's stats cannot be lowered by other Pokemon; burn immunity; takes 1/2 from Fire, Ice attacks have 1.3x power.",
+
+ },
+
+regiforcemoltenfoundry: {
+    name: "Regiforce: Molten Foundry",
+    shortDesc: "This Pokemon's stats cannot be lowered by other Pokemon. Its Rock-type moves become Fire-type and have 1.2x power.",
+
+},
 	baddreams: {
 		name: "Bad Dreams",
 		desc: "Causes opposing Pokemon to lose 1/8 of their maximum HP, rounded down, at the end of each turn if they are asleep.",
