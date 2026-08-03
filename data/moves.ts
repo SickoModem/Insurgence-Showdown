@@ -20320,25 +20320,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	surf: {
-		num: 57,
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		name: "Surf",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, nonsky: 1, metronome: 1},
-		onBasePower(basePower, pokemon, target) {
-			if (this.field.isWeather('newmoon')) {
-				this.debug('weakened by weather');
-				return this.chainModify(1.5);
-			}
-		},
-		secondary: null,
-		target: "allAdjacent",
-		type: "Water",
-		contestType: "Beautiful",
+	num: 57,
+	accuracy: 100,
+	basePower: 90,
+	category: "Special",
+	name: "Surf",
+	pp: 15,
+	priority: 0,
+	flags: {protect: 1, mirror: 1, nonsky: 1, metronome: 1},
+	onBasePower(basePower, pokemon, target) {
+		if (pokemon.hasAbility('lunatonebelt') || this.field.isWeather('newmoon')) {
+			this.debug('weakened by weather');
+			return this.chainModify(1.5);
+		}
 	},
+	secondary: null,
+	target: "allAdjacent",
+	type: "Water",
+	contestType: "Beautiful",
+
+        },
 	surgingstrikes: {
 		num: 818,
 		accuracy: 100,
