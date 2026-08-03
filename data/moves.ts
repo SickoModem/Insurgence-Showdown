@@ -11244,13 +11244,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 						this.debug('Light Screen weaken');
 						if (this.activePerHalf > 1) {
-							if (this.field.isWeather('newmoon')) {
+						    if (source.hasAbility('lunatonebelt') || this.field.isWeather('newmoon')) {
 								return this.chainModify([8, 15]);
 							} else {
 								return this.chainModify([2732, 4096]);
 							}
 						}
-						if (this.field.isWeather('newmoon')) {
+						if (source.hasAbility('lunatonebelt') || this.field.isWeather('newmoon')) {
 							return this.chainModify(0.4);
 						} else {
 							return this.chainModify(0.5);
@@ -16195,13 +16195,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
 						this.debug('Reflect weaken');
 						if (this.activePerHalf > 1) {
-							if (this.field.isWeather('newmoon')) {
+						   if (source.hasAbility('lunatonebelt') || this.field.isWeather('newmoon')) {
 								return this.chainModify([8, 15]);
 							} else {
 								return this.chainModify([2732, 4096]);
 							}
 						}
-						if (this.field.isWeather('newmoon')) {
+						if (source.hasAbility('lunatonebelt') || this.field.isWeather('newmoon')) {
 							return this.chainModify(0.4);
 						} else {
 							return this.chainModify(0.5);

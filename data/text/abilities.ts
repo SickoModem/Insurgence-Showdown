@@ -2343,6 +2343,24 @@ regiforcemoltenfoundry: {
              name: "Toxic Presence",
              shortDesc: "This Pokemon has the resistances, weaknesses, immunities, and power of the Poison Type.",
         },
+        exoskeleton: {
+             name: "Exoskeleton",
+             shortDesc: "This Pokemon has the resistances, weaknesses, and power of the Bug type.",
+        },
+        cheekhoarder: {
+             name: "Cheek Hoarder",
+             shortDesc: "Gains health from berries. Pokemon hoardes more berries from your bag, only used when eaten.",
+        },
+        solrocksystem: {
+	name: "Solrock System",
+	shortDesc: "Levitates. This Pokemon acts as if it's in harsh sunlight.",
+
+	},
+	lunatonebelt: {
+	name: "Lunatone Belt",
+	shortDesc: "Levitates. This Pokemon acts as if it's in total darkness.",
+        
+        },
         hardheaded: {
              name: "Hard-Headed",
              shortDesc: "Ground 2x, Fire 2x. Gains stab and resists of Steel Type.",
