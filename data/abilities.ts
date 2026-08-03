@@ -816,6 +816,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 167,
 	},
+        cheekhoarder: {
+	onEatItem(item, pokemon) {
+		this.heal(pokemon.baseMaxhp / 3);
+	},
+	onResidualOrder: 28,
+	onResidualSubOrder: 2,
+	onResidual(pokemon) {
+		if (this.randomChance(1, 2)) {
+			if (pokemon.hp && !pokemon.item && this.dex.items.get(pokemon.lastItem).isBerry) {
+				pokemon.setItem(pokemon.lastItem);
+				pokemon.lastItem = '';
+				this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Cheek Hoarder');
+			}
+		}
+	},
+	flags: {},
+	name: "Cheek Hoarder",
+	rating: 3,
+	num: -121233,
+        
+        },
 	chillingneigh: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
@@ -1597,6 +1618,46 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 313,
 	},
+        exoskeleton: {
+    onModifyAtk(atk, attacker, defender, move) {
+        if (move.type === 'Bug') {
+            return this.chainModify(2);
+        }
+    },
+    onModifySpA(atk, attacker, defender, move) {
+        if (move.type === 'Bug') {
+            return this.chainModify(2);
+        }
+    },
+    onSourceModifyAtkPriority: 6,
+    onSourceModifyAtk(atk, attacker, defender, move) {
+        if (move.type === 'Fighting' || move.type === 'Ground' || move.type === 'Grass') {
+            this.debug('Exoskeleton resist');
+            return this.chainModify(0.5);
+        }
+        if (move.type === 'Fire' || move.type === 'Flying' || move.type === 'Rock') {
+            this.debug('Exoskeleton weakness');
+            return this.chainModify(2);
+        }
+    },
+    onSourceModifySpAPriority: 5,
+    onSourceModifySpA(atk, attacker, defender, move) {
+        if (move.type === 'Fighting' || move.type === 'Ground' || move.type === 'Grass') {
+            this.debug('Exoskeleton resist');
+            return this.chainModify(0.5);
+        }
+        if (move.type === 'Fire' || move.type === 'Flying' || move.type === 'Rock') {
+            this.debug('Exoskeleton weakness');
+            return this.chainModify(2);
+        }
+    },
+    name: "Exoskeleton",
+    flags: {breakable: 1},
+    gen: 6,
+    rating: 3.5,
+    num: -10990, 
+
+       },
 	electromorphosis: {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
