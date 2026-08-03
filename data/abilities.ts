@@ -3544,6 +3544,36 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 315,
 		// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
 	},
+        solrocksystem: {
+	isNonstandard: "Future",
+	onWeatherModifyDamage(damage, attacker, defender, move) {
+		if (this.field.weather !== 'sunnyday') {
+			(this.dex.conditions.getByID('sunnyday' as ID) as any).onWeatherModifyDamage
+				.call(this, damage, attacker, defender, move);
+		}
+	},
+	flags: {},
+	name: "Solrock System",
+	rating: 3,
+	num: 3150,
+	// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
+         
+        },
+        lunatonebelt: {
+	isNonstandard: "Future",
+	onWeatherModifyDamage(damage, attacker, defender, move) {
+		if (this.field.weather !== 'newmoon') {
+			(this.dex.conditions.getByID('newmoon' as ID) as any).onWeatherModifyDamage
+				.call(this, damage, attacker, defender, move);
+		}
+	},
+	flags: {},
+	name: "Lunatone Belt",
+	rating: 3,
+	num: 3151,
+	// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
+        
+        },
         mindshuffle: {
 	onStart(pokemon) {
 		for (const target of pokemon.adjacentFoes()) {

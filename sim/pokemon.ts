@@ -2276,6 +2276,8 @@ export class Pokemon {
 		if (this.hasAbility('levitate') && !this.battle.suppressingAbility(this)) return null;
                 if (this.hasAbility('archaicaviation') && !this.battle.suppressingAbility(this)) return null;
                 if (this.hasAbility('eelevate') && !this.battle.suppressingAbility(this)) return null;
+                if (this.hasAbility('solrocksystem') && !this.battle.suppressingAbility(this)) return null;
+		if (this.hasAbility('lunatonebelt') && !this.battle.suppressingAbility(this)) return null;
 		if (this.hasAbility('omnitype') && !this.battle.suppressingAbility(this)) return false;
 		if ('magnetrise' in this.volatiles) return false;
 		if ('telekinesis' in this.volatiles) return false;
@@ -2324,6 +2326,19 @@ export class Pokemon {
 			if (message) this.battle.add('-activate', this, 'ability: Mega Sol');
 			return 'sunnyday';
 		}
+
+                if (this.hasAbility('solrocksystem') && this.battle.activePokemon === this && weather !== 'sunnyday') {
+	if (message) this.battle.add('-activate', this, 'ability: Solrock System');
+	return 'sunnyday';
+              
+        }
+
+// TODO: check interactions of Lunatone Belt with Utility Umbrella and Desolate Land
+if (this.hasAbility('lunatonebelt') && this.battle.activePokemon === this && weather !== 'newmoon') {
+	if (message) this.battle.add('-activate', this, 'ability: Lunatone Belt');
+	return 'newmoon';
+                 
+         }
 		return weather;
 	}
 

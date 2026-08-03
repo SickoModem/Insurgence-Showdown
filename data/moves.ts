@@ -11496,36 +11496,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {evasion: 1}},
 		contestType: "Cute",
 	},
-	"lunarcannon": {
-		num: 11,
-		accuracy: 100,
-		basePower: 105,
-		category: "Special",
-		name: "Lunar Cannon",
-		pp: 10,
-		priority: 0,
-		flags: {charge: 1, protect: 1, mirror: 1},
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name, defender);
-			if (this.field.isWeather('newmoon')) {
-				this.attrLastMove('[still]');
-				this.addMove('-anim', attacker, move.name, defender);
-				return;
-			}
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		},
-		secondary: null,
-		target: "normal",
-		type: "Dark",
-		contestType: "Cool",
+        lunarcannon: {
+	num: 11,
+	accuracy: 100,
+	basePower: 105,
+	category: "Special",
+	name: "Lunar Cannon",
+	pp: 10,
+	priority: 0,
+	flags: {charge: 1, protect: 1, mirror: 1},
+	onTryMove(attacker, defender, move) {
+		if (attacker.removeVolatile(move.id)) {
+			return;
+		}
+		this.add('-prepare', attacker, move.name, defender);
+		if (attacker.hasAbility('lunatonebelt') || this.field.isWeather('newmoon')) {
+			this.attrLastMove('[still]');
+			this.addMove('-anim', attacker, move.name, defender);
+			return;
+		}
+		if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+			return;
+		}
+		attacker.addVolatile('twoturnmove', defender);
+		return null;
 	},
+	secondary: null,
+	target: "normal",
+	type: "Dark",
+	contestType: "Cool",
+       
+        },
 	luminacrash: {
 		num: 855,
 		accuracy: 100,
