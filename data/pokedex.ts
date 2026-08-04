@@ -5501,7 +5501,7 @@ snowbromega: {
 		name: "Politoed-Mega",
 		baseSpecies: "Politoed",
 		forme: "Mega",
-		types: ["Water"],
+		types: ["Water", "Electric"],
 		baseStats: {hp: 90, atk: 75, def: 95, spa: 120, spd: 140, spe: 80},
 		abilities: {0: "Drizzle"},
 		weightkg: 33.9,
