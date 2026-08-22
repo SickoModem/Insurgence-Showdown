@@ -6075,6 +6075,177 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+                astralythsolar: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        astralythlunar: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        betaleda: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        celecremie: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        critten: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        damefetchd: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        doufestation: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        druddilith: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        fulgeroar: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        hivedge: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        junkodor: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        kabootops: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        marrodactyl: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        poliking: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        reanamastar: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        reptalada: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        shizora: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        snowking: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        snowpoke: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        spectrubb: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        vaporgon: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        wattacat: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        onixcrystal: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        steelixcrystal: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        butterfreedelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        calyrexdelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        caterpiedelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        drizziledelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        gabitedelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        gibledelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        inteleondelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        kingambitdelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        metapoddelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        },
+        sobbledelta: {
+                tier: "NU",
+                doublesTier: "(DUU)",
+                natDexTier: "UU",
+        }, 
+
 	bulbasaurdelta: {
 		isNonstandard: "Past",
 		tier: "Illegal",
