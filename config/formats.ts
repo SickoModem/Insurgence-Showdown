@@ -270,6 +270,13 @@ export const Formats: FormatList = [
     ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod', '+Unobtainable', '+Past', '+PastMove'],
 
         },
+        {
+                name: "[Gen 9] Ryuka Prime Actual Dex",
+
+                mod: 'gen9',
+                searchShow: false,
+                ruleset: ['Standard Draft', '+Unobtainable', '+Past', '+PastMove'],
+        },
 	{
 		name: "[Gen 9] Ryuka Dex Ubers",
 		threads: [
