@@ -5552,11 +5552,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 		natDexTier: "Uber",
 	},
-	reptalada: {
-		tier: "RU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
-	},
 	tinglu: {
 		tier: "OU",
 		doublesTier: "DUU",

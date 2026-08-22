@@ -406,6 +406,16 @@ export const Formats: FormatList = [
 		// no restrictions, for serious (other than team preview)
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
 	},
+        {
+	name: "[Gen 9] Custom Game Random Moves",
+	mod: 'gen9',
+	searchShow: false,
+	debug: true,
+	battle: {trunc: Math.trunc},
+	// no restrictions, for serious (other than team preview) + random moves each turn
+	ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod', 'Random Moves Rule'],
+	
+	},
 
         // National Dex
 	///////////////////////////////////////////////////////////////////
