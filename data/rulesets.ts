@@ -570,6 +570,37 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 		},
 	},
+        randommovesrule: {
+	effectType: 'Rule',
+	name: 'Random Moves Rule',
+	desc: "Each turn, a random move from the user's own moveset is used instead of the one selected.",
+	onBeforeMove(pokemon, target, move) {
+		// Don't hijack Struggle
+		if (move.id === 'struggle') return;
+ 
+		// Recursion guard: the substitute move below also fires onBeforeMove.
+		// Without this, the rule would try to re-randomize its own randomized move.
+		if (pokemon.m.randomMoveLock) return;
+ 
+		const usableMoves = pokemon.moveSlots.filter(
+			slot => slot.pp > 0 && !slot.disabled
+		);
+		if (!usableMoves.length) return; // fall through, will likely Struggle
+ 
+		const chosen = this.sample(usableMoves);
+		if (chosen.id === move.id) return; // already the one selected, let it run as-is
+ 
+		this.add('-activate', pokemon, 'move: Random Moves Rule');
+ 
+		pokemon.m.randomMoveLock = true;
+		this.actions.useMove(chosen.id, pokemon, { target });
+		pokemon.m.randomMoveLock = false;
+ 
+		return false; // prevent the originally selected move from ALSO running
+	},
+
+
+      },
 	forcemonotype: {
 		effectType: 'ValidatorRule',
 		name: 'Force Monotype',
