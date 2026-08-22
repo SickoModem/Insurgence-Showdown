@@ -593,15 +593,19 @@ export const Rulesets: {[k: string]: FormatData} = {
 		this.add('-activate', pokemon, 'move: Random Moves Rule');
  
 		pokemon.m.randomMoveLock = true;
-		this.actions.useMove(chosen.id, pokemon, { target });
+		// No explicit target passed - let useMove resolve targeting itself,
+		// same as Sleep Talk's real call. Passing a wrapped {target} object
+		// here is the most likely cause of the crash: your fork's useMove
+		// probably expects the target Pokemon directly (or nothing), not
+		// an options object.
+		this.actions.useMove(chosen.id, pokemon);
 		pokemon.m.randomMoveLock = false;
  
 		return false; // prevent the originally selected move from ALSO running
-	},
-
-
-      },
-	forcemonotype: {
+         	},
+     
+     },
+      forcemonotype: {
 		effectType: 'ValidatorRule',
 		name: 'Force Monotype',
 		desc: `Forces all teams to have the same type. Usage: Force Monotype = [Type], e.g. "Force Monotype = Water"`,
