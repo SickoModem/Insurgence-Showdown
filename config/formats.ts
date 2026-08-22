@@ -271,7 +271,7 @@ export const Formats: FormatList = [
 
         },
         {
-                name: "[Gen 9] Ryuka Prime Actual Dex",
+                name: "[Gen 9] Ryuka Prime NatDex",
 
                 mod: 'gen9',
                 searchShow: false,
