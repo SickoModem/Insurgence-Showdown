@@ -407,6 +407,28 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
 	},
 
+        // National Dex
+	///////////////////////////////////////////////////////////////////
+
+	{
+		section: "National Dex",
+	},
+	{
+		name: "[Gen 9] National Dex",
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Terastal Clause'],
+		banlist: [
+			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
+			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
+		],
+	},
+	{
+		name: "[Gen 8] National Dex",
+		mod: 'gen8',
+		ruleset: ['Standard NatDex', 'Dynamax Clause'],
+		banlist: ['ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Razor Fang', 'Quick Claw', 'Baton Pass'],
+	},
+
 	// Ryuka Dex Doubles
 	///////////////////////////////////////////////////////////////////
 
