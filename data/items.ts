@@ -34,17 +34,20 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Past",
 	},
         golisopite: {
-		name: "Golisopite",
-		spritenum: 508,
-		megaStone: { "Golisopod": "Golisopod-Mega" },
-		itemUser: ["Golisopod"],
-		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.baseSpecies];
-		},
-		num: 2645,
-		gen: 9,
-		isNonstandard: "Past",
+	name: "Golisopite",
+	spritenum: 508,
+	megaStone: { "Golisopod": "Golisopod-Mega" },
+	megaEvolves: "Golisopod",
+	itemUser: ["Golisopod"],
+	onTakeItem(item, source) {
+		if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+		return true;
 	},
+	num: 2645,
+	gen: 9,
+	isNonstandard: "Past",
+
+       },
 	absolite: {
 		name: "Absolite",
 		spritenum: 576,
