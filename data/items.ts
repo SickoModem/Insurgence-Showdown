@@ -36,7 +36,7 @@ export const Items: {[itemid: string]: ItemData} = {
         golisopite: {
 	name: "Golisopite",
 	spritenum: 508,
-	megaStone: { "Golisopod": "Golisopod-Mega" },
+	megaStone: "Golisopod-Mega",
 	megaEvolves: "Golisopod",
 	itemUser: ["Golisopod"],
 	onTakeItem(item, source) {
@@ -46,8 +46,8 @@ export const Items: {[itemid: string]: ItemData} = {
 	num: 2645,
 	gen: 9,
 	isNonstandard: "Past",
-
-       },
+        
+        },
 	absolite: {
 		name: "Absolite",
 		spritenum: 576,
