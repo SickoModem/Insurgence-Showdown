@@ -20220,7 +20220,7 @@ fulgeroar: {
         molotzar: {
                 num: -774,
                 name: "Molotzar",
-                types: ["Rock", "Flying"],
+                types: ["Rock", "Psychic"],
                 gender: "N",
                 baseStats: {hp: 60, atk: 100, def: 160, spa: 100, spd: 160, spe: 60},
                 abilities: {0: "Illusionary Shield"},
