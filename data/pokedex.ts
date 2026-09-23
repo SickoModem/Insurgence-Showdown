@@ -20217,6 +20217,18 @@ fulgeroar: {
 		requiredAbility: "Shields Down",
 		battleOnly: "Minior",
 	},
+        molotzar: {
+                num: -774,
+                name: "Molotzar",
+                types: ["Rock", "Flying"],
+                gender: "N",
+                baseStats: {hp: 60, atk: 100, def: 160, spa: 100, spd: 160, spe: 60},
+                abilities: {0: "Illusionary Shield"},
+                heightm: 0.3,
+                weightkg: 40,
+                color: "Brown",
+                eggGroups: ["Mineral"],
+        },
 	komala: {
 		num: 775,
 		name: "Komala",

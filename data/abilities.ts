@@ -7564,6 +7564,58 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 1,
 		num: 133,
 	},
+        illusionaryshield: {
+	onBeforeSwitchIn(pokemon) {
+		pokemon.illusion = null;
+		// yes, you can Illusion an active pokemon but only if it's to your right
+		for (let i = pokemon.side.pokemon.length - 1; i > pokemon.position; i--) {
+			const possibleTarget = pokemon.side.pokemon[i];
+			if (!possibleTarget.fainted) {
+				// If Ogerpon is in the last slot while the Illusion Pokemon is Terastallized
+				// Illusion will not disguise as anything
+				if (!pokemon.terastallized || possibleTarget.species.baseSpecies !== 'Ogerpon') {
+					pokemon.illusion = possibleTarget.illusionClone();
+				}
+				break;
+			}
+		}
+	},
+	onStart(pokemon) {
+		this.add('-ability', pokemon, 'Illusionary Shield');
+	},
+	onModifyMove(move) {
+		move.ignoreAbility = true;
+	},
+	onDamagingHit(damage, target, source, move) {
+		if (target.illusion) {
+			this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, source, move);
+		}
+		if (move.category === 'Physical') {
+			this.boost({def: -1, spe: 2}, target, target);
+		}
+	},
+	onEnd(pokemon) {
+		if (pokemon.illusion) {
+			this.debug('illusion cleared');
+			pokemon.illusion = null;
+			const details = pokemon.species.name + (pokemon.level === 120 ? '' : ', L' + pokemon.level) +
+				(pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
+			this.add('replace', pokemon, details);
+			this.add('-end', pokemon, 'Illusion');
+			if (this.ruleTable.has('illusionlevelmod')) {
+				this.hint("Illusion Level Mod is active, so this Pokémon's true level was hidden.", true);
+			}
+		}
+	},
+	onFaint(pokemon) {
+		pokemon.illusion = null;
+	},
+	flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1},
+	name: "Illusionary Shield",
+	rating: 5,
+	num: -1, // custom ability, adjust to match your fork's ID convention
+     
+       },
 	wellbakedbody: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
