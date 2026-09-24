@@ -5185,6 +5185,56 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 272,
 	},
+        valiantshield: {
+	onStart(pokemon) {
+		this.add('-ability', pokemon, 'Valiant Shield');
+		if (!pokemon.shieldBoost) {
+			pokemon.shieldBoost = true;
+			this.boost({atk: 1, def: 1}, pokemon);
+		}
+	},
+	onModifyMove(move) {
+		move.ignoreAbility = true;
+	},
+	onBasePowerPriority: 19,
+	onBasePower(basePower, attacker, defender, move) {
+		if (move.flags['slicing']) {
+			this.debug('Valiant Shield slicing boost');
+			return this.chainModify(1.5);
+		}
+	},
+	onSetStatus(status, target, source, effect) {
+		if ((effect as Move)?.status) {
+			this.add('-immune', target, '[from] ability: Valiant Shield');
+		}
+		return false;
+	},
+	onTryAddVolatile(status, target) {
+		if (status.id === 'yawn') {
+			this.add('-immune', target, '[from] ability: Valiant Shield');
+			return null;
+		}
+	},
+	onSourceModifyAtkPriority: 6,
+	onSourceModifyAtk(atk, attacker, defender, move) {
+		if (move.type === 'Ghost') {
+			this.debug('Valiant Shield weaken');
+			return this.chainModify(0.5);
+		}
+	},
+	onSourceModifySpAPriority: 5,
+	onSourceModifySpA(spa, attacker, defender, move) {
+		if (move.type === 'Ghost') {
+			this.debug('Valiant Shield weaken');
+			return this.chainModify(0.5);
+		}
+	},
+	flags: {breakable: 1},
+	name: "Valiant Shield",
+	rating: 5,
+	num: 9001,
+ 
+       },
 	quarkdrive: {
 		onStart(pokemon) {
 			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
