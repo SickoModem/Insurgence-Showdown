@@ -7488,7 +7488,7 @@ swampertdeltamega: {
         },
         captitox: {
                 num: -267,
-                name: "Beautifly",
+                name: "Captitox",
                 types: ["Grass", "Electric"],
                 baseStats: {hp: 70, atk: 114, def: 64, spa: 90, spd: 114, spe: 68},
                 abilities: {0: "Effect Spore", 1: "Levitate", H: "Mycelial Spike"},
