@@ -1668,6 +1668,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 280,
 	},
+        mycelialspike: {
+	onModifySecondaries(secondaries) {
+		this.debug('Mycelial Spike prevent secondary');
+		return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+	},
+	onDamagingHitOrder: 1,
+	onDamagingHit(damage, target, source, move) {
+		target.addVolatile('charge');
+	},
+	flags: {breakable: 1},
+	name: "Mycelial Spike",
+	rating: 3.5,
+	num: -1987,
+
+        },
 	embodyaspectcornerstone: {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.name === 'Ogerpon-Cornerstone-Tera' && !this.effectState.embodied) {

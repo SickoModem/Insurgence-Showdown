@@ -3486,7 +3486,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Crush Claw",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1},
 		secondary: {
 			chance: 50,
 			boosts: {
@@ -4364,7 +4364,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Double Shock",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		onTryMove(pokemon, target, move) {
 			if (pokemon.hasType('Electric')) return;
 			this.add('-fail', pokemon, 'move: Double Shock');
@@ -18420,7 +18420,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	slash: {
 		num: 163,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 80,
 		category: "Physical",
 		name: "Slash",
 		pp: 20,
@@ -18729,7 +18729,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	snipeshot: {
 		num: 745,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 85,
 		category: "Special",
 		name: "Snipe Shot",
 		pp: 15,

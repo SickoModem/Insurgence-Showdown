@@ -40,6 +40,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's sound-based attacks have their power multiplied by 1.25.",
 		shortDesc: "This Pokemon's sound-based attacks have 1.25x power.",
 	},
+        mycelialspike: {
+		name: "Mycelial Spike",
+		desc: "This Pokemon is protected from adverse effects of opposing Pokemon's moves, unless the effect is protecting the user of the move from an attack made by this Pokemon or the effect specifically bypasses this immunity. If this Pokemon is hit by a damaging attack, it gains a Charge effect, doubling the power of its next Electric-type move.",
+		shortDesc: "This Pokemon blocks secondary effects from foes' moves. Being hit by a damaging move charges it.",
+	},
 	analytic: {
 		name: "Analytic",
 		desc: "The power of this Pokemon's move is multiplied by 1.3 if it is the last to move in a turn. Does not affect Doom Desire and Future Sight.",
