@@ -103394,6 +103394,8 @@ fulgeroar: {
 		defensecurl: ["9L3", "7L3"],
 		doubleedge: ["9M", "9L43", "7L43"],
 		doubleteam: ["7M"],
+                dragonascent: ["9M"],
+                dracometeor: ["9M"],
 		earthpower: ["9M"],
 		earthquake: ["9M", "7M"],
 		endeavor: ["9M", "7T"],
