@@ -1482,6 +1482,57 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 263,
 	},
+        draconianshield: {
+	onStart(pokemon) {
+		this.add('-ability', pokemon, 'Draconian Shield');
+	},
+	onModifyMove(move) {
+		move.ignoreAbility = true;
+	},
+	onModifyTypePriority: -1,
+	onModifyType(move, pokemon) {
+		const noModifyType = [
+			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+		];
+		if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+			!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			move.type = 'Dragon';
+			move.typeChangerBoosted = this.effect;
+		}
+	},
+	onBasePowerPriority: 23,
+	onBasePower(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+	},
+	onModifyAtkPriority: 5,
+	onModifyAtk(atk, attacker, defender, move) {
+		if (move.type === 'Dragon') {
+			this.debug('Draconian Shield boost');
+			return this.chainModify(1.5);
+		}
+	},
+	onModifySpAPriority: 5,
+	onModifySpA(spa, attacker, defender, move) {
+		if (move.type === 'Dragon') {
+			this.debug('Draconian Shield boost');
+			return this.chainModify(1.5);
+		}
+	},
+	onDamage(damage, target, source, effect) {
+		if (effect.effectType !== 'Move') {
+			if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+			return false;
+		}
+	},
+	onTryAddVolatile(status, pokemon) {
+		if (status.id === 'mustrecharge') return null;
+	},
+	flags: {},
+	name: "Draconian Shield",
+	rating: 5,
+	num: -13789,
+
+        },
          dragonize: {
                 onModifyTypePriority: -1,
                 onModifyType(move, pokemon) {

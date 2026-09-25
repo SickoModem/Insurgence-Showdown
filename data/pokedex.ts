@@ -20259,10 +20259,10 @@ fulgeroar: {
         molotzar: {
                 num: -774,
                 name: "Molotzar",
-                types: ["Rock", "Psychic"],
+                types: ["Rock", "Flying"],
                 gender: "N",
-                baseStats: {hp: 60, atk: 160, def: 100, spa: 60, spd: 100, spe: 160},
-                abilities: {0: "Valiant Shield"},
+                baseStats: {hp: 60, atk: 160, def: 100, spa: 160, spd: 100, spe: 100},
+                abilities: {0: "Draconian Shield"},
                 heightm: 0.3,
                 weightkg: 40,
                 color: "Brown",
