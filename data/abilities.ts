@@ -60,28 +60,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 5,
 	},
         aurumarmor: {
-	onTryHit(pokemon, target, move) {
-		if (move.ohko) {
-			this.add('-immune', pokemon, '[from] ability: Aurum Armor');
+	onDamagePriority: -30,
+	onDamage(damage, target, source, effect) {
+		if (effect && effect.id === 'recoil' && target.hp === target.maxhp) {
 			return null;
 		}
 	},
-	onDamagePriority: -30,
-	onDamage(damage, target, source, effect) {
-		if (effect && effect.id === 'recoil') {
-			if (!this.activeMove) throw new Error("Battle.activeMove is null");
-			if (this.activeMove.id !== 'struggle') return null;
-		}
-		if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
-			this.add('-ability', target, 'Aurum Armor');
-			return target.hp - 1;
-		}
-	},
-	flags: {breakable: 1},
+	flags: {},
 	name: "Aurum Armor",
-	rating: 4,
+	rating: 3,
 	num: -302,
-         
+
         },
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
