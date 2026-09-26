@@ -99,8 +99,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
         aurumarmor: {
 	name: "Aurum Armor",
-	desc: "This Pokemon is immune to OHKO moves. This Pokemon does not take recoil damage, except from Struggle. If this Pokemon has full HP, it survives an attack that would otherwise cause it to faint with 1 HP.",
-	shortDesc: "Immune to OHKO. No recoil damage. Survives an attack at full HP with 1 HP.",
+	desc: "This Pokemon does not take recoil damage, at full HP.",
+	shortDesc: "No recoil if at full HP, recoil if it at full HP.",
 
         },
 	arenatrap: {
