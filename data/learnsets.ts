@@ -96440,6 +96440,7 @@ garchompdelta: {
 			bulldoze: ["9M", "8M", "7M", "6M"],
 			burningjealousy: ["9M"],
                         bulkup: ["9M"],
+                        shadowsneak: ["9M"],
 			calmmind: ["9M", "8M", "7M", "6M"],
 			confide: ["7M", "6M"],
 			confuseray: ["9M", "9L12", "8L12", "7L1", "6L1"],
