@@ -4120,7 +4120,7 @@ barbaracite: {
 		},
 		spritenum: 475,
 		onModifyCritRatio(critRatio, user) {
-			if (["farfetchd", "sirfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
+			if (["farfetchd", "sirfetchd", "damefetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
 				return critRatio + 2;
 			}
 		},
