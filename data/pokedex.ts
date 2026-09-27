@@ -18483,7 +18483,7 @@ gabitedelta: {
 		num: 709,
 		name: "Trevenant",
 		types: ["Ghost", "Grass"],
-		baseStats: {hp: 85, atk: 120, def: 76, spa: 55, spd: 82, spe: 46},
+		baseStats: {hp: 85, atk: 120, def: 76, spa: 65, spd: 82, spe: 46},
 		abilities: {0: "Natural Cure", 1: "Call Of The Haunted", H: "Harvest"},
 		heightm: 1.5,
 		weightkg: 71,

@@ -96439,7 +96439,6 @@ garchompdelta: {
 			brutalswing: ["8M", "7M"],
 			bulldoze: ["9M", "8M", "7M", "6M"],
 			burningjealousy: ["9M"],
-                        bulkup: ["9M"],
                         shadowsneak: ["9M"],
 			calmmind: ["9M", "8M", "7M", "6M"],
 			confide: ["7M", "6M"],
