@@ -2172,6 +2172,14 @@ regiforcemoltenfoundry: {
 
 		activate: "  [POKEMON] gained strength from the fallen!",
 	},
+        callofthehaunted: {
+	name: "Call of the Haunted",
+	desc: "This Pokemon's moves have their power multiplied by 1+(X*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
+	shortDesc: "This Pokemon's moves have 10% more power for each fainted ally, up to 5 allies.",
+
+	activate: "  [POKEMON] heard the call of the spirits!",
+        
+        },
 	surgesurfer: {
 		name: "Surge Surfer",
 		shortDesc: "If Electric Terrain is active, this Pokemon's Speed is doubled.",

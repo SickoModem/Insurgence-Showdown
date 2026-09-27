@@ -6652,6 +6652,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 293,
 	},
+        callofthehaunted: {
+	onStart(pokemon) {
+		if (pokemon.side.totalFainted) {
+			this.add('-activate', pokemon, 'ability: Call of the Haunted');
+			const fallen = Math.min(pokemon.side.totalFainted, 5);
+			this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+			this.effectState.fallen = fallen;
+		}
+	},
+	onEnd(pokemon) {
+		this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+	},
+	onBasePowerPriority: 21,
+	onBasePower(basePower, attacker, defender, move) {
+		if (this.effectState.fallen) {
+			const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+			this.debug(`Call of the Haunted boost: ${powMod[this.effectState.fallen]}/4096`);
+			return this.chainModify([powMod[this.effectState.fallen], 4096]);
+		}
+	},
+	flags: {},
+	name: "Call of the Haunted",
+	rating: 4,
+	num: 293,
+
+        },
 	surgesurfer: {
 		onModifySpe(spe) {
 			if (this.field.isTerrain('electricterrain')) {
