@@ -857,42 +857,43 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		contestType: "Beautiful",
 	},
-	aurawheel: {
-		num: 783,
-		accuracy: 100,
-		basePower: 110,
-		category: "Physical",
-		name: "Aura Wheel",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			self: {
-				boosts: {
-					spe: 1,
-				},
+        aurawheel: {
+	num: 783,
+	accuracy: 100,
+	basePower: 110,
+	category: "Physical",
+	name: "Aura Wheel",
+	pp: 10,
+	priority: 0,
+	flags: {protect: 1, mirror: 1},
+	secondary: {
+		chance: 100,
+		self: {
+			boosts: {
+				spe: 1,
 			},
 		},
-		onTry(source) {
-			if (source.species.baseSpecies === 'Morpeko') {
-				return;
-			}
-			this.attrLastMove('[still]');
-			this.add('-fail', source, 'move: Aura Wheel');
-			this.hint("Only a Pokemon whose form is Morpeko or Morpeko-Hangry can use this move.");
-			return null;
-		},
-		onModifyType(move, pokemon) {
-			if (pokemon.species.name === 'Morpeko-Hangry') {
-				move.type = 'Dark';
-			} else {
-				move.type = 'Electric';
-			}
-		},
-		target: "normal",
-		type: "Electric",
 	},
+	onTry(source) {
+		if (source.species.baseSpecies === 'Morpeko' || source.species.baseSpecies === 'Furret') {
+			return;
+		}
+		this.attrLastMove('[still]');
+		this.add('-fail', source, 'move: Aura Wheel');
+		this.hint("Only a Pokemon whose form is Morpeko, Morpeko-Hangry, or Furret can use this move.");
+		return null;
+	},
+	onModifyType(move, pokemon) {
+		if (pokemon.species.name === 'Morpeko-Hangry') {
+			move.type = 'Dark';
+		} else {
+			move.type = 'Electric';
+		}
+	},
+	target: "normal",
+	type: "Electric",
+        
+        },
 	aurorabeam: {
 		num: 62,
 		accuracy: 100,

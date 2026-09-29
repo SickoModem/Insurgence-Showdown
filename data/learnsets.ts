@@ -31840,7 +31840,7 @@ butterfreedelta: {
 		supercellslam: ['9L1'],
 		spinout: ['9L1'],
 		wildcharge: ['9L1'],
-		overheat: ['9L1'],
+		bodypress: ['9L1'],
 	},
 
        },

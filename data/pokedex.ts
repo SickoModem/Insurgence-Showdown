@@ -5038,7 +5038,7 @@ snowbromega: {
 	baseSpecies: "Furret",
 	forme: "Armor",
 	types: ["Normal", "Electric"],
-	baseStats: {hp: 85, atk: 98, def: 108, spa: 41, spd: 68, spe: 78},
+	baseStats: {hp: 85, atk: 88, def: 118, spa: 41, spd: 68, spe: 78},
 	abilities: {0: "Pendulum", 1: "Normalize", H: "Inner Focus"},
 	weightkg: 32.5,
 	heightm: 1.8,
