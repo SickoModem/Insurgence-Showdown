@@ -31828,6 +31828,22 @@ butterfreedelta: {
 			{generation: 4, level: 6},
 		],
 	},
+        furretarmor: {
+	inherit: true,
+	learnset: {
+		aurawheel: ['9L1'],
+		rapidspin: ['9L1'],
+		steelbeam: ['9L1'],
+		discharge: ['9L1'],
+		voltswitch: ['9L1'],
+		thunderwave: ['9L1'],
+		supercellslam: ['9L1'],
+		spinout: ['9L1'],
+		wildcharge: ['9L1'],
+		overheat: ['9L1'],
+	},
+
+       },
 	hoothoot: {
 		learnset: {
 			achillesheel: ["6M"],
