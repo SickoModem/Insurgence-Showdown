@@ -2128,6 +2128,15 @@ regiforcemoltenfoundry: {
 
 		activate: "#lightningrod",
 	},
+        lawofthecosmos: {
+	name: "Law of The Cosmos",
+	desc: "On switch-in, this Pokemon peers into the future if any opposing Pokemon has a supereffective or OHKO move against it. This Pokemon is immune to Psychic-type moves and raises its Special Attack by 1 stage when hit by one. If this Pokemon is not the target of a single-target Psychic-type move used by another Pokemon, this Pokemon redirects that move to itself. This Pokemon and its allies have the power of their Psychic-type attacks multiplied by 1.5.",
+	shortDesc: "Peers into the future on entry if a foe has a SE/OHKO move. Draws Psychic moves for +1 Sp. Atk; Psychic immunity. Psychic moves of this Pokemon and allies have 1.5x power.",
+
+	start: "  [POKEMON] peered into the future!",
+	activate: "#lightningrod",
+       
+        },
 	strongjaw: {
 		name: "Strong Jaw",
 		desc: "This Pokemon's bite-based attacks have their power multiplied by 1.5.",
