@@ -38,7 +38,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
         lawofthecosmos: {
 	name: "Law of The Cosmos",
 	desc: "On switch-in, this Pokemon's mind becomes one with the cosmos. This Pokemon's Normal-type moves become Psychic-type moves. This Pokemon is immune to Psychic-type moves and raises its Special Attack by 1 stage when hit by a Psychic-type move. This Pokemon and its allies have the power of their Psychic-type attacks multiplied by 1.5.",
-	shortDesc: "Immune to Confusion. Normal moves become Psychic. All psychic moves are boosted by 1.5x. Immune to all psychic power.",
+	shortDesc: "Immune to Confusion.All psychic moves are boosted by 1.5x. Immune to all psychic power boosting the highest atk stat.",
 
 	start: "  [POKEMON]'s mind is one with the cosmos!",
 
