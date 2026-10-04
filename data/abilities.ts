@@ -7551,57 +7551,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 11,
 	},
-        lawofthecosmos: {
-		// Anticipation
-		onStart(pokemon) {
-			for (const target of pokemon.foes()) {
-				for (const moveSlot of target.moveSlots) {
-					const move = this.dex.moves.get(moveSlot.move);
-					if (move.category === 'Status') continue;
-					const moveType = move.id === 'hiddenpower' ? target.hpType : move.type;
-					if (
-						this.dex.getImmunity(moveType, pokemon) && this.dex.getEffectiveness(moveType, pokemon) > 0 ||
-						move.ohko
-					) {
-						this.add('-ability', pokemon, 'Law of The Cosmos');
-						return;
-					}
-				}
-			}
-		},
-		// Steely Spirit (Steel -> Psychic)
-		onAllyBasePowerPriority: 22,
-		onAllyBasePower(basePower, attacker, defender, move) {
-			if (move.type === 'Psychic') {
-				this.debug('Law of The Cosmos boost');
-				return this.chainModify(1.5);
-			}
-		},
-		// Storm Drain (Water -> Psychic)
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Psychic') {
-				if (!this.boost({spa: 1})) {
-					this.add('-immune', target, '[from] ability: Law of The Cosmos');
-				}
-				return null;
-			}
-		},
-		onAnyRedirectTarget(target, source, source2, move) {
-			if (move.type !== 'Psychic' || move.flags['pledgecombo']) return;
-			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
-			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
-				if (move.smartTarget) move.smartTarget = false;
-				if (this.effectState.target !== target) {
-					this.add('-activate', this.effectState.target, 'ability: Law of The Cosmos');
-				}
-				return this.effectState.target;
-			}
-		},
-		flags: {breakable: 1},
-		name: "Law of The Cosmos",
-		rating: 4,
-		num: 9999,
-	},
 	waterbubble: {
 		onSourceModifyAtkPriority: 5,
 		onSourceModifyAtk(atk, attacker, defender, move) {
