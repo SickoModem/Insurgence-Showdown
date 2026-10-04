@@ -3717,6 +3717,41 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 104,
 	},
+        lawofthecosmos: {
+	onStart(pokemon) {
+		this.add('-ability', pokemon, 'Law of The Cosmos');
+	},
+	onModifyTypePriority: -1,
+	onModifyType(move, pokemon) {
+		const noModifyType = [
+			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+		];
+		if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+			!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			move.type = 'Psychic';
+		}
+	},
+	onAllyBasePowerPriority: 22,
+	onAllyBasePower(basePower, attacker, defender, move) {
+		if (move.type === 'Psychic') {
+			this.debug('Law of The Cosmos boost');
+			return this.chainModify(1.5);
+		}
+	},
+	onTryHit(target, source, move) {
+		if (target !== source && move.type === 'Psychic') {
+			if (!this.boost({spa: 1})) {
+				this.add('-immune', target, '[from] ability: Law of The Cosmos');
+			}
+			return null;
+		}
+	},
+	flags: {breakable: 1},
+	name: "Law of The Cosmos",
+	rating: 4,
+	num: -3449,
+ 
+        },
 	moody: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
