@@ -3746,11 +3746,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return null;
 		}
 	},
+	onUpdate(pokemon) {
+		if (pokemon.volatiles['confusion']) {
+			this.add('-activate', pokemon, 'ability: Law of The Cosmos');
+			pokemon.removeVolatile('confusion');
+		}
+	},
+	onTryAddVolatile(status, pokemon) {
+		if (status.id === 'confusion') return null;
+	},
+	onHit(target, source, move) {
+		if (move?.volatileStatus === 'confusion') {
+			this.add('-immune', target, 'confusion', '[from] ability: Law of The Cosmos');
+		}
+	},
 	flags: {breakable: 1},
 	name: "Law of The Cosmos",
 	rating: 4,
 	num: -3449,
- 
+
         },
 	moody: {
 		onResidualOrder: 28,
