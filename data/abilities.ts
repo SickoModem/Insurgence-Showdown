@@ -5720,6 +5720,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 45,
 	},
+        sabulummotor: {
+	onStart(pokemon) {
+		if (this.field.setWeather('sandstorm')) {
+			this.add('-activate', pokemon, 'Sabulum Motor', '[source]');
+		} else if (this.field.isWeather('sandstorm')) {
+			this.add('-activate', pokemon, 'ability: Sabulum Motor');
+		}
+	},
+	onModifyAtkPriority: 5,
+	onModifyAtk(atk, pokemon) {
+		if (pokemon.effectiveWeather() === 'sandstorm') {
+			this.debug('Sabulum boost');
+			return this.chainModify([5461, 4096]);
+		}
+	},
+	flags: {},
+	name: "Sabulum Motor",
+	rating: 4.5,
+	num: 288,
+
+       },
 	sandveil: {
 		onImmunity(type, pokemon) {
 			if (type === 'sandstorm') return false;
