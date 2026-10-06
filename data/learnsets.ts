@@ -72680,6 +72680,28 @@ garchompdelta: {
 			{generation: 5, level: 23},
 		],
 	},
+        stoutlandarmor: {
+	inherit: true,
+	learnset: {
+		defog: ['9L1'],
+		flashcannon: ['9L1'],
+		steelbeam: ['9L1'],
+		magnetrise: ['9L1'],
+		thunderbolt: ['9L1'],
+		overheat: ['9L1'],
+		stealthrock: ['9L1'],
+		supercellslam: ['9L1'],
+		fly: ['9L1'],
+		highhorsepower: ['9L1'],
+		stoneedge: ['9L1'],
+		irondefense: ['9L1'],
+                irontail: ['9M'],
+                heavyslam: ['9M'],
+                hardpress: ['9M'],
+                
+	},
+
+       },
 	purrloin: {
 		learnset: {
 			achillesheel: ["6M"],

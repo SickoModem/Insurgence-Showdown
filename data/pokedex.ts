@@ -13636,6 +13636,23 @@ gabitedelta: {
 		evoLevel: 32,
 		eggGroups: ["Field"],
 	},
+        stoutlandarmor: {
+	num: 508,
+	name: "Stoutland-Armor",
+	baseSpecies: "Stoutland",
+	forme: "Armor",
+	types: ["Steel"],
+	baseStats: {hp: 85, atk: 118, def: 108, spa: 49, spd: 98, spe: 70},
+	abilities: {0: "Sabulum Motor"},
+	weightkg: 330,
+	heightm: 1.2,
+	color: "Gray",
+	eggGroups: ["Field"],
+	requiredItem: "Alltron Armor",
+	changesFrom: "Stoutland",
+	gen: 9,
+
+        },
 	purrloin: {
 		num: 509,
 		name: "Purrloin",
