@@ -63694,24 +63694,6 @@ swampertdelta: {
 			wildcharge: ["9M", "9L68", "8M", "8L68", "7M", "7L53", "6M", "6L53", "5M", "5L53"],
 		},
 	},
-        luxioarmor: {
-	inherit: true,
-	learnset: {
-		volttackle: ['9L1'],
-		shiftgear: ['9L1'],
-		flareblitz: ['9L1'],
-		nanorepair: ['9L1'],
-		headsmash: ['9L1'],
-		headcharge: ['9L1'],
-		submission: ['9L1'],
-		geargrind: ['9L1'],
-		rapidspin: ['9L1'],
-		temperflare: ['9L1'],
-		firelash: ['9L1'],
-		knockoff: ['9L1'],
-                spikes: ['9M'],
-	},
-},
 	luxiodelta: {
 		learnset: {
 			achillesheel: ["6M"],
