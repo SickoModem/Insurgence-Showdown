@@ -29,6 +29,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		damage: "  [POKEMON] was hurt!",
 	},
+        protoncannon: {
+	name: "Proton Cannon",
+	shortDesc: "Electric moves 1.3x power. Once per switch-in, skips a move's charge turn.",
+
+        },
 	airlock: {
 		name: "Air Lock",
 		shortDesc: "While this Pokemon is active, the effects of weather conditions are disabled.",

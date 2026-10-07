@@ -4893,6 +4893,38 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 239,
 	},
+        protoncannon: {
+	onChargeMove(pokemon, target, move) {
+		if (this.effectState.chargeSkipped) return;
+		this.effectState.chargeSkipped = true;
+		this.debug('Proton Cannon - remove charge turn for ' + move.id);
+		this.attrLastMove('[still]');
+		this.addMove('-anim', pokemon, move.name, target);
+		return false;
+	},
+	onModifyAtkPriority: 5,
+	onModifyAtk(atk, attacker, defender, move) {
+		if (move.type === 'Electric') {
+			this.debug('Proton Cannon boost');
+			return this.chainModify([5325, 4096]);
+		}
+	},
+	onModifySpAPriority: 5,
+	onModifySpA(atk, attacker, defender, move) {
+		if (move.type === 'Electric') {
+			this.debug('Proton Cannon boost');
+			return this.chainModify([5325, 4096]);
+		}
+	},
+	onSwitchIn(pokemon) {
+		delete this.effectState.chargeSkipped;
+	},
+	flags: {},
+	name: "Proton Cannon",
+	rating: 3.5,
+	num: 1001,
+
+        },
 	protean: {
 		onPrepareHit(source, target, move) {
 			if (this.effectState.protean) return;

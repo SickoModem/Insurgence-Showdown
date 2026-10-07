@@ -13581,6 +13581,24 @@ butterfreedelta: {
 			{generation: 6, level: 24},
 		],
 	},
+        gravelerarmor: {
+	inherit: true,
+	learnset: {
+		electroshot: ['9L1'],
+		meteorbeam: ['9L1'],
+		rapidspin: ['9L1'],
+		discharge: ['9L1'],
+		thunderbolt: ['9L1'],
+		voltswitch: ['9L1'],
+		nihilspark: ['9L1'],
+		icebeam: ['9L1'],
+		focusblast: ['9L1'],
+		paleowave: ['9L1'],
+		metalburst: ['9L1'],
+		flashcannon: ['9L1'],
+	},
+
+       },
 	graveleralola: {
 		learnset: {
 			allyswitch: ["7T"],

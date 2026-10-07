@@ -2383,6 +2383,23 @@ butterfreedelta: {
 		otherFormes: ["Graveler-Alola", "Graveler-Delta"],
 		formeOrder: ["Graveler", "Graveler-Alola", "Graveler-Delta"],
 	},
+        gravelerarmor: {
+	num: 75,
+	name: "Graveler-Armor",
+	baseSpecies: "Graveler",
+	forme: "Armor",
+	types: ["Rock", "Ground"],
+	baseStats: {hp: 55, atk: 62, def: 118, spa: 168, spd: 47, spe: 68},
+	abilities: {0: "Proton Cannon"},
+	weightkg: 105,
+	heightm: 1,
+	color: "Brown",
+	eggGroups: ["Mineral"],
+	requiredItem: "Alltron Armor",
+	changesFrom: "Graveler",
+	gen: 9,
+
+        },
 	graveleralola: {
 		num: 75,
 		name: "Graveler-Alola",
