@@ -767,6 +767,14 @@ regiforcemoltenfoundry: {
 		start: "  [POKEMON] turned the ground into Electric Terrain, energizing its futuristic engine!",
 		activate: "  [POKEMON] used the Electric Terrain to energize its futuristic engine!",
 	},
+        sabulummotor: {
+	name: "Sabulum Motor",
+	shortDesc: "On switch-in, summons Sandstorm. During Sandstorm, Atk is 1.3333x.",
+
+	start: "  [POKEMON] whipped up a Sandstorm, revving its motor!",
+	activate: "  [POKEMON] used the Sandstorm to rev its motor!",
+
+        },
 	harvest: {
 		name: "Harvest",
 		desc: "If the last item this Pokemon used is a Berry, there is a 50% chance it gets restored at the end of each turn. If Sunny Day is active, this chance is 100%.",
