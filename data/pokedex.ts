@@ -10888,6 +10888,23 @@ swampertdeltamega: {
 		otherFormes: ["Luxio-Delta"],
 		formeOrder: ["Luxio", "Luxio-Delta"],
 	},
+        luxioarmor: {
+	num: 404,
+	name: "Luxio-Armor",
+	baseSpecies: "Luxio",
+	forme: "Armor",
+	types: ["Electric", "Fire"],
+	baseStats: {hp: 60, atk: 128, def: 79, spa: 64, spd: 79, spe: 88},
+	abilities: {0: "Reckless"},
+	weightkg: 30.5,
+	heightm: 0.9,
+	color: "Blue",
+	eggGroups: ["Field"],
+	requiredItem: "Alltron Armor",
+	changesFrom: "Luxio",
+	gen: 9,
+
+       },
 	luxiodelta: {
 		gen: 6,
 		num: 404,
