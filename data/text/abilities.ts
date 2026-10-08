@@ -31,7 +31,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
         protoncannon: {
 	name: "Proton Cannon",
-	shortDesc: "Electric moves 1.3x power. Once per switch-in, skips a move's charge turn.",
+	shortDesc: "Electric moves 1.3x power. Once per battle, skips a move's charge turn.",
 
         },
 	airlock: {
