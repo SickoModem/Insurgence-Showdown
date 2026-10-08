@@ -4895,8 +4895,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
         protoncannon: {
 	onChargeMove(pokemon, target, move) {
-		if (this.effectState.chargeSkipped) return;
-		this.effectState.chargeSkipped = true;
+		if (pokemon.abilityState.protonCannonUsed) return;
+		pokemon.abilityState.protonCannonUsed = true;
 		this.debug('Proton Cannon - remove charge turn for ' + move.id);
 		this.attrLastMove('[still]');
 		this.addMove('-anim', pokemon, move.name, target);
@@ -4915,9 +4915,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.debug('Proton Cannon boost');
 			return this.chainModify([5325, 4096]);
 		}
-	},
-	onSwitchIn(pokemon) {
-		delete this.effectState.chargeSkipped;
 	},
 	flags: {},
 	name: "Proton Cannon",
