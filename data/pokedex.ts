@@ -2389,7 +2389,7 @@ butterfreedelta: {
 	baseSpecies: "Graveler",
 	forme: "Armor",
 	types: ["Rock", "Ground"],
-	baseStats: {hp: 55, atk: 92, def: 118, spa: 168, spd: 27, spe: 58},
+	baseStats: {hp: 55, atk: 98, def: 118, spa: 168, spd: 21, spe: 58},
 	abilities: {0: "Proton Cannon"},
 	weightkg: 105,
 	heightm: 1,
