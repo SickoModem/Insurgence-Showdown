@@ -3092,7 +3092,7 @@ snowbromega: {
 		num: 99,
 		name: "Kingler",
 		types: ["Water"],
-		baseStats: {hp: 85, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
+		baseStats: {hp: 75, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
 		abilities: {0: "Hyper Cutter", 1: "Tough Claws", H: "Sheer Force"},
 		heightm: 1.3,
 		weightkg: 60,

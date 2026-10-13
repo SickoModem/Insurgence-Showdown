@@ -18347,6 +18347,7 @@ butterfreedelta: {
 			ancientpower: ["4T"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			bide: ["7V"],
+                        hyperimpact: ["9M"],
 			blizzard: ["8M", "8V", "7M", "7V", "6M", "5M", "4M", "3M"],
 			bodyslam: ["8M", "7V", "3T"],
 			brickbreak: ["8M", "8V", "7M", "6M", "5M", "4M"],

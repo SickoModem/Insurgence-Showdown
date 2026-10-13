@@ -7258,6 +7258,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Tough",
 	},
+        hyperimpact: {
+	num: 9063,
+	accuracy: 90,
+	basePower: 150,
+	category: "Physical",
+	name: "Hyper Impact",
+	pp: 5,
+	priority: 0,
+	flags: {recharge: 1, protect: 1, mirror: 1, metronome: 1},
+	onAfterMoveSecondarySelf(pokemon, target, move) {
+		if (!target || target.fainted || target.hp <= 0) {
+			pokemon.removeVolatile('mustrecharge');
+		}
+	},
+	self: {
+		volatileStatus: 'mustrecharge',
+	},
+	secondary: null,
+	target: "normal",
+	type: "Normal",
+	contestType: "Cool",
+         
+        },
 	gigatonhammer: {
 		num: 893,
 		accuracy: 100,

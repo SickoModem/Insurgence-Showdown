@@ -1289,6 +1289,12 @@ export const MovesText: {[k: string]: MoveText} = {
                 desc: "Ignores Immunity. If this move is successful, the user must recharge on the following turn",
                 shortDesc: "User cannot move next turn. Ignores Immunity",
         },
+        hyperimpact: {
+	name: "Hyper Impact",
+	desc: "If this move is successful and the target does not faint, the user must recharge on the following turn.",
+	shortDesc: "User cannot move next turn unless it KOs the target.",
+         
+        },
 	darkpulse: {
 		name: "Dark Pulse",
 		desc: "Has a 20% chance to make the target flinch.",
