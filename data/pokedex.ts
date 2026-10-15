@@ -3812,7 +3812,7 @@ snowbromega: {
 		types: ["Normal"],
 		gender: "M",
 		baseStats: {hp: 75, atk: 100, def: 95, spa: 70, spd: 70, spe: 110},
-		abilities: {0: "Intimidate", 1: "Anger Point", H: "Sheer Force"},
+		abilities: {0: "Intimidate", 1: "Prime Physicality", H: "Sheer Force"},
 		heightm: 1.4,
 		weightkg: 88.4,
 		color: "Brown",

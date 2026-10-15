@@ -1017,6 +1017,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 14,
 	},
+        primephysicality: {
+	onModifyMove(move, pokemon) {
+		if (move.category === 'Special') {
+			move.category = 'Physical';
+		}
+	},
+	onAfterMoveSecondarySelf(pokemon, target, move) {
+		if (move.flags['recharge'] && (!target || target.fainted || target.hp <= 0)) {
+			pokemon.removeVolatile('mustrecharge');
+		}
+	},
+	onSourceModifyAccuracyPriority: -1,
+	onSourceModifyAccuracy(accuracy) {
+		if (typeof accuracy !== 'number') return;
+		this.debug('primephysicality - enhancing accuracy');
+		return this.chainModify([4505, 4096]);
+	},
+	flags: {},
+	name: "Prime Physicality",
+	rating: 3,
+	num: -90064, 
+
+        },
         conflagrate: {
         onModifyTypePriority: -1,
         onModifyType(move, pokemon) {

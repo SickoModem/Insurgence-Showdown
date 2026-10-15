@@ -34,6 +34,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	shortDesc: "Electric moves 1.3x power. Once per battle, skips a move's charge turn.",
 
         },
+        primephysicality: {
+	name: "Prime Physicality",
+	desc: "This Pokemon's Special moves become Physical moves. This Pokemon's moves have their accuracy multiplied by 1.1. If this Pokemon KOs the target with a move that requires a recharge turn, it does not need to recharge.",
+	shortDesc: "All moves become Physical, +10% Acc. Recharge Moves lose CD on KOs.",
+        
+        },
 	airlock: {
 		name: "Air Lock",
 		shortDesc: "While this Pokemon is active, the effects of weather conditions are disabled.",
