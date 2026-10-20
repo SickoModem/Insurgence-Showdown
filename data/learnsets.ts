@@ -12392,6 +12392,24 @@ butterfreedelta: {
 			{generation: 4, level: 14},
 		],
 	},
+        machokearmor: {
+	inherit: true,
+	learnset: {
+		firelash: ['9L1'],
+		stoneedge: ['9L1'],
+		thunder: ['9L1'],
+		discharge: ['9L1'],
+		thunderbolt: ['9L1'],
+		bodypress: ['9L1'],
+		machpunch: ['9L1'],
+		rockwrecker: ['9L1'],
+		secretsword: ['9L1'],
+		temperflare: ['9L1'],
+		stealthrock: ['9L1'],
+		meteormash: ['9L1'],
+
+	},
+},
 	machamp: {
 		learnset: {
 			achillesheel: ["6M"],
