@@ -2184,7 +2184,7 @@ butterfreedelta: {
 	forme: "Armor",
 	types: ["Fighting", "Fire"],
 	genderRatio: {M: 0.75, F: 0.25},
-	baseStats: {hp: 80, atk: 108, def: 70, spa: 158, spd: 88, spe: 45},
+	baseStats: {hp: 80, atk: 108, def: 70, spa: 158, spd: 88, spe: 44},
 	abilities: {0: "Stamina", 1: "No Guard", H: "Mold Breaker"},
 	weightkg: 70.5,
 	heightm: 1.5,
