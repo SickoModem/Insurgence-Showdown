@@ -7076,8 +7076,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Psychic",
 		contestType: "Clever",
-	},
-	gastroacid: {
+	
+               },
+		gastroacid: {
 		num: 380,
 		accuracy: 100,
 		basePower: 0,
@@ -7085,7 +7086,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Gastro Acid",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, metronome: 1},
+		flags: { protect: 1, reflectable: 1, mirror: 1, allyanim: 1, metronome: 1 },
 		volatileStatus: 'gastroacid',
 		onTryHit(target) {
 			if (target.getAbility().flags['cantsuppress']) {
@@ -7097,29 +7098,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		condition: {
-			// Ability suppression implemented in Pokemon.ignoringAbility() within sim/pokemon.js
-			onStart(target) {
+			// Ability suppression implemented in Pokemon.ignoringAbility() within sim/pokemon.ts
+			onStart(pokemon) {
 				if (pokemon.hasItem('Ability Shield')) return false;
-				this.add('-endability', target);
-				this.singleEvent('End', target.getAbility(), target.abilityState, target, target, 'gastroacid');
-
-				if (target.illusion) {
-					this.debug('illusion cleared');
-					target.illusion = null;
-					const details = target.species.name + (target.level === 120 ? '' : ', L' + target.level) +
-					(target.gender === '' ? '' : ', ' + target.gender) + (target.set.shiny ? ', shiny' : '');
-					this.add('replace', target, details);
-					this.add('-end', target, 'Illusion');
-				}
+				this.add('-endability', pokemon);
+				this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'gastroacid');
 			},
 			onCopy(pokemon) {
 				if (pokemon.getAbility().flags['cantsuppress']) pokemon.removeVolatile('gastroacid');
 			},
 		},
-		secondary: null,
 		target: "normal",
 		type: "Poison",
-		zMove: {boost: {spe: 1}},
+		zMove: { boost: { spe: 1 } },
 		contestType: "Tough",
 	},
 	geargrind: {
