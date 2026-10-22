@@ -385,7 +385,7 @@ export const Formats: FormatList = [
 		searchShow: false,
 		tournamentShow: false,
 		rated: false,
-		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 3', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 3', 'Max Move Count = 4', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
 	},
 	{
 		name: "[Gen 9] Full Ryuka Dex Free-For-All",
@@ -394,7 +394,7 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		tournamentShow: false,
 		rated: false,
-		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 4', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
 	},
 	{
 		name: "[Gen 9] Custom Game",
@@ -404,7 +404,7 @@ export const Formats: FormatList = [
 		debug: true,
 		battle: {trunc: Math.trunc},
 		// no restrictions, for serious (other than team preview)
-		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 4', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod'],
 	},
         {
 	name: "[Gen 9] Custom Game Random Moves",
@@ -413,7 +413,7 @@ export const Formats: FormatList = [
 	debug: true,
 	battle: {trunc: Math.trunc},
 	// no restrictions, for serious (other than team preview) + random moves each turn
-	ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod', 'Random Moves Rule'],
+	ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 4', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod', 'Random Moves Rule'],
 	
 	},
         {
@@ -423,7 +423,7 @@ export const Formats: FormatList = [
 	debug: true,
 	battle: {trunc: Math.trunc},
 	// no restrictions, for serious (other than team preview) + inverted type chart
-	ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod', 'Inverse Mod'],
+	ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 4', 'Max Level = 9999', 'Default Level = 120', 'Sleep Clause Mod', 'Inverse Mod'],
 
       },
 

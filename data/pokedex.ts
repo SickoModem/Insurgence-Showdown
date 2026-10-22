@@ -3970,7 +3970,7 @@ snowbromega: {
 		types: ["Water"],
 		gender: "N",
 		baseStats: {hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48},
-		abilities: {0: "Protean"},
+		abilities: {0: "Protean", 1: "Impersonator"},
 		weightkg: 4,
 		heightm: 1,
 		color: "Red",

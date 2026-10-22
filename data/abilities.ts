@@ -2906,6 +2906,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 5,
 		num: 150,
 	},
+        impersonator: {
+	onSwitchIn(pokemon) {
+		this.effectState.switchingIn = true;
+	},
+	onStart(pokemon) {
+		// Doesn't activate when Skill Swapped or when Neutralizing Gas leaves the field
+		if (!this.effectState.switchingIn) return;
+		// Copies across in doubles/triples
+		const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+		if (target) {
+			pokemon.morphInto(target);
+		}
+		this.effectState.switchingIn = false;
+	},
+	flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1},
+	name: "Impersonator",
+	rating: 5,
+	num: -1004, 
+
+        },
         infestate: {
         onModifyTypePriority: -1,
         onModifyType(move, pokemon) {

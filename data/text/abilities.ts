@@ -90,6 +90,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		boost: "  [POKEMON] maxed its Attack!",
 	},
+        impersonator: {
+	name: "Impersonator",
+	desc: "On switch-in, this Pokemon Morphs into the opposing Pokemon.",
+	shortDesc: "On switch-in, this Pokemon Morphs into the opposing Pokemon.",
+
+        },
 	angershell: {
 		name: "Anger Shell",
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Attack, Special Attack, and Speed are raised by 1 stage, and its Defense and Special Defense are lowered by 1 stage. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
