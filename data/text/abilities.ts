@@ -1435,7 +1435,7 @@ regiforcemoltenfoundry: {
         reverselichforce: {
                 name: "Reverse Lichforce",
                 desc: "This Pokemon's moves have their power multiplied by 1+(X*0.1).",
-                shortDesc: "This Pokemon's moves have 10% more power for each KO.",
+                shortDesc: "This Pokemon's moves have 10% more power for each fainted Pokemon.",
 
                 activate: "[POKEMON] gained strength from the fallen!",
         },
