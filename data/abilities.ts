@@ -3882,23 +3882,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     onStart(pokemon) {
         if (this.effectState.fallen) {
             this.add('-activate', pokemon, 'ability: Reverse Lichforce');
-            const fallen = this.effectState.fallen;
+            this.add('-start', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+        }
+    },
+    onAnyFaintPriority: 1,
+    onAnyFaint() {
+        const pokemon = this.effectState.target;
+        if (!pokemon || pokemon.fainted) return;
+        const old = this.effectState.fallen || 0;
+        const fallen = Math.min(old + 1, 5);
+        if (fallen > old) {
+            this.add('-activate', pokemon, 'ability: Reverse Lichforce');
+            this.add('-end', pokemon, `fallen${old}`, '[silent]');
+            this.effectState.fallen = fallen;
             this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
         }
     },
-    onSourceAfterFaint(length, target, source, effect) {
-        if (effect && effect.effectType === 'Move') {
-            const fallen = Math.min((this.effectState.fallen || 0) + length, 5);
-            if (fallen > (this.effectState.fallen || 0)) {
-                this.add('-activate', source, 'ability: Reverse Lichforce');
-                this.add('-end', source, `fallen${this.effectState.fallen || 0}`, '[silent]');
-                this.effectState.fallen = fallen;
-                this.add('-start', source, `fallen${fallen}`, '[silent]');
-            }
-        }
-    },
     onEnd(pokemon) {
-        this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+        if (this.effectState.fallen) this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
     },
     onBasePowerPriority: 21,
     onBasePower(basePower, attacker, defender, move) {
