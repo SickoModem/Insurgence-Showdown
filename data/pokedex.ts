@@ -6066,7 +6066,7 @@ snowbromega: {
 		forme: "Mega",
 		types: ["Steel", "Poison"],
 		baseStats: {hp: 70, atk: 80, def: 95, spa: 130, spd: 95, spe: 85},
-		abilities: {0: "Intimidate"},
+		abilities: {0: "Power Of Alchemy"},
 		weightkg: 41.5,
 		heightm: 1,
 		color: "Red",

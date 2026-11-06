@@ -4799,19 +4799,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 185,
 	},
 	powerofalchemy: {
-		onAllyFaint(target) {
-			if (!this.effectState.target.hp) return;
-			const ability = target.getAbility();
-			if (ability.flags['noreceiver'] || ability.id === 'noability') return;
-			if (this.effectState.target.setAbility(ability)) {
-				this.add('-ability', this.effectState.target, ability, '[from] ability: Power of Alchemy', '[of] ' + target);
-			}
-		},
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1},
-		name: "Power of Alchemy",
-		rating: 0,
-		num: 223,
+	onAnyFaint(target) {
+		const holder = this.effectState.target;
+		if (!holder.hp || target === holder) return;
+		const ability = target.getAbility();
+		if (ability.flags['noreceiver'] || ability.id === 'noability' || ability.id === holder.ability) return;
+		if (holder.setAbility(ability)) {
+			holder.baseAbility = ability.id; // persists through switch-out
+			this.add('-ability', holder, ability, '[from] ability: Power of Alchemy', '[of] ' + target);
+		}
 	},
+	flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1},
+	name: "Power of Alchemy",
+	rating: 0,
+	num: 223,
+
+       },
 	powerspot: {
 		onAllyBasePowerPriority: 22,
 		onAllyBasePower(basePower, attacker, defender, move) {

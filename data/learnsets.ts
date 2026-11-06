@@ -37397,6 +37397,7 @@ butterfreedelta: {
 			smog: ["6L1"],
 			tackle: ["6L1"],
 			leer: ["6L1"],
+                        shiftgear: ["9M"],
 			clearsmog: ["6L1"],
 			poisongas: ["6L5"],
 			bite: ["6L10"],
