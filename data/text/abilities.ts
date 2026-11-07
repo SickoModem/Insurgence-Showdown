@@ -34,6 +34,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	shortDesc: "Electric moves 1.3x power. Once per battle, skips a move's charge turn.",
 
         },
+        globetrotter: {
+	name: "Globetrotter",
+	shortDesc: "Once per battle, switches out after being hit by a damaging move.",
+
+        },
         primephysicality: {
 	name: "Prime Physicality",
 	desc: "This Pokemon's Special moves become Physical moves. This Pokemon's moves have their accuracy multiplied by 1.1. If this Pokemon KOs the target with a move that requires a recharge turn, it does not need to recharge.",

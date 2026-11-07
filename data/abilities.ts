@@ -107,6 +107,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 184,
 	},
+        globetrotter: {
+	onAfterMoveSecondaryPriority: 2,
+	onAfterMoveSecondary(target, source, move) {
+		if (target.m.globetrotterUsed) return;
+		if (source && source !== target && target.hp && move && move.category !== 'Status' && !move.flags['futuremove']) {
+			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.beingCalledBack || target.isSkyDropped()) return;
+			if (target.volatiles['commanding'] || target.volatiles['commanded']) return;
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon.switchFlag === true) return;
+			}
+			target.m.globetrotterUsed = true;
+			target.switchFlag = true;
+			source.switchFlag = false;
+			this.add('-activate', target, 'ability: Globetrotter');
+		}
+	},
+	flags: {},
+	name: "Globetrotter",
+	rating: 3,
+	num: -24383, // set to your custom ability number
+
+        },
 	aftermath: {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
