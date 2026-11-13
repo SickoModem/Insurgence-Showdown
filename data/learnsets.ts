@@ -9956,6 +9956,7 @@ butterfreedelta: {
 			captivate: ["7L56", "6L56", "5L56", "4M", "4L56"],
 			charm: ["9M", "8M"],
 			chillingwater: ["9M"],
+                        copycat: ["9M"],
 			confide: ["7M", "6M"],
 			covet: ["7T", "6T", "5T"],
 			curse: ["7V"],
